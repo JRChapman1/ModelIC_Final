@@ -98,8 +98,8 @@ class Annuity:
 
 
 if __name__ == '__main__':
-    ann_data = pd.read_csv(r'inputs/ann_data_inputs/JRL.csv')
-    ann = Annuity(InterestRate('gbp_sonia_ye22.csv'), ann_data)
+    ann_data = pd.read_csv(r'inputs/ann_data_inputs/example_ann.csv')
+    ann = Annuity(InterestRate('example_ir.csv'), ann_data)
 
     val = ann.value()
     ecf = ann.expected_cfs()

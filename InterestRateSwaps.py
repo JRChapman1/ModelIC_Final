@@ -70,7 +70,7 @@ class IRS:
 
 
 if __name__ == '__main__':
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv', ir_shock=0.0001)
+    mdl_ir = InterestRate('example_ir.csv', ir_shock=0.0001)
     df_irs = pd.read_csv('inputs/irs_data_inputs/irs_data.csv')
     mdl_irs = IRS(mdl_ir, df_irs)
     pcfs = mdl_irs.fixed_leg_pcfs()

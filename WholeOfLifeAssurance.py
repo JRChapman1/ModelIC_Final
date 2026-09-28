@@ -86,7 +86,7 @@ class WholeOfLifeAssurance:
 
 if __name__ == '__main__':
 
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv')
+    mdl_ir = InterestRate('example_ir.csv')
     policy_data = pd.DataFrame([[45, 10000], [55, 15000], [60, 12000], [47, 15000]], columns=['Age', 'Sum Assured'])
     mdl_wol = WholeOfLifeAssurance(mdl_ir, policy_data)
     print(mdl_wol.expected_cfs())

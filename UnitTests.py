@@ -7,9 +7,9 @@ class UnitTests:
 
     def __init__(self):
 
-        self.ann_dataset = 'JRL.csv'
-        self.ltm_dataset = 'JRL_c2.csv'
-        self.bond_dataset = 'JRL.csv'
+        self.ann_dataset = 'example_bonds.csv'
+        self.ltm_dataset = 'example_erms.csv'
+        self.bond_dataset = 'example_bonds.csv'
 
         self.regression_vars = {
             'discount_curve': {'Desc': 'discount_curve',

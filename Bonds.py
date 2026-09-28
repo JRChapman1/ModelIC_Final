@@ -128,8 +128,8 @@ class BondPortfolio:
 
 if __name__ == '__main__':
 
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv')
-    df_bonds = pd.read_csv('inputs/bond_data_inputs/JRL.csv', index_col='ISIN')
+    mdl_ir = InterestRate('example_ir.csv')
+    df_bonds = pd.read_csv('inputs/bond_data_inputs/example_bonds.csv', index_col='ISIN')
     mdl_bonds = BondPortfolio(mdl_ir, df_bonds)
 
     v = mdl_bonds.market_value()

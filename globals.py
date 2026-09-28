@@ -1,5 +1,5 @@
 class UserDefinedGlobals:
-    default_ir_curve = 'gbp_sonia_ye22.csv'
+    default_ir_curve = 'example_ir.csv'
     log = []
     tests = []
     pension_age = 65

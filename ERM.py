@@ -249,8 +249,8 @@ class ERM:
 
 if __name__ == '__main__':
 
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv')
-    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/JRL_c2.csv')
+    mdl_ir = InterestRate('example_ir.csv')
+    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/example_erms.csv')
 
     #mortality_model, int_rate_model, df_ltm_pols, hpi_drift, hpi_vol, prop_shock = None
     MdlEqRel = ERM(Mortality(lapse_rate=0.01), mdl_ir, ltm_pols, 0.03, 0.13)

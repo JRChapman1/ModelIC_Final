@@ -371,8 +371,8 @@ if __name__ == '__main__':
     for method in dir(LTMNote):
         if method[:2] != "__":
             print(method)
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv')
-    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/JRL_c2.csv')
+    mdl_ir = InterestRate('example_ir.csv')
+    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/example_erms.csv')
     MdlEqRel = ERM(Mortality(), mdl_ir, ltm_pols, 0.03, 0.13)
     MdlNote = LTMNote(MdlEqRel, mdl_ir)
     foo = MdlNote.liquidity_scenario()

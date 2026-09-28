@@ -63,13 +63,13 @@ class Portfolio:
 
 if __name__ == '__main__':
 
-    mdl_ir = InterestRate('gbp_sonia_ye22.csv')
+    mdl_ir = InterestRate('example_ir.csv')
     mdl_mortality = Mortality()
 
-    df_bonds = pd.read_csv('inputs/bond_data_inputs/JRL.csv', index_col='ISIN')
+    df_bonds = pd.read_csv('inputs/bond_data_inputs/example_bonds.csv', index_col='ISIN')
     mdl_bonds = BondPortfolio(mdl_ir, df_bonds)
 
-    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/JRL_c2.csv', index_col='PolicyID')
+    ltm_pols = pd.read_csv('inputs/ltm_data_inputs/example_erms.csv', index_col='PolicyID')
     mdl_erm = ERM(mdl_mortality, mdl_ir, ltm_pols, 0.018, 0.13)
 
     mdl_assets = Portfolio(mdl_ir, mdl_mortality, mdl_bonds, mdl_erm)
