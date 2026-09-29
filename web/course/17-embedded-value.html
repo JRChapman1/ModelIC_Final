@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Embedded value | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a><a href="13-capital-management.html" title="Capital management">Chapter 13</a><a href="14-asset-liability-management.html" title="Asset–liability management">Chapter 14</a><a href="15-analysis-of-surplus.html" title="Analysis of surplus">Chapter 15</a><a href="16-profit-reporting.html" title="Profit reporting">Chapter 16</a><a href="17-embedded-value.html" aria-current="page" title="Embedded value">Chapter 17</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 17</div><article><h1>Embedded value</h1>
+<p>A company&#39;s Embedded Value (EV) is the value of future profit streams from their existing business, together with the value of any net assets separately attributable to shareholders, to give a measure of shareholder value.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">What is profitability?</a></li><li><a href="#section-2">Embedded value principles</a></li><li><a href="#section-15">Implications of solvency regime</a></li><li><a href="#section-16">Analysis of change in embedded value</a></li><li><a href="#section-25">Customer value</a></li></ul></nav></details>
+<p>IFRS and US GAAP have their own drawbacks as measures of profitability for a company, so many insurers choose to also publish Embedded Value (EV) information which provides an additional view of shareholder value.</p>
+<p>A &#39;traditional&#39; EV calculation is typically performed deterministically, with risk margins loaded into the discount rate and/or each estimate of future experience.</p>
+<p>However, these &#39;traditional&#39; EV calculations lacked consistency across the industry and did not always properly allow for risks or for the value of options and guarantees.</p>
+<p>As such, the European Embedded Value (EEV) principles were introduced in 2004 by a group of major European insurers.</p>
+<p>These standards:</p>
+<ul>
+<li><p>Introduced more standardisation of methods, assumptions, and disclosure, as well as better valuation of options and guarantees.</p>
+</li>
+<li><p>Continued to allow a range of different approaches, in particular to setting the discount rate and by allowing the use of either a traditional or market-consistent methodology.</p>
+</li>
+</ul>
+<p>The same group also introduced the Market Consistent Embedded Value (MCEV) principles in 2008 to continue addressing these perceived shortcomings. These specify a market-consistent approach to EV calculations, with further standardisation of the approach to be taken (e.g. when setting discount rates).</p>
+<p>Over time, in response to the introduction of the EEV principles and the MCEV principles, EV calculations have moved towards market-consistent approaches.</p>
+<h2 id="section-1">What is profitability?</h2>
+<p>The actual profit from a particular policy can only be known with certainty when the final payment (e.g. on death or maturity) is made, which is not helpful when trying to assess the value of a policy that is still in force.</p>
+<p>Accounting standards such as IFRS aim to assess profit arising over a year in a way that is &#39;true and fair&#39;, but the extent to which they actually achieve this is subject to debate. A &#39;true and fair&#39; view of profit is a dynamic concept which has regard to changes in accounting and business practice. A &#39;true and fair&#39; view requires compliance with the associated accounting standards (except in exceptional circumstances, where compliance with the standards would give a misleading view).</p>
+<p>Historically, methods used to report an insurer’s profits could include substantial prudence.</p>
+<p>To address this, supplementary financial reporting was developed with the aim of informing shareholders of the true value of their interests in the business and the change in that value over time as a result of the company&#39;s management of their resources. Supplementary reporting serves both defensive benefits (e.g. protecting the company&#39;s reputation) and capital raising benefits. If profit and value are understated in a company&#39;s accounts, the company may be vulnerable to take over at a price that does not reflect fair value to shareholders, hence the &#39;defensive&#39; benefits of supplementary EV reporting. Understatement of profit and value may also compromise an insurer&#39;s ability to raise finance.</p>
+<p>Supplementary EV reporting recognises profit from selling new business, but also incorporates any new business strain arising from prudence in solvency reserves.</p>
+<p>EV aims to measure a realistic, risk-adjusted valuation of shareholder cashflows arising from in-force business and net assets. An EV-based measure of profit is the change in EV over the period, plus distributions to shareholders and less capital contributed by shareholders. Profit transfer needs to be added back into the EV calculation to assess an insurer’s performance where profit has been distributed to shareholders.</p>
+<h2 id="section-2">Embedded value principles</h2>
+<p>The usefulness of any supplementary financial reporting is dependent on the level of consistency and transparency in the methods and assumptions adopted by companies.</p>
+<p>As such, standards have been developed for supplementary financial reporting, including:</p>
+<ul>
+<li><p>The European Embedded Value (EEV) principles.</p>
+</li>
+<li><p>The Market Consistent Embedded Value (MCEV) principles.</p>
+</li>
+</ul>
+<h3 id="section-3">The EEV principles</h3>
+<p>The EEV principles were introduced in 2004 by the CFO Forum, a group of major European insurers, for adoption from year-end 2005.</p>
+<p>The EEV principles&#39; objective was to improve consistency and transparency of supplementary financial reporting.</p>
+<p>The EEV framework comprises twelve principles and associated guidance. These outline how key assumptions and methodologies should be set, but allow individual companies to decide the precise approach best suited to their circumstances.</p>
+<h3 id="section-4">The MCEV principles</h3>
+<p>The MCEV framework combines principles with supporting guidance and disclosure requirements.</p>
+<p>Many MCEV principles build on the earlier EEV principles.</p>
+<h3 id="section-5">General embedded value principles</h3>
+<p>Embedded value principles address the following aspects of the calculation.</p>
+<h4 id="section-6">Defining embedded value</h4>
+<p>Under the EEV principles, for example, the EV is defined to be the present value of shareholders&#39; interests in the earnings distributable from assets backing the liabilities included in the EV, after allowing for aggregate risks in those liabilities. The allowance for aggregate risks should include the risks associated with options and guarantees.</p>
+<h4 id="section-7">Covered business</h4>
+<p>The &#39;covered&#39; business in an EV calculation should include long-term business and may also include other business (e.g. health insurance, short-term group business, asset management activities, etc).</p>
+<h4 id="section-8">Net assets, future profits, and capital costs</h4>
+<p>A useful way to view embedded value is through the following components, ensuring that costs are deducted only once:</p>
+<ul>
+<li><p>Free surplus allocated to the business covered by the EV calculation.</p>
+</li>
+<li><p>Required capital, less the cost of holding that capital.</p>
+</li>
+<li><p>The value of future shareholder cashflows from the covered in-force business, after the relevant allowances for risks, options, and guarantees. This is often described as the present value of in-force business (PVIF).</p>
+</li>
+</ul>
+<p>Some other EV approaches may combine the free surplus and required capital (less the cost of holding the required capital) into a single item called &#39;shareholder net assets&#39;.</p>
+<p>Required capital is differentiated from free surplus by having restrictions on its distribution to shareholders (i.e. free surplus is available capital that is not required to support the in-force business). The &#39;required capital&#39; should be at least the level of solvency capital at which the regulator is empowered to take action (e.g. no less than the SCR under Solvency II). The required capital could also include amounts required to meet the company&#39;s internal objectives (e.g. the capital required to maintain a particular target credit rating).</p>
+<p>The cost of holding the required solvency capital is equal to the following:</p>
+<p><strong>Cost of required capital = amount of required capital − present value of future capital releases and associated net investment income</strong></p>
+<p>This cost represents the cost of being unable to freely distribute this capital to shareholders. For a company using a traditional EV calculation, this reflects the opportunity cost of this capital only being able to earn a relatively low investment return because it is held in assets to demonstrate solvency (rather than being used to earn shareholders&#39; required rate of return).</p>
+<p>For a company using a market-consistent EV calculation approach, this reflects the frictional costs (e.g. tax and investment expenses) to shareholders of the company holding this capital rather than it being freely distributable.</p>
+<p>Tax costs arise when holding assets by investing in an insurer is less tax-efficient for the shareholder than investing in the assets directly (e.g. because the insurer pays a higher rate of tax than the shareholder would on those assets, etc). A &#39;cost of tax&#39; liability should be deducted from a market-consistent EV to reflect the fact that the assets held by the insurer are worth less to a shareholder than their market value in this case. In the event of there being tax advantages associated with assets being held through investment in an insurer, a &#39;benefit of tax-shield&#39; asset would be added to the market-consistent EV.</p>
+<p>A broader economic valuation may also allow for agency costs to reflect that the decisions of the company&#39;s management may not correspond to the decisions shareholders would make if acting in their own best interests. Determining the size of these agency costs is subjective. They should not be treated as an automatic, separate deduction required by the MCEV principles.</p>
+<p>In other cases, the total of liabilities plus required solvency capital is combined so that the required capital emerges as part of the PVIF. The PVIF also captures the release of any margins for prudence in the supervisory reserving basis (including relevant releases of the Solvency II risk margin, depending on where these are recognised in the chosen presentation; the release of the whole technical provision is not itself profit).</p>
+<p>The EV should include future renewal premiums on in-force business, but exclude the value of future new business.</p>
+<p>The distinction between in-force business and new business is not always clear.</p>
+<p>For example, in the case of the following:</p>
+<ul>
+<li><p>Recurrent single premiums.</p>
+</li>
+<li><p>Increments.</p>
+</li>
+<li><p>Conversions of one policy to another.</p>
+</li>
+<li><p>New members for group business.</p>
+</li>
+</ul>
+<p>As such, it is important that the insurer clearly discloses the method they have used to make this distinction.</p>
+<h4 id="section-9">Options and guarantees</h4>
+<p>The PVIF should reflect both the intrinsic value and time value of any options or guarantees embedded in liabilities. To determine the time value of such options and guarantees, stochastic models or option pricing techniques would need to be used. As a starting point, the valuation would need to consider the actual asset mix held by the insurer, where that asset mix affects the benefits payable and hence the option value.</p>
+<p>It may be possible to take credit for the value of management actions, provided that these are realistic and that customer reactions to the management actions are taken into consideration. For example, a management action might be to reduce the build-up of future guarantees under a with-profits contract by setting a lower regular bonus rate, or apply a market value reduction where contract terms permit. Already vested guarantees cannot simply be withdrawn. However, the consequences of this may be bad publicity and a reduction in new business.</p>
+<h4 id="section-10">Setting and reviewing assumptions</h4>
+<p>Examples of possible principles relating to projection assumptions are that they should be:</p>
+<ul>
+<li><p>Best estimate.</p>
+</li>
+<li><p>Internally consistent.</p>
+</li>
+<li><p>Consistent with assumptions used in other reporting.</p>
+</li>
+<li><p>Consistent with past, current, and expected experience and any other relevant data.</p>
+</li>
+<li><p>Consistent with observable, reliable market data (for economic assumptions).</p>
+</li>
+<li><p>Reviewed at least annually and updated as appropriate.</p>
+</li>
+<li><p>Considered separately for each product group.</p>
+</li>
+</ul>
+<p>There may be freedom to choose whether or not to adopt a market-consistent approach in these valuations (with non-investment risk allowed for through risk margins or by deducting the cost of residual non-hedgeable risks).</p>
+<p>If a market-consistent (risk neutral) approach is used:</p>
+<ul>
+<li><p>There may or may not be guidance on how the risk-free rate should be set.</p>
+</li>
+<li><p>It may or may not be permissible to allow for any illiquidity premium in relation to assets that match liability cashflows closely and will be held to maturity.</p>
+</li>
+</ul>
+<p>If a risk-neutral approach is not used:</p>
+<ul>
+<li><p>Assumed investment returns may be set at the best estimate returns on the assets actually held at the valuation date (allowing for credit risk).</p>
+</li>
+<li><p>Discounting would be performed using the risk discount rate (which may vary between product groups).</p>
+</li>
+<li><p>Other than the choice of discount rate, allowance for risk may be made in the following ways:</p>
+<ul>
+<li><p>Applying prudence in liability valuations.</p>
+</li>
+<li><p>Applying prudence in cashflow projection assumptions (e.g. reducing the expected long-term asset return on corporate bonds to allow for credit risk).</p>
+</li>
+<li><p>Deducting a risk margin from the value of future profits.</p>
+</li>
+<li><p>Establishing the cost of required capital.</p>
+</li>
+<li><p>Applying prudence in the valuation of options and guarantees.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="section-11">With-profits business</h4>
+<p>Companies may have significant discretion in how they allow for with-profits business in their EV calculations. Particular considerations may include the following:</p>
+<ul>
+<li><p>How future bonus rates should be estimated. For with-profits business, shareholder transfers are typically triggered by bonus declarations, in which case it will be necessary to project future bonuses in order to project future shareholder profits.</p>
+<p>Under the additions to benefits method, the following approaches may be used:</p>
+<ul>
+<li><p>Use bonus rates determined such that, on a best-estimate basis, asset shares will be paid out on maturity. This approach requires an assumption to be made about the future balance of bonuses between regular bonuses and terminal bonuses.</p>
+</li>
+<li><p>Use bonus rates that are calculated to extinguish the fund. This approach places an implicit value on any free estate.</p>
+</li>
+</ul>
+</li>
+<li><p>How the interaction between with-profits and any without-profits business in the same fund should be reflected. Ideally, the treatment of profits on without-profits business in the EV calculation will reflect how they will be treated in practice. A simpler, more approximate, approach may be appropriate if the interaction between with-profits and without-profits business is too complex to model.</p>
+</li>
+<li><p>Shareholders&#39; share of any free surplus. It may be argued that, with the regulator&#39;s agreement, assets remaining in a with-profits fund that are not needed to cover liabilities could be allocated entirely to shareholders. In this case, their market value could be added to the EV. Alternatively, such assets could be regarded as giving support to existing with-profits policyholders, in which case the profits to which those assets give rise should be split between shareholders and policyholders. In this case, the shareholder proportion of their market value could be added to the EV.</p>
+</li>
+</ul>
+<h4 id="section-12">Consistency of economic assumptions</h4>
+<p>Economic assumptions need to be internally consistent and set in accordance with the chosen embedded value framework.</p>
+<h4 id="section-13">Disclosures</h4>
+<p>The principles might require that embedded value results are disclosed at consolidated group level, consistent with the primary financial statements.</p>
+<h4 id="section-14">Consolidation and primary statements</h4>
+<p>The principles should explain how results for different business units are consolidated, and how those results relate to the primary financial statements.</p>
+<p>The components can be presented as follows:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable reference table"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>What it represents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Free surplus</td>
+<td>Assets allocated to covered business that are not needed to back liabilities or required capital.</td>
+</tr>
+<tr>
+<td>Required capital</td>
+<td>Capital supporting covered business that cannot presently be distributed.</td>
+</tr>
+<tr>
+<td>Value of in-force business</td>
+<td>The value of future shareholder cashflows, allowing for options, guarantees, and the relevant costs and risks.</td>
+</tr>
+</tbody></table></div>
+<p>In the MCEV presentation, frictional costs of required capital are deducted within the value of in-force business, alongside the time value of options and guarantees and the cost of residual non-hedgeable risks. If a simplified presentation instead deducts capital costs from required capital, those same costs must not be deducted again in the value of in-force business. See the <a href="https://www.cfoforum.eu/publications/embedded-value">CFO Forum’s embedded value principles</a>.</p>
+<h2 id="section-15">Implications of solvency regime</h2>
+<p>The applicable solvency regime for an insurer may have significant implications for the EV calculation and, consequently, the analysis of change (AoC) in EV over a period.</p>
+<p>In jurisdictions where supervisory reporting is done on a prudential basis, the emergence of those prudence margins forms the PVIF component in the EV and its analysis of change. In jurisdictions where supervisory reporting requires liabilities to be stated on a best estimate basis (e.g. Solvency II or similar), there would be no release of implicit prudence from the best-estimate component, although an explicit risk margin may still be released.</p>
+<p>Even when no prudential margins are expected to emerge on a supervisory valuation basis, insurers may still determine a PVIF component of the EV in relation to the following:</p>
+<ul>
+<li><p>Profits that are expected beyond the Solvency II contract boundaries.</p>
+</li>
+<li><p>Any relevant difference between the EV and solvency valuation assumptions. Under a market-consistent EV, an expected excess asset return is not automatically extra value: the associated financial risk must be allowed for.</p>
+</li>
+<li><p>Future shareholder transfers in respect of with-profits business to the extent that these are not already allowed for within &#39;own funds&#39; (e.g. the value of shareholder transfers in relation to a future distribution of the estate which has not yet been formally approved by the regulator).</p>
+</li>
+<li><p>The release of the risk margin, after allowing for the cost of holding it.</p>
+</li>
+</ul>
+<p>Under Solvency II, required capital for embedded value will reflect the relevant regulatory constraints and any additional internal capital target. The risk margin is part of technical provisions; its future release can be reflected separately in the EV reconciliation. The SCR and MCR are not interchangeable choices. The &#39;free surplus&#39; component of the EV broadly equates to the consolidated shareholder &#39;own funds&#39; in excess of those required to cover the SCR. The lower PVIF component of the EV under Solvency II means that the EV of many companies will be increasingly similar to the supervisory balance sheet results.</p>
+<p>A simplified bridge helps explain when EV could equal shareholder own funds. Let OF be shareholder own funds after other liabilities and capital-quality adjustments, let RC be required capital, and let V be the value of future shareholder cashflows not already recognised in OF, after allowing for capital costs and other risks. Then:</p>
+<p><strong>Free surplus = OF − RC</strong></p>
+<p><strong>EV = free surplus + RC + V = OF + V</strong></p>
+<p>If V is zero, EV equals shareholder own funds. This is an assumption about the net remaining value adjustments, not a consequence of setting one labelled component to zero.</p>
+<p>For example, suppose OF is 120 and RC is 80. Free surplus is 40. If a separately recognised future risk-margin release has a value of 6 and the relevant capital and risk costs also have a value of 6, V is zero: EV = 40 + 80 + 6 − 6 = 120. If those costs are 8, EV is 118.</p>
+<p>The example shows why the risk-margin release and capital costs must be handled consistently. The risk margin does not automatically equal the economic cost of capital, and must not be counted twice.</p>
+<p>The similarity between the results of EV and Solvency II calculations has led many stakeholders to question whether EV will still be needed in the future, as the &#39;information gap&#39; they filled is now much smaller than it was prior to Solvency II. Some insurers who report on a Solvency II basis have ceased to report on an EV basis, and no longer carry out a regular analysis of change in EV for this reason. Insurers who do continue to produce an EV will likely have aligned their EV reporting process with their Solvency II process.</p>
+<h2 id="section-16">Analysis of change in embedded value</h2>
+<p>When performing an AoC of the EV, the change in free surplus, required capital (where relevant), and PVIF are typically identified separately. In some cases, free surplus and required capital may be combined so that only shareholder net assets are included in the AoC.</p>
+<h3 id="section-17">Components of the analysis of change</h3>
+<p>The change in EV can be separated into the following sources.</p>
+<h4 id="section-18">Return on net assets</h4>
+<p>The return on net assets will not be included in the PVIF and therefore needs to be recognised separately in the AoC.</p>
+<p>The return on net assets should reflect the actual performance achieved on the starting net assets. This may be split into the expected return and the excess of actual return over the expected return. The expected investment return used in this case would be consistent with economic assumptions used to value the in-force business over the year, and with the asset mix of the net assets. For a market-consistent EV, the expected return would be the risk-free rate.</p>
+<h4 id="section-19">Expected return on in-force business</h4>
+<p>This is the expected change in the value of the in-force business over the year.</p>
+<p>The change in value of in-force business would be calculated using the economic and demographic assumptions at the start of the year. The expected return on in-force business can be seen as the unwind of the discount rate on the opening value of the in-force business over the year (i.e. since those future cashflows will be closer in time than at the start of the period, reducing the discounting applied to them). The emergence of an already anticipated surplus transfers value from the in force component to net assets. That transfer alone does not increase EV; the passage of time and the expected return on value are separate effects.</p>
+<h4 id="section-20">Experience variances</h4>
+<p>Experience variances measure the impact of actual versus expected experience over the year.</p>
+<p>This will impact both the surplus emerging during the year and the value of the in-force business at the end of the year. For example, higher than expected surrenders may lead to a decrease in the PVIF.</p>
+<p>These variances may be split into economic and non-economic.</p>
+<h4 id="section-21">Operating assumption changes</h4>
+<p>These measure the impact of changes to the supervisory valuation basis and the embedded value basis. Each change can be identified separately.</p>
+<p>The impact of economic assumption changes may also be identified separately to the impact of changes in non-economic assumptions. Economic assumption changes in the EV projection basis include changes in the risk discount rate. The supervisory valuation basis is needed, in addition to the EV basis, to project the future profits comprising the PVIF component.</p>
+<p>In general, the projection basis will not impact the value of net assets. This is because assets will be taken at market value (or fair value) and liability cashflows will be valued on the supervisory valuation basis (when calculating net assets), meaning that the excess of assets over liabilities is likely to remain unchanged. However, if certain assets are held at amortised cost (e.g. to reflect any &#39;lock-in&#39;) then these will be impacted by changes in the projection basis.</p>
+<h4 id="section-22">New business impacts</h4>
+<p>The contribution from new business written over the analysis period should be assessed by projecting the future profits associated with it, including an appropriate allowance for the full expenses incurred in acquiring the business. Since the EV does not allow for expected future new business, any new business actually written will impact the EV and should be included within the AoC.</p>
+<p>The resultant change in net assets will be the net impact of the following in relation to the new business written:</p>
+<ul>
+<li><p>Premiums received during the analysis period.</p>
+</li>
+<li><p>Expenses incurred during the analysis period (including initial expenses and any subsequent maintenance expenses).</p>
+</li>
+<li><p>The cost of establishing supervisory reserves.</p>
+</li>
+<li><p>Any investment returns earned (on reserves and net cashflows) up to the end of the analysis period.</p>
+</li>
+</ul>
+<p>Prudence in the reserving basis may mean that writing new business leads to a reduction in net assets. However, there will also be an increase in PVIF, reflecting the value of future profits arising from the release of these prudence margins. Overall, business written on profitable terms should increase the EV.</p>
+<p>Where a best-estimate reserving basis recognises future profits immediately, new business value may appear largely in net assets. A zero PVIF still depends on matching boundaries, assumptions, and the treatment of risks and capital costs.</p>
+<h4 id="section-23">Other items</h4>
+<p>Other items which may lead to changes in the EV over the analysis period may include the following:</p>
+<ul>
+<li><p>Model changes.</p>
+</li>
+<li><p>Capital injections.</p>
+</li>
+<li><p>Tax changes.</p>
+</li>
+<li><p>Exceptional expenses.</p>
+</li>
+</ul>
+<p>Items which may impact the net asset component of the EV include the following:</p>
+<ul>
+<li><p>Actual investment return earned on the start-of-period net assets (which may be split between actual and expected).</p>
+</li>
+<li><p>Expected surplus arising (or shareholder transfer) during the analysis period.</p>
+</li>
+<li><p>Experience variances which result in actual surplus arising differing from expected surplus arising.</p>
+</li>
+<li><p>Assumption changes in the supervisory reserving basis.</p>
+</li>
+<li><p>The impact of any new business written during the analysis period.</p>
+</li>
+<li><p>Capital raised (e.g. rights issue).</p>
+</li>
+<li><p>Capital distributed (e.g. dividends paid).</p>
+</li>
+<li><p>Any one-off expenses deducted from net assets.</p>
+</li>
+<li><p>Model changes impacting the valuation of liabilities.</p>
+</li>
+<li><p>Any tax paid from the net assets.</p>
+</li>
+</ul>
+<p>The above simplified analysis may be refined further by showing each movement component split into its separate impact on free surplus, required capital, and PVIF. These are then summed to give the total impact of each component on the EV.</p>
+<p>Changes in the calculation of any solvency capital requirements will also impact the EV. This is due to impacts on the release of any solvency capital requirements (after allowing for any frictional lock-in costs). As such, any changes in these calculations (or their assumptions) should be reflected in the AoC. For some EV calculations (e.g. EEV), the net assets component may be split into free surplus and required capital (which has restricted ability for distribution).</p>
+<p>The &#39;restricted&#39; required capital will be subject to &#39;lock-in&#39; costs which may change over the reporting period. Any change in these &#39;lock-in costs&#39; would need to be reflected in the AoC of the EV.</p>
+<p>Reasons why these &#39;lock-in&#39; costs may change over the period include changes in:</p>
+<ul>
+<li><p>The methodology used to determine the timing of the release of this locked-in capital.</p>
+</li>
+<li><p>The parameters used to project the release of the &#39;locked-in&#39; capital.</p>
+</li>
+<li><p>The parameters used to calculate the related frictional costs.</p>
+</li>
+</ul>
+<p>The required capital component of the EV will also change over the analysis period due to the following:</p>
+<ul>
+<li><p>Investment returns earned on the start of period required capital. In theory, only expected returns should impact required capital and (positive) variances in actual returns on required capital instead represent an increase in free surplus. In practice, however, actual investment returns on required capital remain within the required capital &#39;fund&#39;, so variances in actual experience flow through to the required capital component until released from the required capital fund.</p>
+</li>
+<li><p>Differences between the actual and expected pattern in the release of required capital over the period (e.g. due to higher than expected withdrawals).</p>
+</li>
+<li><p>Differences between actual frictional &#39;lock-in&#39; costs of holding the required capital relative to the costs assumed at the start of the period.</p>
+</li>
+<li><p>Increases in the amount of required capital needed as a result of new business written over the analysis period.</p>
+</li>
+<li><p>Changes in the amount of capital requirements (e.g. due to changes in methodology, calibration, or underlying risk profile).</p>
+</li>
+</ul>
+<h3 id="section-24">Impact of solvency regime on the analysis of change</h3>
+<p>The applicable solvency regime for an insurer can have implications for the EV calculation and, consequently, the AoC in EV.</p>
+<p>In jurisdictions where supervisory reporting is performed on a prudential basis, the emergence of those prudential margins forms the PVIF component of the EV.</p>
+<p>In jurisdictions where supervisory reporting is performed using a best estimate basis for liability valuations (e.g. Solvency II), there would be no release of implicit prudence from that best-estimate component. Whether PVIF is zero also depends on explicit margins, contract boundaries, and differences between the reporting bases. In such circumstances, an AoC in the EV is essentially an AoC in free surplus and required capital, net of the cost of holding that capital. This will involve rolling forward the balance sheet from the start of the year to the end of the year.</p>
+<p>However, even where no prudential margins are expected to emerge on a supervisory valuation basis, it is still possible for an insurer to expect some PVIF from other sources:</p>
+<ul>
+<li><p>Under Solvency II profits expected beyond the Solvency II contract boundaries may be recognised in the PVIF.</p>
+</li>
+<li><p>In some jurisdictions, the EV for with-profits business may include the present value of future shareholder transfers and any interest in the estate as part of the PVIF.</p>
+</li>
+</ul>
+<p>If there is an element of PVIF in the EV, then the AoC needs to model the revised end-of-period PVIF for each roll-forward change. The expected return on the value of in-force business must be included in the EV analysis. Its presentation differs from an analysis of supervisory surplus, which may already include investment return and the unwind of liability discounting.</p>
+<p>To the extent that an explicit margin is expected to be released from the PVIF (e.g. the risk margin under Solvency II), after allowing for the cost of holding it, then any changes in the value of these margins will also need to be included in the EV AoC. The release of any such explicit margins may be included in either the PVIF or the required capital component of the EV.</p>
+<p>In jurisdictions where Solvency II has been implemented, some life insurers no longer report on an EV basis and thus do not perform an AoC in EV. This is because, if the PVIF is zero (or immaterial) under Solvency II, a separate EV analysis may add little information beyond an analysis of surplus, if the remaining valuation and capital-cost adjustments are also immaterial.</p>
+<h2 id="section-25">Customer value</h2>
+<p>Customer value measurement and management relate to the value that is placed on an existing or potential new customer throughout their lifetime.</p>
+<p>Customer value is often monitored through persistency rates. It can also use valuation techniques similar to EV to assess expected future policy purchases through cross-selling or fulfilling customers’ changing needs. These future purchases go beyond the in-force business included in conventional EV.</p>
+<p>Analysis of the impact on customer value of different business decisions (e.g. changes to marketing, distribution, underwriting, product design, or pricing) can help the company to maximise its profits or embedded value. Simulation approaches can be used to achieve this, though the modelling requirements are typically complex. For example, the need to allow for the potential impact of an action on customer behaviour, for which there is typically only limited data or experience on which to base assumptions. Similarly, data will typically be limited with regards to potential future policy purchases. As such, these approaches are typically quite subjective.</p>
+<p>An AoC of the EV can be used to identify drivers of profit or loss at customer-level. Similarly, life insurers with large legacy portfolios or closed funds may perform customer value analysis in order to maximise the profit that can be extracted from that portfolio or fund (subject to treating customers fairly (TCF)).</p>
+<p>Managing customer value is thus a combination of the following:</p>
+<ul>
+<li><p>Persistency management.</p>
+</li>
+<li><p>Maximising cross-selling opportunities.</p>
+</li>
+<li><p>Ensuring that product design reflects changing customer needs over their lifetime.</p>
+</li>
+<li><p>Monitoring and modelling customer behaviours.</p>
+</li>
+<li><p>Applying EV analysis techniques to identify sources of profit or loss at customer level.</p>
+</li>
+</ul>
+</article><nav class="pagination" aria-label="Page navigation"><a href="16-profit-reporting.html">← Profit reporting</a><a href="index.html">Course contents →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Asset–liability management | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a><a href="13-capital-management.html" title="Capital management">Chapter 13</a><a href="14-asset-liability-management.html" aria-current="page" title="Asset–liability management">Chapter 14</a><a href="15-analysis-of-surplus.html" title="Analysis of surplus">Chapter 15</a><a href="16-profit-reporting.html" title="Profit reporting">Chapter 16</a><a href="17-embedded-value.html" title="Embedded value">Chapter 17</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 14</div><article><h1>Asset–liability management</h1>
+<p>Asset–liability management is concerned with how an insurer’s assets and liabilities behave together. The aim is to derive an investment strategy that takes account of the insurer’s obligations, available capital, and attitude to market risk.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">Investment principles</a></li><li><a href="#section-2">Aim of asset-liability management</a></li><li><a href="#section-3">Principles and processes</a></li><li><a href="#section-12">Derivatives</a></li></ul></nav></details>
+<h2 id="section-1">Investment principles</h2>
+<p>For most life insurance companies, market risk is the most significant exposure and hence asset-liability management (ALM) is important to help manage this exposure.</p>
+<p>The basic investment principle of a life insurer is expressed as follows:</p>
+<p><em>“To maximise investment return, subject to meeting all contractual obligations and obligations to treat customers fairly and recognising the uncertainties involved and the overall risk that the shareholders (of proprietary companies), regulators, and policyholders are prepared to tolerate.”</em></p>
+<p>The more closely a company matches their liabilities with assets of similar terms, amounts, types (including risk exposures), and currencies, the more likely it will be able to meet its contractual liabilities as they fall due.</p>
+<p>The extent of any divergence from a matched position will largely depend on the degree of risk the company is prepared to take and any disclosure made to policyholders that may force the company to depart from a matched position.</p>
+<p>Two important disclosures that may force an insurer to depart from a matched position include the following:</p>
+<ul>
+<li><p>The company’s customer-facing literature on its with-profits fund will provide an indication of future investment strategy. In particular, a company must disclose the degree of matching to be maintained between assets and liabilities, and this may not be a fully matched position.</p>
+</li>
+<li><p>The company’s policy on the use and control of derivatives may restrict their ability to match certain liabilities (e.g. guaranteed equity products and guaranteed annuity options).</p>
+</li>
+</ul>
+<h2 id="section-2">Aim of asset-liability management</h2>
+<p>The main aim of ALM is to derive an investment strategy that takes into account the insurer’s attitude to market risk (i.e. the extent to which it is prepared to risk suffering losses due to adverse economic and investment market conditions).</p>
+<p>This attitude will vary depending on how strong the insurer is in terms of their available capital (which can be assessed using realistic capital) and its level of risk diversification.</p>
+<p>The insurer will need to clearly define the extent to which it is prepared to deviate from a matched position. The chosen level of acceptable deviation is known as the &#39;risk budget&#39;.</p>
+<p>An insurer needs to decide whether to match assets to liabilities on a best-estimate or a regulatory basis. Even perfect cashflow matching on a realistic basis will not necessarily match for <em>reported</em> liabilities. For example, liability values on a Solvency II balance sheet may benefit from a volatility adjustment, which is based on a hypothetical portfolio of assets rather than the assets actually held by the insurer. Additionally, movements in the full balance sheet may still be observed under a perfectly matched position due to movements in solvency capital requirements.</p>
+<p>A company&#39;s ALM strategy should also aim to examine alternative investment strategies (which may incorporate both physical asset and derivative strategies) so that they can be assessed on their suitability and level of risk. To do this, some quantitative measure of assessment must be chosen (e.g. the probability of free capital dropping below zero at any time over the next 5 years). In practice, ALM strategy will not be set in isolation of other elements of business strategy, so model office projections are needed in setting a company&#39;s overall financial management. Such projections also form a key part of a company&#39;s own risk and solvency assessment (ORSA).</p>
+<p>In addition to setting strategic asset allocation and hedging strategy, the ALM team are also responsible for carrying out ALM risk management. This will include, for example, monitoring and rebalancing investments so that they conform to the chosen ALM strategy.</p>
+<h2 id="section-3">Principles and processes</h2>
+<h3 id="section-4">Principles of ALM</h3>
+<p>An insurer must understand and evaluate both their contractual and non-contractual (e.g. treating customers fairly (TCF), future with-profits bonuses, non-linked surrender values, etc) liabilities.</p>
+<p>To achieve this, policy projections are required.</p>
+<p>Actual asset performance and changes in market conditions may influence management decisions and will affect the payouts for some types of policy (e.g. with-profits).</p>
+<p>Where policy projections are performed using deterministic models for with-profits business, it is important to set bonus assumptions appropriately. For example, if bonus rates would be reduced from their present level under the investment assumptions used then the company should use bonus assumptions starting at their current level and falling gradually to be consistent with investment assumptions. Such projections are useful in showing whether available capital will be significantly squeezed by the need to smooth bonus rates (to satisfy TCF requirements), or how quickly bonus rates would need to fall under adverse market conditions (which could then be reflected in sales literature).</p>
+<p>Where policies include investment guarantees, a stochastic model may be necessary to appropriately value these.</p>
+<h3 id="section-5">Matching</h3>
+<p>Asset-liability matching requires not only that there is sufficient money available in total to meet liabilities, but also that cashflows arise so that this money is available at the right time to cover liabilities.</p>
+<h4 id="section-6">Without-profits business</h4>
+<p>For without-profits business, it is relatively straightforward to match cashflows, but difficulties may arise where suitable assets do not exist or are of limited availability.</p>
+<p>Asset availability can be a particular issue when matching long-term cashflows, since there may be limited availability of long-term bonds at a reasonable price.</p>
+<p>The existence of guaranteed surrender values also poses an issue, since the unknown timing of surrenders can make it difficult to determine what duration bonds should be used to match the liabilities. A duration mismatch may give rise to interest rate risk (since selective withdrawals may increase if the insurer bought bonds to match the maturity duration of the liabilities and interest rates subsequently rose, leading to selective surrenders). Derivatives may pose a solution to this issue, but they can be costly to manage on a small scale.</p>
+<p>Historically, insurers faced difficulties in obtaining assets to match deferred annuities, since this requires very long-term assets. However, in countries with a deep and liquid swaps market (e.g. the UK), swaps can help match their interest-rate exposure. Longevity and other non-financial risks remain. Private credit, infrastructure projects, and equity release mortgages (ERMs) can also provide long-duration cashflows for business such as annuities. Duration alone does not establish a close match: credit risk, repayment uncertainty, guarantees, and liquidity also matter.</p>
+<h4 id="section-7">With-profits business</h4>
+<p>For with-profits business, matching becomes more difficult due to the discretionary element in benefits and because of promises made in sales literature (e.g. that some premiums will be invested in equities, which do not have a maturity date and will therefore not match liabilities by term).</p>
+<p>The split between regular bonuses and the terminal bonuses will affect the pace at which guarantees accumulate on policies, and will thus influence matching requirements.</p>
+<p>Stochastic modelling may help with-profits funds to identify the optimum levels of matching and the extent to which a company can mismatch.</p>
+<p>The steps for doing this would include the following:</p>
+<ul>
+<li><p>Specify the model. Decide the variables to model stochastically. Allow for correlations/interactions between stochastic variables. Choose the remaining (deterministic) model parameters. Calibrate the stochastic parameters (e.g. to realistic market or real world long-term expectations). Choose the output distribution (e.g. the loss distribution). Decide whether to include new business.</p>
+</li>
+<li><p>Create model points.</p>
+</li>
+<li><p>Set the basis.</p>
+</li>
+<li><p>Choose the projection horizon and time-step.</p>
+</li>
+<li><p>Set the criterion for judging outcomes (e.g. maximise maturity values subject to an acceptably low risk of insolvency).</p>
+</li>
+<li><p>Project cashflows (using simulations for stochastic variables) for various possible investment strategies.</p>
+</li>
+<li><p>Compare outcomes against pre-specified criteria to assess which is optimal.</p>
+</li>
+<li><p>Sensitivity test the outcomes.</p>
+</li>
+</ul>
+<h4 id="section-8">Variable annuity business</h4>
+<p>Asset-liability matching decisions can be very complex for variable annuity business, for which guarantees are often hedged dynamically using futures, swaps, and options.</p>
+<p>Nested stochastic projections may be needed to determine the hedging strategy most suited to matching the risk exposures of these liabilities. A stochastic model is needed to project asset and liability values over time but, at each future time, a second stochastic model will be needed to value complex options and guarantees embedded in the liabilities.</p>
+<h4 id="section-9">Unit-linked business</h4>
+<p>Asset-liability matching is less difficult for unit-linked business, since the unit liability can generally be matched by holding the corresponding units. Charges, expenses, additional benefits, and guarantees still create risks for the insurer.</p>
+<p>As such, stochastic investment models are less likely to be used, though unit-linked companies are still likely to use sensitivity analysis or scenario testing to investigate the effect of different scenarios on charges. They will also use model office projections to plan capital requirements.</p>
+<p>If such analyses indicate that the profitability of existing business is very badly affected under plausible falls in asset values then the following actions could be taken:</p>
+<ul>
+<li><p>Warn policyholders that such scenarios would require increases in charges (if this is consistent with TCF and policyholders&#39; reasonable expectations).</p>
+</li>
+<li><p>Sell on the future charges to a reinsurer (if the reinsurer&#39;s loadings are not too large) or even sell the whole portfolio of business.</p>
+</li>
+<li><p>Use shareholder funds to purchase suitable derivatives to protect against the risk (e.g. put options on an index of similar assets).</p>
+</li>
+<li><p>Invest funds more defensively (though this is unlikely to be consistent with TCF or policyholders&#39; reasonable expectations).</p>
+</li>
+</ul>
+<h4 id="section-10">Index-linked business</h4>
+<p>To match liabilities linked to an investment index, an insurer can invest in line with the index or can try to replicate the performance of the index using a much smaller selection of stocks.</p>
+<p>Matching liabilities that are linked to an economic index can be more difficult. For example:</p>
+<ul>
+<li><p>Matching a country&#39;s price inflation index is partially achieved by investing in index-linked government bonds (though the time lag used in determining payments stops this being a perfect match).</p>
+</li>
+<li><p>Matching a country&#39;s wage inflation index can be more difficult, since it is unlikely that there will be bonds that are linked to this. Equities may provide a reasonable match over the long-term, but their short-term volatility may be problematic.</p>
+</li>
+<li><p>The inflation hedging of liabilities with caps and floors is particularly challenging, but may be possible by use of derivatives.</p>
+</li>
+</ul>
+<p>Guaranteed minimum maturity values may be matched using a combination of government bonds plus call options on the underlying index (or a security linked to the index plus put options on the index).</p>
+<h3 id="section-11">The process</h3>
+<p>Stochastic modelling is a powerful tool for determining and testing management rules of asset-liability matching and for advance planning for changes in conditions or strategies.</p>
+<p>Companies may identify situations that pose a threat to their solvency and implement contingencies for such circumstances.</p>
+<p>It is vital that the user of such a model is aware of their limitations and any inherent shortcomings in the results. A considerable number of assumptions are required in a stochastic model, including the choice of asset model and calibration assumptions. Care must be taken to understand which assumptions are likely to be critical and the impact of the model/methodology used.</p>
+<p>For many purposes, market-consistent bases will be used in these models. However, for ALM purposes, there will also be a need for real-world bases to project asset returns. It is important that management actions which would not be taken in practice are not modelled within these models. Otherwise, the model may give a false sense of matching. For products with guarantees, such as variable annuities, the impact of dynamic lapse behaviour relative to the moneyness of the guarantees is important to model.</p>
+<p>The projections from both the asset model and the liability model will be based on simulations produced by an economic scenario generator (ESG). The ESG may output macroeconomic variables (e.g. nominal and real interest rates, inflation rates, etc) and simulations of asset returns for certain asset classes (e.g. equities, commercial property, corporate bonds of different credit ratings, etc). The power of ESGs comes from their ability to model the joint behaviour of economic variables in a coherent fashion. ESGs may be calibrated on a risk-neutral or real-world basis. The latter is needed to produce, for example, confidence intervals using real-world probabilities.</p>
+<p>In addition to stochastic modelling, time-zero stress tests may also be used to assess immediate risks. When conducting such tests, it is important to note that risk exposures can change significantly over time as both liabilities and assets mature.</p>
+<h2 id="section-12">Derivatives</h2>
+<p>Many insurers use derivatives as an integral part of their ALM strategy.</p>
+<p>Reasons for holding derivatives include the following:</p>
+<ul>
+<li><p>To reduce the risk of losses (e.g. as an alternative to using physical assets, perhaps when such assets are not available).</p>
+</li>
+<li><p>To release capital available for other uses by reducing regulatory capital requirements. For example, holding put-options within a with-profits fund may reduce the Solvency II SCR.</p>
+</li>
+<li><p>To stabilise the overall balance sheet (e.g. hedging the SCR or Risk Margin under Solvency II). Insurers may choose to hedge interest rate risk within their full technical provisions, including the Risk Margin (which is itself sensitive to interest rates) to reduce the overall Solvency II balance sheet volatility.</p>
+</li>
+<li><p>To reduce tax or investment costs (i.e. if it is cheaper to deal in derivatives, rather than the underlying).</p>
+</li>
+<li><p>To more effectively or efficiently acquire or dispose of rights in relation to assets. For example, going short in equity futures provides an immediate reduction in exposure to equity movements whilst allowing the actual assets to be sold more gradually over time.</p>
+</li>
+<li><p>To hedge risks associated with guarantees (e.g. for variable annuities, guaranteed equity bonds, and with-profits contracts) and thus help to meet claims in the presence of these guarantees.</p>
+</li>
+</ul>
+<p>Derivatives may sometimes be held on a static basis to protect against a specific severe adverse scenario that only arises in limited circumstances. For example:</p>
+<ul>
+<li><p>Put options on the country’s main equity index may be held to protect against large falls in equity values.</p>
+</li>
+<li><p>Interest rate swaptions may be held to protect against the future cost of guaranteed annuity rates.</p>
+</li>
+<li><p>Longevity swaps or other longevity-linked instruments may be used to protect against mortality improvements on an annuity portfolio being significantly greater than anticipated. If the reference population differs from the insured population, basis risk remains.</p>
+</li>
+</ul>
+<p>Like with physical asset strategies, consideration should also be given to residual risks (e.g. counterparty, liquidity, operational, etc) introduced by derivative strategies. Basis risk should also be considered.</p>
+<p>Companies should consider any local regulatory restrictions on the use of derivatives.</p>
+</article><nav class="pagination" aria-label="Page navigation"><a href="13-capital-management.html">← Capital management</a><a href="15-analysis-of-surplus.html">Analysis of surplus →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>

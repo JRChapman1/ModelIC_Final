@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Capital management | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a><a href="13-capital-management.html" aria-current="page" title="Capital management">Chapter 13</a><a href="14-asset-liability-management.html" title="Asset–liability management">Chapter 14</a><a href="15-analysis-of-surplus.html" title="Analysis of surplus">Chapter 15</a><a href="16-profit-reporting.html" title="Profit reporting">Chapter 16</a><a href="17-embedded-value.html" title="Embedded value">Chapter 17</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 13</div><article><h1>Capital management</h1>
+<p>Capital management involves considering both the capital required to support a business and the capital available to meet that requirement. The answer will depend on the risks the insurer faces, its plans for the future, and the perspective from which capital strength is viewed.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">Capital requirements</a></li><li><a href="#section-2">Reasons for projecting solvency</a></li><li><a href="#section-3">Available capital</a></li><li><a href="#section-7">Assessing ongoing solvency</a></li><li><a href="#section-14">The relationship between risk, capital, and economic value</a></li><li><a href="#section-15">Methods of managing the capital position</a></li></ul></nav></details>
+<p>The Solvency II examples build on chapters 9–10. UK requirements have diverged under Solvency UK; the economic principles discussed here apply more broadly.</p>
+<h2 id="section-1">Capital requirements</h2>
+<p>In assessing the capital position of a company, it is necessary to consider the perspective from which capital strength should be viewed. This will normally be from the perspective of the policyholders, regulator, or shareholders.</p>
+<p>Typically, policyholders and regulators are most interested in the company’s ability to meet their obligations under extreme adverse circumstances. Shareholders, however, may also be concerned about whether the company has sufficient capital to achieve a particular credit rating and/or to continue writing business going forwards.</p>
+<p>The most onerous perspective will vary from company to company. For some companies, shareholders will require more capital than the regulator. For others, the opposite may be true. Which perspective is most onerous will depend on the nature of the business in force, the company&#39;s risk appetite, and their plans for the future.</p>
+<p>When thinking about capital, it is necessary to distinguish between the following:</p>
+<ul>
+<li><p>The capital required to support the business (i.e. the required capital).</p>
+</li>
+<li><p>The capital available to meet this requirement (i.e. the available capital).</p>
+</li>
+</ul>
+<p>In the context of insurance, available capital is defined as the difference between the value of assets and liabilities. However, this definition still requires the definition of asset and liability values to be clarified. Associated capital requirements (e.g. the Solvency Capital Requirement (SCR)) would not normally be included in the value of liabilities for this purpose but, instead, would be regarded as the capital which the available capital needs to cover.</p>
+<p>Depending on the type of company, the available capital may be interpreted in different ways:</p>
+<ul>
+<li><p>For a proprietary insurance company, the available capital is a measure of the shareholders&#39; capital currently invested in the company.</p>
+</li>
+<li><p>The interpretation of available capital is less clear for with-profits funds, since excess assets cannot normally be used to support business outside of the fund.</p>
+</li>
+<li><p>Within a mutual insurance company, whilst the entire company theoretically belongs to its policyholders, the available capital is more likely to be regarded as the capital required to support the corporate entity. The available capital is therefore not earmarked for distribution to the current generation of policyholders.</p>
+</li>
+</ul>
+<p>Required capital represents the level of assets required in excess of liabilities so that policyholder claims (or shareholder requirements) can be met with a high degree of certainty when they fall due.</p>
+<p>There are various types of required capital assessments.</p>
+<p>Three common types include the following:</p>
+<ul>
+<li><p><strong>Economic capital:</strong> An internal determination of the capital required based on a company&#39;s risk profile, risk appetite, and the needs of its ongoing business strategy.</p>
+</li>
+<li><p><strong>Regulatory capital:</strong> Solvency requirements prescribed by regulators, which define the regulatory value of a company&#39;s assets, liabilities, and the associated capital requirements.</p>
+</li>
+<li><p><strong>Rating agency capital:</strong> This represents the view of rating agencies, whose capital adequacy standards are important for companies who wish to achieve or maintain a particular credit rating.</p>
+</li>
+</ul>
+<p>All three of these approaches to assessing capital consider policyholder protection to some extent, since there is a link between an insurer&#39;s ability to meet policyholder claims as they fall due and the broader risk appetite of the company.</p>
+<p>The main reasons for a life insurance company requiring capital can be split into the following two broad categories:</p>
+<ul>
+<li><p><strong>Risk capital:</strong> The capital required to cover the day-to-day risks to which a company is exposed.</p>
+<p>Such risks include the following:</p>
+<ul>
+<li><p>Market risk.</p>
+</li>
+<li><p>Credit risk.</p>
+</li>
+<li><p>Insurance risk (e.g. mortality, persistency, expenses, etc).</p>
+</li>
+<li><p>Operational risk (e.g. outsourcing, terrorism, malicious damage, system failures, etc).</p>
+</li>
+<li><p>Liquidity risk.</p>
+</li>
+<li><p>Group risk.</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Working capital:</strong> The capital required to support the ongoing business strategy of the company.</p>
+<p>This includes activities such as the following:</p>
+<ul>
+<li><p>Funding new business, including the cost of attracting support from intermediaries (by demonstrating financial strength to intermediaries).</p>
+</li>
+<li><p>Funding overheads and development costs of organic expansion (e.g. computer hardware and software, product development, head office and branch premises, and overseas initiatives).</p>
+</li>
+<li><p>Acquiring other companies or blocks of business.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>A company’s need for capital could be exacerbated by any of the following:</p>
+<ul>
+<li><p>The costs of regulatory fines.</p>
+</li>
+<li><p>Restrictions on product design (e.g. caps on product charges).</p>
+</li>
+<li><p>Market conditions (e.g. low or negative interest rates).</p>
+</li>
+<li><p>Improvements in annuitant longevity.</p>
+</li>
+<li><p>Implications of treating customers fairly.</p>
+</li>
+<li><p>Increasing competition (e.g. fund management groups).</p>
+</li>
+<li><p>Changing distribution patterns.</p>
+</li>
+</ul>
+<p>Companies that fall within Solvency II (or similar regimes) are now required to look at all risks to which the company is exposed as part of the own risk and solvency assessment (ORSA), or equivalent. This has made companies increasingly aware of the capital employed in the business and the need to manage this capital (and the return on it) more effectively.</p>
+<h2 id="section-2">Reasons for projecting solvency</h2>
+<p>Reasons why an insurer&#39;s ability to project their solvency is fundamental to its successful management include the following:</p>
+<ul>
+<li><p>To understand and monitor the evolution of their risk profile.</p>
+</li>
+<li><p>To assess the impact of key business strategy decisions on solvency and, in particular, to show the amount of new business strain (and hence new business volumes) that can be supported by the available capital.</p>
+</li>
+<li><p>To prepare run-off plans for with-profits funds that are closed or in decline.</p>
+</li>
+<li><p>To estimate the pattern of capital releases and hence to assess whether the company is achieving a suitable return on their capital.</p>
+</li>
+<li><p>To assess the cost of holding required capital when assessing the embedded value of the company.</p>
+</li>
+<li><p>To satisfy statutory requirements (e.g. the ORSA requirement, the projections needed for the risk margin and capital assessment, etc).</p>
+</li>
+<li><p>To assist in the successful risk management of the company (e.g. assessing the circumstances under which a particular regulatory requirement would be breached and how to mitigate the risk of such an event).</p>
+</li>
+</ul>
+<h2 id="section-3">Available capital</h2>
+<p>In an insurance company, the available capital is the difference between the value of assets and liabilities. However, the definition of asset and liability values needs to be clarified since it may differ between economic, regulatory, and rating agency assessments.</p>
+<h3 id="section-4">Sources of available capital</h3>
+<p>For a proprietary company, the central source of the available capital will be the initial capital put in by the proprietors.</p>
+<p>Over time, this may have been augmented due to the following:</p>
+<ul>
+<li><p>Additional amounts subsequently subscribed by shareholders or invested through subordinated loan stock.</p>
+</li>
+<li><p>Profits being retained within the company (including profits from without-profits business on which shareholders are entitled to 100% of all surplus).</p>
+</li>
+<li><p>Consistent under-distribution of surplus in respect of past generations of with-profits policyholders (although if this remains in a with-profits fund then this may not be attributable to shareholders).</p>
+</li>
+</ul>
+<p>Conversely, the amount of available capital may have depleted over time due to the following:</p>
+<ul>
+<li><p>Distributions of capital to shareholders as dividends.</p>
+</li>
+<li><p>Losses being incurred on without-profits business (on which shareholders are liable for 100% of losses).</p>
+</li>
+<li><p>Consistent over-distribution of surplus in respect of past generations of with-profits policyholders.</p>
+</li>
+</ul>
+<p>In a proprietary company, with-profits business is commonly written on a 90/10 fund whereby surplus arising on the fund is split in a set proportion of 90% to 10% between policyholders and shareholders.</p>
+<p>The existence of capital within the fund which has built up from under-distribution to past generations of policyholders (i.e. the &#39;inherited estate&#39;) raises an important question of ownership. The rules and procedures relating to the intended management of the inherited estate and its potential uses, together with its target size in relation to the company&#39;s current business, should be made available to policyholders in any customer-facing literature.</p>
+<p>The rules and uses to which the inherited estate may be put are an area of ongoing debate, but uses in practice have included the following:</p>
+<ul>
+<li><p>Aiding investment flexibility for the with-profits fund.</p>
+</li>
+<li><p>Helping to meet regulatory capital requirements.</p>
+</li>
+<li><p>Paying tax incurred by the fund on distributions to shareholders.</p>
+</li>
+<li><p>Covering over-runs on existing and new business expenses.</p>
+</li>
+<li><p>Helping to support smoothing flexibility.</p>
+</li>
+</ul>
+<p>Insurers are under close scrutiny to ensure that their overall capital management approach for with-profits funds fairly balances the interests of different generations of with-profits customers.</p>
+<p>The inherited estate is broadly equal to the part of the with-profits fund in excess of the amount required to meet the realistic liabilities and which the insurer has decided to retain. An insurer might choose to retain some of the with-profits fund for commercial reasons (e.g. to build a strong capital base to attract future generations of policyholders, to help fund future growth plans, etc). The inherited estate provides working capital for the with-profits fund.</p>
+<p>Proprietary companies would view some (or all) of the inherited estate as money that could be given to shareholders. However, with-profits policyholders may expect this capital to remain within the fund to provide security to policyholders and support greater investment freedom.</p>
+<p>Provided that the local regulator is satisfied that the interests of existing policyholders are not being harmed, companies may be allowed to transfer (or at least earmark) part of their inherited estate to shareholders. To ensure that the interests of existing policyholders are protected, it will likely be required that the assets of the company remain materially above the current asset shares (plus the expected cost of guarantees) so that benefits can be smoothed without excessive risk. The estate retained in the with-profits fund should also be sufficient to meet regulatory capital requirements.</p>
+<p>A lock-in period may be specified as part of such an arrangement, during which assets earmarked to shareholders cannot actually be transferred to shareholders&#39; funds. The rules setting out the process for transferring part of the inherited estate to shareholders may involve the approval of the legal system in that jurisdiction.</p>
+<h4 id="section-5">Mutual companies</h4>
+<p>The available capital of a mutual company will typically stem from the following sources:</p>
+<ul>
+<li><p>Any initial (or, in rare cases, subsequent) capital injections into the company.</p>
+</li>
+<li><p>Any consistent under-distribution of surplus in respect of past generations of policyholders (which will often not be deliberate, but rather a consequence of imprecise calculation methods).</p>
+</li>
+</ul>
+<p>It is important to recognise that (like with proprietary companies) the availability of capital can be viewed from both a regulatory and realistic perspective.</p>
+<p>Most mutuals operate on the basis that the available capital within the company does not belong to any particular generation of policyholders but, instead, is there to support the company as an &#39;entity&#39;. For this reason, this approach to running a mutual is known as the &#39;entity approach&#39;.</p>
+<p>The amount of available capital in a mutual will vary due to the effects of smoothing.</p>
+<p>As in the case of a proprietary company, the available capital of a mutual is referred to as the &#39;inherited estate&#39; (or, in some cases, the &#39;orphan estate&#39;). Whether a mutual needs all of this available capital is a topic of debate in the context of demutualisation. It is controversial whether a demutualising mutual should allow new shareholders to benefit directly from the inherited estate. Whilst current policyholders may have a weak claim to the inherited estate, new shareholders in a demutualisation have no claim at all.</p>
+<h3 id="section-6">Assessing available capital</h3>
+<p>Techniques for assessing the available capital (i.e. the difference between the values of assets and liabilities) have evolved in recent years.</p>
+<p>The traditional approach of valuing liabilities based on an expected earned rate of return on assets can lead to advance credit being taken for any risk premium included in the return (and so these approaches may not be suitable). It is important to ensure consistency between the approaches used to value assets and liabilities.</p>
+<p>One commonly used measure of asset and liability values is their market value. The market value of assets can usually be directly observed, but the value of liabilities will need to be estimated using market-consistent techniques. The difference between asset and liability values calculated on this basis can be referred to as &#39;realistic capital&#39; or &#39;realistic available capital&#39;.</p>
+<p>Under a market-consistent valuation, liability cashflows (which are not normally traded) are, in theory, valued in line with the traded assets they most closely resemble.</p>
+<p>For example:</p>
+<ul>
+<li><p>A fixed liability due in ten years would be valued in line with a 10-year zero-coupon bond.</p>
+</li>
+<li><p>An embedded financial option within a liability would be valued in line with the market price of a similar traded option.</p>
+</li>
+</ul>
+<p>For cashflows where no exact traded price exists, market-consistent valuations employ a combination of option pricing techniques and interpolation/extrapolation between/from the prices available to arrive at a value. This is done in a way that ensures no arbitrage is introduced, so that switching between asset classes does not appear to create value (i.e. changing the backing assets alone should not change the value of a fixed liability; where benefits depend on asset performance, that dependence must be modelled).</p>
+<p>In practice, a number of short cuts and alternative approaches (e.g. certainty equivalent valuation, risk-neutral valuation, and state-price deflators) are used to make the valuation process easier. These approaches may obscure the process, but are nonetheless market-consistent if they value cashflows in line with market prices. A certainty-equivalent projection can simplify valuation where the cashflows are sufficiently linear. Financial options and guarantees generally need a separate allowance for their time value. &#39;State-price deflators&#39; are effectively stochastic discount factors which enable values to be presented using real-world expectations, rather than &#39;risk-neutral&#39; expectations.</p>
+<p>The use of market-consistent valuation techniques ensures that market and credit risks are appropriately allowed for in the valuation of the liabilities.</p>
+<p>However, insurance cashflows are also subject to non-market risks (e.g. variations in mortality or lapses). The appropriate allowances for such risks when estimating the market value of liabilities is a complex area since consideration needs to be given to the distribution of losses that might occur from such risks.</p>
+<p>Economic theory indicates that an appropriate starting point for valuing such risks is a set of best estimate assumptions. This is just a starting point because, in practice, someone accepting such a liability is likely to require some compensation for the risk that experience might be worse than expected. Margins are therefore likely to be included in the insurance-related assumptions (or some other form of risk margin applied), leading to a higher liability value than would be obtained using best estimate assumptions.</p>
+<p>Realistic available capital is a useful economic measure of available capital from both a policyholder and shareholder perspective.</p>
+<p>From a policyholder viewpoint:</p>
+<ul>
+<li><p>Its calculation captures the value of all the net assets available to meet policyholder claims and uses a realistic value of all existing liabilities.</p>
+</li>
+<li><p>It captures the interaction between asset and liability values (and between these values and movements in the market), so the distribution of the realistic capital helps measure policyholder exposure to downside risk.</p>
+</li>
+<li><p>Projecting whether realistic capital remains positive helps assess the ability to meet claims. The insurer must also have sufficient liquidity to pay claims when they fall due.</p>
+</li>
+</ul>
+<p>From a shareholder perspective:</p>
+<ul>
+<li>It can be used to define the shareholder capital that is actually locked in the company (though for with-profits funds, this will also require the determination of ownership of any available capital).</li>
+</ul>
+<p>Companies writing with-profits business need to include appropriate dynamic approaches to setting bonus rates, allowing for the need to treat customers fairly. There will also often be a public commitment to a particular approach to management (e.g. the Principles and Practices of Financial Management (PPFM) in the UK) of their with-profits funds, which will need to set out approaches to changes in bonus rates and management under extreme conditions. Such modelling will need to allow for interactions between the liabilities and assets of the company and is likely to involve stochastic modelling techniques.</p>
+<h2 id="section-7">Assessing ongoing solvency</h2>
+<p>The capital requirements of a life insurance company cannot be assessed adequately by simply considering the current value of liabilities and the assets available to meet them.</p>
+<p>Instead, insurers also need information on their projected solvency that allows appropriately for both of the following:</p>
+<ul>
+<li><p>The size and probability of downside risks. Life insurers operate in sometimes volatile environments (typically in relation to market risk elements) and companies’ need to be resilient to this drives the need for capital.</p>
+</li>
+<li><p>The capital needed to support their future new business strategy. Companies also need capital to fund their ongoing business strategy.</p>
+</li>
+</ul>
+<p>With-profits business has features that can reduce the probability of future insolvency.</p>
+<p>Reasons for this include the following:</p>
+<ul>
+<li><p>In the short-term, the solvency capital requirements should protect the company against most changes in investment conditions.</p>
+</li>
+<li><p>In the longer-term, the company can reduce future discretionary bonuses to absorb some adverse experience, subject to guarantees and commitments to policyholders.</p>
+</li>
+</ul>
+<p>However, the probability of future <em>regulatory</em> insolvency should not be ruled out.</p>
+<h3 id="section-8">Economic capital</h3>
+<p>Economic capital is an internal assessment (which allows for the company&#39;s ongoing business strategy) of the value of assets in excess of liabilities so that (allowing for all risks) claims can be met with a high degree of certainty.</p>
+<p>This can be calculated by determining the realistic available capital over a number of scenarios, which may be performed stochastically or by using stress tests. A stochastic approach is commonly used to assess market and credit risks by calculating the realistic capital across a large number of &#39;real world&#39; economic scenarios. This approach can also be used for other risks when a distribution of the possible outcomes is available (e.g. using stochastic mortality to model longevity risks in annuity portfolios). Where the distribution of a particular risk is less clearly understood, the impact is commonly assessed by applying stress tests to the realistic available capital.</p>
+<p>The impact of inter-dependencies between the various risks will need to be assessed in order to determine the overall economic capital requirement for the company.</p>
+<p>Regardless of the calculation approach used, it is key to consider the appropriate time horizon over which economic capital requirements should be calculated. Some companies consider a one-year horizon, whilst others consider the horizon of the full run-off of their in-force book. If the risks to which a company is exposed can be managed through the capital markets then it can make sense to use a shorter time horizon on the assumption that these risks can be hedged. Conversely, where risks cannot be hedged, companies may wish to use a long-term time horizon.</p>
+<p>Prior to the introduction of Solvency II in the EU, many of the larger European insurers were already using economic capital to help manage the business. Under Solvency II, the own risk and solvency assessment (ORSA) requires an assessment of overall solvency needs. It does not prescribe a separate economic capital model or itself calculate a regulatory capital requirement. See <a href="https://www.eiopa.europa.eu/rulebook/solvency-ii-single-rulebook/article-2128_en">Article 45</a>. Insurers in many other jurisdictions are also required to produce an ORSA (or equivalent).</p>
+<h3 id="section-9">Regulatory capital</h3>
+<p>Regardless of the outcome of any economic capital calculation, an insurer must be able to meet their regulatory capital requirements.</p>
+<p>Despite the greater risk-sensitivity of many regulatory regimes nowadays, regulatory capital requirement calculations may target a different measure (and level) of security for policyholders than any internal economic capital calculations. For example, economic capital calculations may allow for premiums beyond any applicable contract boundaries.</p>
+<p>Any regulatory requirement to undertake an ORSA may include a solvency capital projection which may be equivalent (or similar) to an internal economic capital assessment.</p>
+<h3 id="section-10">Rating agency capital</h3>
+<p>The financial strength rating obtained by a company can drive their costs of raising additional capital and may also affect the insurance market&#39;s willingness to do business with the company.</p>
+<p>It can, therefore, be important for insurers to understand the capital adequacy standards applied by rating agencies. In recent years, these capital adequacy standards have moved to use economic capital measures and other internal assessments of capital requirements.</p>
+<h3 id="section-11">Modelling</h3>
+<h4 id="section-12">Practical considerations</h4>
+<p>Some forms of solvency projection - particularly those performed for regulatory purposes - can raise practical difficulties since they may involve nested stochastic calculations.</p>
+<p>The nested stochastic models needed might include the following:</p>
+<ul>
+<li><p>A model of future investment and insurance conditions. The stochastic models used for this would be based on real-world probabilities, since we want to project what will happen to assets and liabilities in the future (the &#39;outer model&#39;). Such models may project a variety of factors, such as investment returns, interest rates, inflation, withdrawals, and claims.</p>
+</li>
+<li><p>A model to calculate the regulatory balance sheet at future points in time under the simulated future insurance conditions (the &#39;inner model&#39;). However, in the presence of options and guarantees, this model may also need to be stochastic. Stochastic valuation of assets or liabilities would usually be done using risk-neutral probabilities.</p>
+</li>
+</ul>
+<p>Due to practical considerations (including the short timescales for Solvency II reporting), it is often desirable to simplify calculations in some way to avoid the need for nested stochastic calculations. One technique used is the use of closed-form solutions to value assets and liabilities. Another technique is to use proxy models such as replicating portfolios.</p>
+<h4 id="section-13">Proxy models</h4>
+<p>Proxy models (also known as &#39;light models&#39;) can use various statistical techniques to construct a simplified approximation of the &#39;heavy&#39; (i.e. full) model.</p>
+<p>Techniques used by such models include:</p>
+<ul>
+<li><p>Curve-fitting.</p>
+</li>
+<li><p>Kriging (a form of multi-dimensional interpolation, modelled by Gaussian processes).</p>
+</li>
+<li><p>Replicating portfolios.</p>
+</li>
+</ul>
+<p>A proxy model should reproduce the results of the heavy model to an acceptable degree of approximation whilst being simple enough to nest within stochastic simulations.</p>
+<p>Under the replicating portfolio approach to proxy modelling, assets are chosen that closely replicate the behaviour of the liabilities. These replicating assets are often easier to model than the liabilities they represent. However, in practice it can be difficult to find assets that replicate the liabilities sufficiently well (e.g. due to non-market risks such as mortality/longevity).</p>
+<p>For example, a curve-fitting approach based on two risk factors (<em>x</em> and <em>y</em>) may use a polynomial model of the form:</p>
+<p><strong>f(x, y) = a₁x + a₂x² + a₃y + a₄y² + a₅xy + a₆x²y + a₇xy² + a₈x²y²</strong></p>
+<p>Here, the <em>aᵢ</em> values are constants that need to be fitted.</p>
+<p>In practice, such a model would use far more risk factors (e.g. 10 to 20) and would include higher order terms (perhaps up to fourth order). However, the more risk factors used (and the higher the order of the polynomial used) the more complex the model becomes, which defeats the point of using a proxy model.</p>
+<p>The process for using a proxy model is as follows:</p>
+<ul>
+<li><p>An insurer must first choose their preferred type of proxy model and identify the key risk factors on which the results of the heavy model depend. The risk factors used in a proxy model may include interest rates, the level/volatility of an equity index, inflation, mortality rates, and so on.</p>
+</li>
+<li><p>The risk dependencies are then determined in order to set the required model structure.</p>
+</li>
+<li><p>Fitting scenarios are generated, perhaps using expert judgement, and run through the heavy model.</p>
+</li>
+<li><p>The proxy model is then calibrated to provide an acceptable fit to the heavy model under these scenarios. To do this, some form of optimisation algorithm (e.g. least squares regression) is used. It is particularly important to achieve a good fit in the tails of the distribution if a high-confidence VaR measure (e.g. the Solvency II SCR) is being modelled. Care should be taken to avoid overfitting if the stochastic model being proxied (i.e. the heavy model) is prone to simulation error.</p>
+</li>
+<li><p>The fitted proxy should be checked against independent scenarios from the heavy model, including relevant stresses.</p>
+</li>
+<li><p>Recalibration of the model will be required periodically.</p>
+</li>
+</ul>
+<h2 id="section-14">The relationship between risk, capital, and economic value</h2>
+<p>Capital management is much more than just the need to ensure adequate available capital and, in managing their capital position, insurers need to reflect the fact that risk, capital, and economic value are inextricably linked.</p>
+<p>The relationship between risk, capital, and economic value can be illustrated as follows:</p>
+<ul>
+<li><p>Risk influences both capital and economic value in the following ways:</p>
+<ul>
+<li><p>Risk exposure determines capital needs, since required capital is a function of the tail of the risk distribution.</p>
+</li>
+<li><p>The market price of risk is a key driver of value creation and it depends on the overall characteristics of the risk distribution.</p>
+</li>
+</ul>
+</li>
+<li><p>Capital also influences economic value, since capital utilisation has a frictional cost and hence reduces value creation.</p>
+</li>
+</ul>
+<p><img src="assets/risk-capital-value.png" alt="Risk determines capital needs and influences economic value; holding capital also has a frictional cost."></p>
+<p>The interactions between risk, capital, and economic value (whilst complex in practice) can be presented in the following simple manner:</p>
+<ul>
+<li><p>Risk drives the amount of required capital and influences policyholders’ willingness to do business with the company. Thus, higher risk requires higher capital (if policyholders are to continue to be attracted to the insurer).</p>
+</li>
+<li><p>Risk also drives shareholder (or economic) value directly, since the market price of financial risk is a core driver of shareholders&#39; required return.</p>
+</li>
+<li><p>The amount of capital held alters shareholder value due to the frictional (opportunity) cost of holding capital. For example, from a shareholder&#39;s perspective the tax treatment of an investment in a life insurer may make it a less efficient option.</p>
+</li>
+</ul>
+<p>In addition to helping companies understand risk exposures, economic capital analysis can also help insurers optimise their portfolio risks. They may, for example, identify that economic capital may be released without compromising on a given policyholder risk tolerance.</p>
+<p>Where companies have a high concentration of risk in particular areas, it should be possible to reduce the amount of required capital by reducing that concentration. For example, a company with significant mortality risk exposure should be able to reduce their required economic capital using reinsurance. The insurer must assess whether the value of the capital benefit compensates for the associated reinsurance premiums and reinsurer default risk. However, this will come at the cost of reducing their potential to earn mortality profits. Similarly, expense risk could be reduced by entering into an outsourcing agreement. However, this would come at the cost of increasing counterparty and operational risks.</p>
+<p>Optimising required economic capital does not necessarily mean minimising the amount of economic capital held. Companies also need to consider how risk decisions affect economic value creation and how these decisions impact the overall value of the company.</p>
+<h2 id="section-15">Methods of managing the capital position</h2>
+<p>Management of the capital position can be split into the following two broad categories:</p>
+<ul>
+<li><p>Raising additional available capital.</p>
+</li>
+<li><p>Reducing the company&#39;s liabilities and/or required capital.</p>
+</li>
+</ul>
+<h3 id="section-16">Equity</h3>
+<p>Insurers may choose to raise further equity capital.</p>
+<p>A mutual cannot issue ordinary shareholder equity while retaining its mutual structure. Raising capital in this form would first require an agreed demutualisation; other forms of capital may be available under local rules. This process would add considerably to the time taken to raise equity capital.</p>
+<p>In the case of a proprietary company, further capital may be obtained by an external issue of shares. The insurer would need a credible business plan to support the required rate of return of investors of additional capital.</p>
+<p>For group companies, it may be sensible for the particular issuer&#39;s capital to be increased by reallocating the total available capital of the group, rather than by issuing further equity.</p>
+<h3 id="section-17">Subordinated loan stock</h3>
+<p>Insurers may also raise capital by issuing subordinated debt in the capital markets.</p>
+<p>Subordinated debt ranks behind policyholders in a wind-up; repayment is not guaranteed. The insurer must also allow for fair treatment of customers and its commitments for managing with-profits business.</p>
+<p>Consideration should be given to where any debt ranks in relation to policyholders in a wind-up. Qualifying subordinated debt can contribute to regulatory capital, although it remains a liability on the balance sheet. Shareholders therefore also need to consider the debt servicing and repayment obligations.</p>
+<p>Under Solvency II, subordinated debt can qualify as own funds only if its terms meet the relevant requirements, and its eligibility to cover capital requirements is subject to limits.</p>
+<h3 id="section-18">Securitisation</h3>
+<p>Securitisation involves converting assets such as the embedded value of a particular block of business, for which full credit cannot be taken in the regulatory balance sheet, into a tradable instrument and selling it to the capital markets.</p>
+<p>In return for receiving payment from investors upon issue of the instrument, the issuing insurer will be required to pay interest and repay capital on the loan as surpluses arise on the underlying block of business.</p>
+<p>Securitisation can be particularly useful in regimes where the regulatory balance sheet does not fully allow for the future profits expected to emerge from a block of business. The insurer&#39;s assets increase when they sell the security. Whether an offsetting liability must be recognised depends on the structure and the applicable reporting rules. In a contingent-loan structure, payments to holders of the security are contingent on sufficient profit emerging from the underlying block of business (and so such securitisations are known as &#39;contingent loans&#39;). Some prudential regimes have recognised a capital benefit from such structures. Contingent repayment alone does not establish that no liability should be recognised.</p>
+<p>From the purchaser&#39;s perspective, these securities can offer an attractive rate of repayment for what may be an acceptably small probability of non-repayment. The default risk on such securities may also provide diversification from the purchaser&#39;s existing assets.</p>
+<p>Securitisations are less effective under regulatory regimes where credit can be taken for future profits on the regulatory balance sheet (e.g. as is the case under Solvency II). However, even in such cases, it may still be possible to construct an arrangement which allows credit to be taken in the regulatory balance sheet for future profits which would not otherwise be allowed (e.g. those arising beyond the contract boundary).</p>
+<p>Securitisation has also been used by insurers to allow assets to meet the requirements for a matching adjustment when they otherwise would not be permissible. This involves restructuring unpredictable cashflows to create a tranche with sufficiently predictable payments. Restructuring alone does not establish eligibility: the relevant conditions and supervisory approval still apply.</p>
+<h3 id="section-19">Reinsurance</h3>
+<p>Financial reinsurance can be used to improve the regulatory balance sheet by crystallising the value of future expected profits. However, as for securitisations, the viability is much reduced under regulatory regimes which take credit for future profits (such as Solvency II).</p>
+<p>Traditional reinsurance can be used to reduce risk-based capital requirements (such as the Solvency II SCR), though there will be some offset to the reduced insurance risk due to increased counterparty risk. There may also be an opportunity for regulatory arbitrage if a reinsurance arrangement passes the risk to a different regulatory regime (e.g. if reinsurers have lower regulatory capital requirements than insurers).</p>
+<h3 id="section-20">Derivatives</h3>
+<p>Insurers can use derivatives to reduce risk-sensitive regulatory capital requirements, such as the Solvency II SCR.</p>
+<p>An insurer could, for example, use derivatives to protect against a fall in the value of its equity portfolio. Insurers can also use derivatives to protect against increases in guaranteed annuity option liabilities arising from a fall in interest rates (e.g. using suitable swaptions).</p>
+<p>Traditionally, insurers have used over-the-counter derivatives on a static hedge basis, where these derivatives were closely matched to liability guarantees. The price of over-the-counter derivatives sold by investment banks will reflect the market price of risk in addition to their cost of capital and profit margins.</p>
+<p>More recently, insurers have been using liquid exchange-traded derivatives to dynamically hedge the exotic options embedded in variable annuity products. For example, futures and swaps may be used to hedge the component risks of the guarantees relating to equity, currency, and interest rate exposures. Over-the-counter derivatives may also be used in these arrangements where exchange-traded alternatives are not available.</p>
+<p>Exchange-traded derivatives are generally centrally cleared. Clearing and collateral reduce counterparty risk, but do not eliminate it. Margin calls, liquidity needs, transaction costs, and basis risk must also be considered. Derivatives can also be used to provide (or increase) equity or credit risk exposure as an alternative to direct investment.</p>
+<h3 id="section-21">Asset-liability matching</h3>
+<p>A review of the insurer&#39;s asset-liability matching position may release capital by allowing smaller reserves and/or capital requirements to be held (e.g. by reducing the cost of options and guarantees or by reducing interest rate risk).</p>
+</article><nav class="pagination" aria-label="Page navigation"><a href="10-solvency-valuation-and-capital.html">← Solvency valuation and capital</a><a href="14-asset-liability-management.html">Asset–liability management →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>

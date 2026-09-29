@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Analysis of surplus | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a><a href="13-capital-management.html" title="Capital management">Chapter 13</a><a href="14-asset-liability-management.html" title="Asset–liability management">Chapter 14</a><a href="15-analysis-of-surplus.html" aria-current="page" title="Analysis of surplus">Chapter 15</a><a href="16-profit-reporting.html" title="Profit reporting">Chapter 16</a><a href="17-embedded-value.html" title="Embedded value">Chapter 17</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 15</div><article><h1>Analysis of surplus</h1>
+<p>An analysis of surplus reconciles the surplus at the start and end of a period by breaking down the change into contributory factors. It helps an insurer understand where its results came from and how those results should inform future decisions.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">Analysis of supervisory valuation surplus</a></li><li><a href="#section-2">Sources of surplus</a></li><li><a href="#section-13">Quantifying the surplus arising from each source</a></li><li><a href="#section-14">Impact of the definition of surplus</a></li><li><a href="#section-17">Using the results of an analysis of surplus</a></li></ul></nav></details>
+<h2 id="section-1">Analysis of supervisory valuation surplus</h2>
+<p>An analysis of surplus provides reconciliation between the start-year and end-year supervisory surplus by breaking down the change into contributory factors.</p>
+<p>In this context, surplus refers to assets minus liabilities. The definition of &#39;liabilities&#39; in this context may, however, mean different things.</p>
+<p>&#39;Surplus arising&#39; over a period of time refers to the change in the amount of surplus over that period.</p>
+<p>One complication of performing an analysis of surplus is the effect of &#39;interaction terms&#39;. For example, higher investment returns than expected combined with lower than expected expenses will lead to greater emergence of surplus in combination than each effect in isolation. Interaction terms could be attributed to any of the factors driving them (i.e. there is no &#39;right&#39; answer). It is important to ensure that these interaction terms are neither missed nor double counted.</p>
+<p>Reasons why a company may wish to perform an analysis of surplus include the following:</p>
+<ul>
+<li><p>Showing the financial effect of divergences between valuation assumptions and actual experience.</p>
+</li>
+<li><p>Determining the assumptions that are most financially significant.</p>
+</li>
+<li><p>Showing the financial effect of writing new business.</p>
+</li>
+<li><p>Validating the calculations and assumptions used in pricing.</p>
+</li>
+<li><p>Providing a check on the valuation data and process (if carried out independently).</p>
+</li>
+<li><p>Identifying non-recurring components of surplus, thus enabling appropriate decisions to be made about the distribution of surplus.</p>
+</li>
+<li><p>Reconciling the value of total surplus across successive years.</p>
+</li>
+<li><p>Providing management information.</p>
+</li>
+<li><p>Providing information for use in executive remuneration schemes.</p>
+</li>
+<li><p>Providing detailed information for publication in the accounts.</p>
+</li>
+<li><p>Demonstrating that the variance in the financial effect of the individual sources is a complete description of the variance in the total financial effect.</p>
+</li>
+<li><p>Giving information on trends in experience to feed back into the actuarial control cycle.</p>
+</li>
+</ul>
+<p>In some cases, analysing the change in surplus arising over a period may also be a regulatory requirement. For example, conducting a profit and loss attribution is one of the internal model approval requirements under Solvency II.</p>
+<h2 id="section-2">Sources of surplus</h2>
+<p>Surplus arises as a result of differences between what is expected to happen in accordance with valuation assumptions (including implicit assumptions, such as &#39;no new business&#39;) and what actually happens in practice.</p>
+<p>Any change in the valuation assumptions used (or the methodology used) will also give rise to surplus (which may be positive or negative). In the context of a simplified supervisory surplus, defined as the excess of assets over liabilities, possible components of an analysis of surplus may include the following:</p>
+<h3 id="section-3">Opening adjustments</h3>
+<p>These usually reflect changes to the model or data used in the calculation of surplus, including corrections, changes to any model point grouping, and methodology changes.</p>
+<h3 id="section-4">Return on opening surplus</h3>
+<p>This results from investment returns earned on the opening surplus.</p>
+<p>This may be expressed as the actual return, or as the expected return with any actual difference recorded within &#39;economic variances&#39;. Under a market-consistent supervisory basis, the expected return would be the risk-free rate.</p>
+<h3 id="section-5">Economic variances</h3>
+<p>These result from differences in actual and expected investment returns, inflation, and exchange rates.</p>
+<p>Economic variances will usually be the major source of variance in an analysis of surplus. Due to this, they are often separated out to a more granular level.</p>
+<p>Economic variances will also capture any mismatch profits/losses where liabilities and their backing assets do not move perfectly in line following a change in economic conditions (e.g. changes in yields or volatilities). Similarly, economic variances also capture the impact of actual asset yields, which may differ from the discount rates applied to liabilities.</p>
+<p>Changes in asset mix may be separately identified in the analysis. For example, changes in asset mix may change the overall investment return volatility assumption and thus impact the value of liabilities with options and guarantees.</p>
+<p>Where adjustments are made to investment return assumptions, these should be allowed for in the analysis of surplus.</p>
+<p>For example, where a matching adjustment (MA) or volatility adjustment (VA) is applied under Solvency II, the surplus arising will reflect the difference between the actual spread movements (and defaults) relative to those allowed for in the adjustments. In the case of the MA, this source of difference arises from the credit-risk allowance in the fundamental spread and the credit losses and other relevant changes actually experienced on investments. This MA related surplus may also include the impact of asset transactions (e.g. if an asset sold has a different impact on the MA than the asset bought).</p>
+<p>In the case of the VA, insurers will see an investment variance due to the spread applying to the representative portfolio of assets underlying the VA and the spread realised on the actual assets held.</p>
+<p>Actual vs expected investment returns may be split between:</p>
+<ul>
+<li><p>Actual investment return relative to an internal view on the expected return.</p>
+</li>
+<li><p>This (internal view of) expected asset return relative to the investment return assumed in liability valuations.</p>
+</li>
+</ul>
+<h3 id="section-6">Changes in economic assumptions</h3>
+<p>The impact of changes in economic assumptions may or may not be shown separately to the &#39;economic variances&#39; item in the analysis of surplus (AoS). The reason why they may be combined with economic variances is that assumption values are a key driver of economic variances.</p>
+<h3 id="section-7">Non-economic (insurance) variances</h3>
+<p>These impacts arise due to differences in actual vs expected demographic and operational experience (e.g. mortality, morbidity, persistency, expenses, etc). Variances that arise from one-off exceptional expenses may be identified separately.</p>
+<h3 id="section-8">Changes in non-economic (insurance) assumptions</h3>
+<p>These may be combined with non-economic (insurance) variances, or shown separately in the AoS.</p>
+<h3 id="section-9">New business</h3>
+<p>New business impacts a company&#39;s surplus if the liabilities taken on differ from the assets accrued in respect of them. The impact on surplus includes premiums received, less claims and expenses paid, plus investment returns, less the liabilities established for the new policies at the valuation date. A profitable term assurance policy may still have initial expenses that exceed its first premium. Its initial surplus also depends on the value placed on future premiums, benefits, and expenses in the liability calculation. However, prudence in valuation assumptions could lead to an initial deficit (due to new business strain).</p>
+<h3 id="section-10">Other variances</h3>
+<p>These may include capital injected into the fund or tax changes.</p>
+<h3 id="section-11">Unexplained movements</h3>
+<p>In practice, approximations and data differences may leave an unexplained residual. The aim is to explain the full movement; a balancing item is not a substitute for investigating material discrepancies. The &#39;unexplained&#39; variances are therefore a balancing item in the AoS.</p>
+<p>Management should specify their tolerance (e.g. as a percentage of total liabilities) for unexplained variances in the AoS. This should enable the AoS to be conducted to the required level. It is important to be aware, however, that a small residual unexplained variance could be masking material errors which just happen to broadly offset each other.</p>
+<h3 id="section-12">Classification of variances</h3>
+<p>It may sometimes be difficult to decide which category certain variances should be recorded under. For example, whether changes in policyholder lapses driven by changes in economic conditions should be recorded as economic or non-economic variances.</p>
+<p>When deciding how to classify variances, it is important to be consistent from one year to the next so that year-by-year comparisons of movements are meaningful.</p>
+<h2 id="section-13">Quantifying the surplus arising from each source</h2>
+<p>An AoS can be used as an independent check that no errors have been made in valuations, but using it for this purpose requires that a logical and robust calculation process is in place for performing the AoS.</p>
+<p>A typical process for performing an AoS is to project forward the insurer&#39;s previous supervisory balance sheet, assuming that experience was as per the insurer&#39;s valuation basis.</p>
+<p>This involves rolling forward the supervisory balance sheet from the previous valuation date to produce an expected balance sheet for the current valuation date.</p>
+<p>This should allow, in turn, for:</p>
+<ul>
+<li><p>Corrections.</p>
+</li>
+<li><p>Assumption changes.</p>
+</li>
+<li><p>Changes to economic conditions.</p>
+</li>
+<li><p>Experience variances.</p>
+</li>
+</ul>
+<p>The valuation model would be re-run each time one of the above was changed in the input data and the change in the output, relative to the previous run, would constitute the impact of that item in the AoS.</p>
+<p>The actual and expected balance sheets for the current period can then be compared, with the difference being classed as &#39;unexplained&#39;.</p>
+<p>One possible approach to producing an AoS is as follows:</p>
+<ul>
+<li><p>Re-run the start-year valuation model.</p>
+</li>
+<li><p>Rebase the start-year valuation model by making any required opening adjustments to the model relative to the model used to produce the balance sheet submitted at the previous valuation date. For example, methodology changes, data corrections, model changes, etc. Any such changes should ideally be made in turn to separately identify the impact of each.</p>
+</li>
+<li><p>Run the rebased model with the new non-economic assumptions to obtain the impact on surplus arising from these assumption changes. Ideally, the assumptions used in the valuation should remain unchanged up to the valuation date, with the new assumptions only being used thereafter in the valuation (i.e. assumption changes should not apply retrospectively). This is to enable insurance variances to be identified separately to the impact of changes in the assumption values. Each distinct type of assumption change (e.g. persistency, expense, mortality, etc) should be carried out separately to identify their individual impacts.</p>
+<p>It is also possible for this step to be conducted after the roll-forward step. Doing this would give a slightly different surplus split.</p>
+</li>
+<li><p>Roll forward the model to the new valuation date using actual investment returns for the inter-valuation period and economic assumptions based on the new valuation basis thereafter. The total economic variance (including the impact of economic assumption changes) is included in the impact of this roll-forward step.</p>
+</li>
+<li><p>Add the new business written over the inter-valuation period to show its impact on surplus at the new valuation date.</p>
+</li>
+<li><p>Allow for known differences between actual and modelled non-economic experience over the inter-valuation period. For example, allow for higher expenses over the inter-valuation period if it is known that expenses were higher than expected over this period. This step gives the non-economic (insurance) experience variance, <em>excluding</em> assumption changes. Each non-economic experience item should be updated in turn to identify their separate impacts on surplus emerging.</p>
+<p>It may not be possible to get an accurate figure for certain items (e.g. mortality or lapses) using this approach due to differences in the actual policies affected by mortality and lapses during the year. That is, the actual mortality rate (for example) may have been exactly as expected, but the policyholders who actually died may have been those with larger sums assured. By contrast, expected mortality losses may be based on the average policy size. So actual mortality losses may differ from expected mortality losses despite accurate prediction of mortality rates. It may be difficult to isolate the impact of actual vs expected mortality rates due to this.</p>
+</li>
+<li><p>Incorporate items such as capital injections or tax changes.</p>
+</li>
+<li><p>Compare the final balance sheet obtained after applying all of the above changes with the actual year-end balance sheet and allow for any differences as an &#39;unexplained&#39; movement in the AoS. The size of the &#39;unexplained&#39; item in the AoS may be investigated by analysing the company&#39;s revenue accounts over the inter-valuation period to ensure that all revenue items have been captured in full. One example of why unexplained differences may arise is when the actual size of policies claiming, relative to the average policy size, is not accurately captured by simply updating the mortality assumption (as described above).</p>
+</li>
+</ul>
+<p>Under the AoS balance sheet projection approach described above, the amount of surplus arising from each step will depend on the order in which the steps are done. There is no uniquely correct order in which these AoS steps should be conducted, but companies would not usually want to change the approach used relative to prior analyses. This is to ensure that AoS results from different investigation periods remain comparable.</p>
+<p>It is essential that the contributions arising from each item in the AoS are checked for reasonableness. It is important to note that an AoS is unlikely to identify a fundamental error in the balance sheet if the same error has been repeated at each valuation.</p>
+<h2 id="section-14">Impact of the definition of surplus</h2>
+<p>In the above sections, &#39;surplus&#39; has been simplified to mean the excess of supervisory assets over supervisory liabilities.</p>
+<p>In practice, liabilities could be defined in various different ways. For example:</p>
+<ul>
+<li><p>Depending on the supervisory regime, liabilities could be best estimate liabilities or could include prudence margins.</p>
+</li>
+<li><p>Liabilities could include a risk margin.</p>
+</li>
+<li><p>The measure of surplus could also deduct solvency capital requirements. These remain capital requirements, rather than accounting liabilities.</p>
+</li>
+</ul>
+<p>The chosen definition of surplus will affect the results of the analysis.</p>
+<h3 id="section-15">Analysing movements in the risk margin</h3>
+<p>Under Solvency II, surplus could be defined as the excess of assets over total technical provisions (i.e. best estimate liabilities plus risk margin). In this case, an AoS would need to take into account changes in the risk margin over the valuation period.</p>
+<p>The risk margin might change between valuations if, for example, changes are made to the allowances for diversification within the calculation of the risk margin.</p>
+<p>Similarly, since the Solvency II risk margin is calculated from the run-off of the non-hedgeable SCR, the AoS would also need to consider:</p>
+<ul>
+<li><p>Changes in the size of the SCR components used.</p>
+</li>
+<li><p>Assumptions relating to the projected run-off of the non-hedgeable SCR.</p>
+</li>
+</ul>
+<p>The risk margin may also be impacted by business decisions, such as changes in reinsurance strategy, which should be separately identified in the AoS.</p>
+<h3 id="section-16">Analysing movements in capital requirements</h3>
+<p>Surplus could alternatively be defined as the excess of assets over liabilities and capital requirements. In this case, an AoS would need to account for changes in the solvency capital requirements over the valuation period.</p>
+<p>In this case, the drivers impacting the solvency capital requirements would need to be considered and featured in the AoS. For example:</p>
+<ul>
+<li><p>Changes in the size of the solvency capital requirement components.</p>
+</li>
+<li><p>Changes from a standard formula approach to an internal model approach.</p>
+</li>
+<li><p>Inclusion of new risk factors (if an internal model approach is used).</p>
+</li>
+<li><p>Changes in the correlations between risk factors.</p>
+</li>
+</ul>
+<h2 id="section-17">Using the results of an analysis of surplus</h2>
+<p>The results of an AoS can inform decisions about new business, assumptions, contract terms, and risk management.</p>
+<h3 id="section-18">New business and capital resources</h3>
+<p>The analysis shows the impact on capital resources of writing new business over the year.</p>
+<p>If the impact is worse than expected, this could lead to:</p>
+<ul>
+<li><p>Limits being imposed on the amount of new business that may be written going forwards.</p>
+</li>
+<li><p>Motivation to redesign products to be more capital efficient.</p>
+</li>
+</ul>
+<h3 id="section-19">Updating valuation assumptions</h3>
+<p>A trend of consistently positive or negative experience surpluses for a particular item (e.g. persistency) could indicate that the valuation assumption for that item needs to be updated. Greater uncertainty may also affect the explicit risk allowance or capital requirement, depending on the reporting basis; it should not automatically be hidden in best-estimate assumptions. Care should be taken, however, since discrepancies could be the result of short-term fluctuations, rather than a long-term feature. It is therefore necessary to assess such trends in experience over a sufficiently long time period.</p>
+<h3 id="section-20">Reviewing contract terms</h3>
+<p>A trend of consistently positive or negative experience surpluses for a particular item could also indicate that a contract term needs to be altered. For example, a trend of increasing mortality surpluses under a unit-linked contract may indicate that mortality charges could be reduced, where contract terms and fair treatment of customers permit.</p>
+<h3 id="section-21">Reducing balance sheet risk</h3>
+<p>This use case is most applicable to financially weak insurers who may wish to prioritise protecting the solvency of the company. For example, large economic variances arising within a fund with a low level of surplus may indicate that the investment strategy is too risky and should be revised.</p>
+<h3 id="section-22">Identifying risks</h3>
+<p>New items identified in the AoS may be useful in the risk identification process, particularly for highlighting new risks.</p>
+</article><nav class="pagination" aria-label="Page navigation"><a href="14-asset-liability-management.html">← Asset–liability management</a><a href="16-profit-reporting.html">Profit reporting →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>

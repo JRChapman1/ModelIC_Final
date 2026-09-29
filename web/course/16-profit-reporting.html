@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Profit reporting | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a><a href="13-capital-management.html" title="Capital management">Chapter 13</a><a href="14-asset-liability-management.html" title="Asset–liability management">Chapter 14</a><a href="15-analysis-of-surplus.html" title="Analysis of surplus">Chapter 15</a><a href="16-profit-reporting.html" aria-current="page" title="Profit reporting">Chapter 16</a><a href="17-embedded-value.html" title="Embedded value">Chapter 17</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 16</div><article><h1>Profit reporting</h1>
+<p>Life insurers produce statements about their financial position and performance. The purpose of those statements, and the accounting standards used to prepare them, determine how assets and liabilities are measured and when profits emerge.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">Overview</a></li><li><a href="#section-5">Accounting standards</a></li><li><a href="#section-11">International financial reporting standards (IFRS)</a></li><li><a href="#section-16">Accounting for insurance contracts - IFRS 17</a></li><li><a href="#section-35">US GAAP</a></li></ul></nav></details>
+<h2 id="section-1">Overview</h2>
+<h3 id="section-2">Financial statements</h3>
+<p>Life insurers will typically produce statements on their financial position and performance on a regular basis.</p>
+<p>Information included in a company&#39;s financial statements will often include the following items:</p>
+<ul>
+<li><p>The balance sheet - This details the value of the company&#39;s assets and liabilities at a particular point in time. The purpose of this is to demonstrate whether the company has sufficient assets to cover its liabilities.</p>
+</li>
+<li><p>The profit and loss statement - This details the revenue earned and expenses incurred by the company over a specified time period. The purpose of this is to show the size and source of profits earned by the company over the time period.</p>
+</li>
+<li><p>Detailed disclosures and commentary - These support the company&#39;s financial disclosures. For example, these might include details of the basis and methodology used to produce the financial statements.</p>
+</li>
+<li><p>Additional supporting information.</p>
+<p>This may include a report from the company&#39;s auditor stating that they have:</p>
+<ul>
+<li><p>Examined the company&#39;s financial statements.</p>
+</li>
+<li><p>Assessed whether these financial statements have been properly prepared.</p>
+</li>
+<li><p>Assessed whether the financial statements present a fair view of the company&#39;s results and financial position.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="section-3">Reasons for disclosure of financial position</h3>
+<p>There are various reasons why a company might disclose its financial position.</p>
+<p>They may disclose their financial position, for example, to:</p>
+<ul>
+<li><p>Demonstrate that the company has sufficient assets to cover their liabilities; and/or.</p>
+</li>
+<li><p>Show the size and source of profits earned by the company over a period.</p>
+</li>
+</ul>
+<p>The reasons for disclosure will impact the basis on which the financial statements are produced. Disclosures with the purpose of demonstrating solvency may be prepared on a prudent basis. Disclosures intended to demonstrate profit generation may be prepared on a best-estimate basis (to show a &#39;true and fair view&#39;).</p>
+<p>Reasons why good quality financial reporting is vital for an insurer include the following:</p>
+<ul>
+<li><p>Assisting in initiatives to raise capital. External stakeholders will use the company&#39;s financial statements to assess their creditworthiness and the strength of their operations.</p>
+</li>
+<li><p>Reassuring stakeholders who use the statements to assess the company&#39;s financial position and future profitability/viability. Such stakeholders include shareholders, creditors, analysts, potential policyholders, and competitors.</p>
+</li>
+<li><p>To comply with regulation and legislation. Insurers may be required, by law, to produce regular financial statements for regulators, capital markets, and tax authorities.</p>
+</li>
+</ul>
+<p>In the UK, insurers are required to prepare both supervisory reports for the financial services regulator and (separately) profit reports tailored to the needs of shareholders and other external stakeholders. The supervisory reports are intended to demonstrate the insurer’s solvency position and their available capital to meet the risks they face. The profit reports (a.k.a the statutory accounts) are intended to demonstrate companies&#39; profitability and value creation. These may include supplementary information on shareholder value.</p>
+<h3 id="section-4">Supplementary financial reporting</h3>
+<p>In addition to their required financial statements, insurers may also provide supplementary financial reporting.</p>
+<p>The aim of these supplementary reports is to inform shareholders of:</p>
+<ul>
+<li><p>The true value of their interest in the business.</p>
+</li>
+<li><p>The change in this value over time as a result of the company&#39;s management of their resources.</p>
+</li>
+</ul>
+<h2 id="section-5">Accounting standards</h2>
+<p>Many decisions need to be made to produce detailed financial statements about a company&#39;s financial position. These decisions can materially impact the company&#39;s financial statements. Without any guidance, different companies could use very different approaches to producing their financial statements. This would make financial statements less comparable between similar companies and less credible for stakeholders. To address this issue, many countries have legislation dictating how companies should prepare their financial statements and what information they should include. Separately, there is also likely to be legislation in place requiring insurers to produce regular statutory accounts.</p>
+<p>Accounting standards set out the principles and standards to be followed in the production of financial statements. The framework detailing companies&#39; reporting requirements can include the accounting standards they are required to use in determining and presenting their accounts.</p>
+<p>Although the relevant laws are passed by governments, accounting standards are often set and maintained by non-government bodies such as:</p>
+<ul>
+<li><p>The International Accounting Standards Board (IASB).</p>
+</li>
+<li><p>The Financial Accounting Standards Board (FASB).</p>
+</li>
+</ul>
+<p>The two most adopted sets of standards are the:</p>
+<ul>
+<li><p>International Financial Reporting Standards (IFRS), issued and maintained by the IASB.</p>
+</li>
+<li><p>US GAAP, issued and maintained by the FASB.</p>
+</li>
+</ul>
+<p>The nature of accounting standards will depend on the following:</p>
+<ul>
+<li><p>The purpose of the reporting conducted using them.</p>
+</li>
+<li><p>The intentions of those who set the standards.</p>
+</li>
+<li><p>The intended users of the financial reports prepared using them.</p>
+</li>
+</ul>
+<h3 id="section-6">Rules-based vs. principles-based approaches</h3>
+<p>Accounting standards are generally either rules-based or principles-based (or a combination of the two) and each of these approaches has their own advantages and disadvantages.</p>
+<h4 id="section-7">Principles-based approaches</h4>
+<p>Principles-based accounting standards allow companies to use discretion in the preparation of their financial statements to ensure that these statements reflect the nature, liabilities, and risk-profile of the company.</p>
+<p>There are, however, some disadvantages associated with the discretion allowed by principles-based standards:</p>
+<ul>
+<li><p>They can make financial statements more open to <strong>manipulation</strong></p>
+</li>
+<li><p>They can make financial statements less <strong>transparent and comparable</strong> with other equivalent companies:</p>
+<ul>
+<li><p>Different approaches for allowing for risk (e.g. the rate used to discount future cashflows or the margins used in the valuation basis).</p>
+</li>
+<li><p>Sensitivity analysis under different valuation assumptions may not be disclosed.</p>
+</li>
+<li><p>Different approaches may be taken to smoothing profit over contracts&#39; lifetimes.</p>
+</li>
+<li><p>Differing levels of consolidation allowed for (e.g. across entities, netting of reinsurance/tax, etc).</p>
+</li>
+</ul>
+</li>
+<li><p>They can make financial statements potentially more <strong>difficult to audit.</strong></p>
+</li>
+</ul>
+<p>Both IFRS and US GAAP use principles based approaches, though US GAAP also contains more specific rules. Though principles-based approaches allow discretion, they still include rules to minimise the variability in the approaches taken.</p>
+<h4 id="section-8">Rules-based approaches</h4>
+<p>Rules-based accounting standards are a more standardised system of financial reporting with less discretion.</p>
+<p>For example, they may prescribe specific rules about how certain items in a company&#39;s financial statements are calculated or defined. These approaches may increase accuracy in financial statements and make it easier for investors to compare the performance of different companies.</p>
+<p>However, rules-based accounting standards can include highly complex rules. This can make production of financial statements more difficult and costly. However, this can also make financial statements easier to audit.</p>
+<h3 id="section-9">Other considerations</h3>
+<p>Other important issues to consider in the preparation of financial statements include the following:</p>
+<ul>
+<li><p><strong>True and fair -</strong> In many countries, it is a requirement that financial statements show a &#39;true and fair view&#39; of a company&#39;s position. In particular, the statements should be free from material misstatements and accurately represent the financial performance and position of the company.</p>
+</li>
+<li><p><strong>Going concern vs wind-up basis -</strong> It needs to be determined whether financial reporting should be conducted on a going-concern or a wind-up basis. A going-concern basis assumes that the company will continue operating for the foreseeable future. A closed insurer can still be a going concern; continuing to write new business is not essential. A wind-up basis assumes the company will be wound up. Which of these bases should be used depends on what is being measured (e.g. measures of solvency may be concerned with a wind-up event, whilst measures of profitability are more likely to use a going-concern basis).</p>
+</li>
+<li><p><strong>Best estimate or prudent basis -</strong> Judgement will be needed in determining whether items in the financial statements should be calculated using a best estimate or prudent basis.</p>
+<p>Uncertain assumptions which may be set on a best estimate or prudent basis include:</p>
+<ul>
+<li><p>The likelihood and amount of future claims.</p>
+</li>
+<li><p>Customer behaviour (e.g. persistency, option exercises, etc).</p>
+</li>
+<li><p>Future market returns.</p>
+</li>
+</ul>
+<p>Financial reporting standards that relate to demonstrating solvency are concerned with risk and are thus more likely to require the use of a prudent basis than those relating to demonstrating the emergence of profit over time. Many older accounting standards require (or allow) prudence in assumptions, whilst newer standards tend to require best estimate assumptions with an explicit amount held to allow for uncertainty in the amounts and timings of risky cashflows.</p>
+</li>
+<li><p><strong>Profit accrual -</strong> Profit and loss is typically recognised in the period in which it is accrued, but the date of accrual can be ambiguous. That is, profit/loss should be allowed for at the time it is earned or incurred, rather than the point at which it is actually paid or received. For life insurance policies, which are expected to remain in force for a long period of time, it can be particularly difficult to determine when profit arising on a policy is actually &#39;earned&#39;. The profit could be recognised at the point of sale, at the end of the contract, or over the term of the contract.</p>
+<p>Accrual accounting recognises income and expenses in the periods to which they relate. It does not give management a general permission to smooth earnings. Where policyholder benefits are smoothed, that feature is reflected in measurement under the applicable accounting rules.</p>
+</li>
+<li><p><strong>Timeliness -</strong> Users of financial statements require information to be available as soon as possible. There may, therefore, be a need for compromise between timeliness and complexity of reporting. Newer accounting standards tend to reflect recent technological advances and often require complex calculations to be performed quickly.</p>
+</li>
+<li><p><strong>Comparability -</strong> Financial statements are most useful to stakeholders when they can be easily compared to the financial reports of other (similar) companies. Statutory reporting standards are more likely than regulatory/internal reporting standards to require consistency across companies of many industries. This is because such comparability is of particular use to investors, who may be considering companies in many different industries when deciding where best to invest their capital. However, it is difficult to prescribe accounting standards that ensure consistency/comparability in all cases.</p>
+</li>
+</ul>
+<h3 id="section-10">International considerations</h3>
+<p>Accounting standards can be specific to the country a company is based in, or the same standards could apply to companies in a number of countries.</p>
+<p>Many countries also have specific rules relating to the financial reporting of specialised businesses such as insurance.</p>
+<p>Companies may be required to produce financial statements in multiple countries.</p>
+<p>This will often be the case for companies who:</p>
+<ul>
+<li><p>Raise capital in multiple countries.</p>
+</li>
+<li><p>Undertake transactions in multiple countries.</p>
+</li>
+<li><p>Have international operations.</p>
+</li>
+</ul>
+<p>As such, companies may need to produce financial statements under multiple different accounting standards (which may be costly and complex).</p>
+<h2 id="section-11">International financial reporting standards (IFRS)</h2>
+<p>International Financial Reporting Standards (IFRSs) are standards relating to companies and other entities which prepare accounts intended to show a true and fair view of the companies&#39; position and performance.</p>
+<p>IFRSs are developed, issued, and withdrawn by the International Accounting Standards Board (IASB). The IASB has no authority to require compliance with IFRS accounting standards, but many countries require companies to prepare financial statements in accordance with IFRS. Such countries will typically require companies to give details of any material departures from these standards. The IASB also collaborates with national accounting standard setters in many countries to improve and harmonise financial reporting around the world.</p>
+<p>The objectives of the IFRS accounting standards are the following:</p>
+<ul>
+<li><p>Improving transparency of reporting by enhancing the international comparability and quality of financial information. This is intended to help investors (and other market participants) to make informed economic decisions. This should improve trust in companies&#39; financial statements (and of the companies themselves) within global financial markets.</p>
+</li>
+<li><p>Strengthening accountability by reducing the information gap between providers of capital and those with whom they entrust their money. Similarly, IFRS accounting standards are of vital importance to regulators around the world. Reducing this information gap helps to improve investor protection and regulator oversight.</p>
+</li>
+<li><p>Contributing to economic efficiency by helping investors identify opportunities and risks across the world, thus improving capital allocation. For businesses, the use of a single, trusted accounting language lowers the costs of capital (by reducing information asymmetry) and reduces international reporting costs.</p>
+</li>
+</ul>
+<p>The IFRS standards are the most widely adopted reporting standards in the world.</p>
+<p>IFRS is widely used internationally, including in the UK and EU. The scope of mandatory use and any local modifications differ by jurisdiction and by type of entity. There has not been complete global convergence of accounting standards. US domestic public companies use US GAAP; other countries may use national standards that are aligned with IFRS to varying degrees.</p>
+<p>There are a number of different IFRS standards, which cover specific aspects of financial reporting for companies, including:</p>
+<ul>
+<li><p>Financial instruments.</p>
+</li>
+<li><p>Insurance contracts.</p>
+</li>
+<li><p>Investment contracts.</p>
+</li>
+<li><p>Reporting and disclosure.</p>
+</li>
+</ul>
+<h3 id="section-12">Financial assets</h3>
+<p>Financial assets on the IFRS balance sheet are valued in accordance with IFRS 9 (&quot;Financial Instruments&quot;).</p>
+<p>IFRS 9 specifies how an entity should classify and measure financial assets, financial liabilities, and some contracts to buy or sell non-financial items. For debt investments, IFRS 9 classification depends on the business model for managing the assets and whether contractual cashflows are solely payments of principal and interest. Assets may be measured at amortised cost, fair value through other comprehensive income (FVOCI), or fair value through profit or loss (FVPL). Equity investments are measured at fair value. An irrevocable FVOCI election is available for eligible equity investments not held for trading.</p>
+<p>Other comprehensive income includes specified gains and losses that are presented outside profit or loss. Fair-value movements therefore do not always enter profit or loss immediately. Where there is an active market for an identical asset, its quoted price is an important basis for determining fair value. IFRS 9 also addresses impairment and hedge accounting. Related financial instrument disclosures are principally covered by IFRS 7. IFRS 9 replaced IAS 39, <em>Financial Instruments: Recognition and Measurement</em>. Its classification requirements may affect the volatility of reported profit and loss, depending on the insurer’s assets and accounting choices.</p>
+<p>See the <a href="https://www.ifrs.org/issued-standards/list-of-standards/ifrs-9-financial-instruments/">IFRS Foundation’s overview of IFRS 9</a>.</p>
+<h3 id="section-13">Insurance contracts</h3>
+<p>Accounting for insurance contract liabilities is covered by IFRS 17.</p>
+<p>IFRS 17 defines an insurance contract as &#39;a contract under which one party (the issuer) accepts significant insurance risk from another party (the policyholder) by agreeing to compensate the policyholder if a specified uncertain future event (the insured event) adversely affects the policyholder&#39;. Examples of insurance risks include mortality, longevity, and morbidity risks. Most conventional without-profits policies are likely to be classified as insurance contracts. Unit-linked contracts may be classified as insurance contracts or investment contracts depending (primarily) on whether there is a significant additional death benefit payable.</p>
+<p>With-profits policies are insurance contracts if they transfer significant insurance risk. Investment contracts with discretionary participation features also fall within IFRS 17 when issued by an entity that issues insurance contracts; this does not make them insurance contracts by definition.</p>
+<p>Some insurance contracts include other features, in addition to the transfer of &#39;significant insurance risk&#39;, such as derivatives, deposits, and asset management services. Such features are known as &#39;non-insurance components&#39;. Depending on the details, embedded derivatives in insurance contracts (e.g. financial options and guarantees) may have to be separated out from the insurance contract. Separated embedded derivatives and investment components are valued in the same way as investment contracts.</p>
+<h3 id="section-14">Investment contracts</h3>
+<p>Savings contracts that do not transfer significant insurance risk are generally investment contracts. Those with discretionary participation features may nevertheless fall within IFRS 17, as described above.</p>
+<p>This would include, for example, unit-linked business with immaterial additional death benefits. The cashflows arising under unit-linked investment contracts are separated into an &#39;investment management services&#39; component and a &#39;financial instrument&#39; component. The investment management services component comprises any fund management charges, bid/offer spreads, surrender penalties, etc, as well as the costs incurred in managing the unit-linked contract. This component is measured in accordance with &quot;IFRS 15: Revenue from Contracts with Customers&quot;. The financial instrument component is the insurer’s contractual financial liability to the customer, including relevant guarantees. Assets held to back that obligation are accounted for separately. This component is measured in accordance with IFRS 9.</p>
+<p>In practice, accounting for such contracts differs from accounting for insurance contracts.</p>
+<h3 id="section-15">Reporting and disclosure</h3>
+<p>An insurer’s IFRS balance sheet will include the following:</p>
+<ul>
+<li><p>Total assets - including the split of this into the following:</p>
+<ul>
+<li><p>Financial assets.</p>
+</li>
+<li><p>Insurance contract assets, where applicable.</p>
+</li>
+<li><p>Reinsurance contract assets. Note that reinsurance contract assets (and liabilities) are reported separately to insurance contract assets and liabilities.</p>
+</li>
+</ul>
+</li>
+<li><p>Total liabilities and equity - including the split of this into the following:</p>
+<ul>
+<li><p>Insurance contract liabilities. Under the GMM and VFA, these include fulfilment cashflows and any contractual service margin (CSM). Insurance contracts issued and reinsurance held are presented separately, with asset and liability portfolios distinguished.</p>
+</li>
+<li><p>Investment contract liabilities.</p>
+</li>
+<li><p>Reinsurance contract liabilities, where applicable.</p>
+</li>
+<li><p>Other liabilities.</p>
+</li>
+<li><p>Equity. This includes both share capital and retained earnings.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>IFRS 17 requires an entity to disclose information that allows users of financial statements to assess the effect that insurance contracts have on the entity&#39;s financial position, performance, and cashflows. An insurer must consider the level of detail required to satisfy the disclosure objective and how much emphasis to place on each of the various requirements. The disclosure requirements of IFRS 17 are more extensive and prescriptive than the previous disclosure requirements (under IFRS 4).</p>
+<p>Examples of disclosure requirements under IFRS 17 include the following:</p>
+<ul>
+<li><p>Reconciliation from the opening to the closing balance sheet. The reconciliations are required separately for insurance contracts issued and reinsurance contracts held. IFRS 17 sets out the components of the insurance contract liabilities that need to be disclosed.</p>
+</li>
+<li><p>Reconciliation from the net opening to the net closing of the following components of insurance contract assets and liabilities:</p>
+<ul>
+<li><p>Estimates of the present value of future cashflows.</p>
+</li>
+<li><p>The risk adjustment for non-financial risk.</p>
+</li>
+<li><p>The CSM.</p>
+</li>
+</ul>
+</li>
+<li><p>Significant judgements and changes in judgements made in applying IFRS 17.</p>
+<p>This requirement builds on the information required to be disclosed under IFRS 4, including:</p>
+<ul>
+<li><p>Information on accounting policies for insurance contracts.</p>
+</li>
+<li><p>The process used to determine material assumptions.</p>
+</li>
+<li><p>The effect of changes in assumptions.</p>
+</li>
+</ul>
+</li>
+<li><p>Information that enables users of the financial statements to evaluate the nature, amount, timing, and uncertainty of future cashflows from insurance contracts. The risks typically expected to arise in such cashflows are insurance risk and financial risks (e.g. market, credit, and liquidity).</p>
+</li>
+</ul>
+<p>Some insurers who implemented IFRS 17 early emphasised to analysts that IFRS 17 is an accounting change which changes the recognition of insurance earnings, but that it does not impact the amount of earnings the company will make over the lifetime of the business. As such, the implementation of IFRS 17 may not change an insurer&#39;s strategy, solvency, or dividend policy. IFRS 17 applies to annual reporting periods beginning on or after 1 January 2023, with earlier application permitted if IFRS 9 is also applied.</p>
+<h2 id="section-16">Accounting for insurance contracts - IFRS 17</h2>
+<p>IFRS 17 applies to companies using IFRS Accounting Standards that issue insurance contracts.</p>
+<p>IFRS 17 covers the following:</p>
+<ul>
+<li><p>Insurance contracts issued.</p>
+</li>
+<li><p>Reinsurance contracts held.</p>
+</li>
+<li><p>Investment contracts with discretionary participation features (i.e. with profits policies) issued by companies that also issue insurance contracts.</p>
+</li>
+</ul>
+<p>IFRS 17 sets out principles for recognition, measurement, presentation, and disclosure of insurance contracts within its scope. The IASB worked for many years, with a wide range of stakeholders, to develop IFRS 17.</p>
+<p>IFRS 17 replaced IFRS 4 (an interim standard for insurance contracts whilst IFRS 17 was being developed) and was introduced with the following aims:</p>
+<ul>
+<li><p>To appropriately reflect insurance revenue in line with services provided.</p>
+</li>
+<li><p>To give consistency with the IFRS standards for other industries.</p>
+</li>
+</ul>
+<p>IFRS 17 requires all insurers to reflect the effect of economic changes in their statements in a timely and transparent way, as well as improved information about the current and future profitability of insurers.</p>
+<p>IFRS 17 aims to make the financial reporting of insurance companies more relevant, transparent, and comparable by providing information about the following:</p>
+<ul>
+<li><p>The effect of the insurance contract on the insurer&#39;s financial performance.</p>
+</li>
+<li><p>The way in which an insurer earns profits (or losses) through underwriting services and investing policyholders&#39; premiums.</p>
+</li>
+<li><p>The nature and extent of risks that the insurer is exposed to from issuing insurance contracts.</p>
+</li>
+</ul>
+<p>IFRS 17 applies to annual reporting periods beginning on or after 1 January 2023, with earlier application permitted if IFRS 9 is also applied. Successful implementation of IFRS 17 has required significant time, effort, and cost from insurers. To meet the requirements of IFRS 17, insurers have had to gather new information, employ or develop people with appropriate skills, and make changes to their financial systems. Insurers have also incurred costs in educating staff, updating internal procedures, and communicating changes in their reports to stakeholders.</p>
+<p>For an insurer first applying IFRS 17 to the 2023 calendar year with one comparative year, the transition date was 1 January 2022. Full retrospective application was required unless impracticable, in which case a modified retrospective or fair value approach was used.</p>
+<p>Transitional arrangements applied at that point, allowing some approximations to be made in determining the starting position. In particular, the fact that the CSM is established for a group at initial recognition and subsequently adjusted and released presented practical issues for insurers. This required insurers to look back through historical data for policies in force at the implementation date of IFRS 17 to determine what the CSM would have been for each when it was sold and how it would have been written down. This posed issues relating to capturing the appropriate historical data and performing these retrospective calculations.</p>
+<h3 id="section-17">Valuation methods</h3>
+<p>IFRS 17 sets out the requirements that companies should apply when reporting information about the insurance contracts they write and the reinsurance contracts they hold.</p>
+<p>IFRS 17 sets out three valuation approaches for insurance liabilities:</p>
+<ul>
+<li><p>The General Measurement Model (GMM), also known as the &#39;building block approach&#39;.</p>
+</li>
+<li><p>The Variable Fee Approach (VFA).</p>
+</li>
+<li><p>The Premium Allocation Approach (PAA), also known as the &#39;simplified approach&#39;.</p>
+</li>
+</ul>
+<p>The appropriate valuation approach to use for a line of business will depend on the nature of the business.</p>
+<h4 id="section-18">The general measurement model (GMM)</h4>
+<p>The General Measurement Model (GMM), also known as the &#39;Building Block Approach&#39;, is the default valuation method for insurance contracts under IFRS 17.</p>
+<p>This approach defines how an insurance contract should be recognised and measured at inception and then subsequently over time. This approach therefore defines how the revenue and profit associated with an insurance contract is realised over its lifetime.</p>
+<p>This approach is most appropriate for traditional long-term insurance business (e.g. annuities, critical illness, term assurance business, etc). Under the GMM, the insurance contract liability on the balance sheet is equal to the <em>fulfilment cashflows</em> plus the <em>contractual service margin (CSM)</em>.</p>
+<h5 id="section-19">Fulfilment cashflows</h5>
+<p>Fulfilment cashflows comprise the present value of future cashflows and an explicit adjustment for non-financial risk.</p>
+<h6 id="section-20">Present value of future cashflows</h6>
+<p>This comprises the present value of benefits and directly attributable expenses, less the present value of expected future premiums, using best estimate assumptions.</p>
+<p>The discount rate applied to cashflows should be consistent with the observable market prices of financial instruments with comparable cashflow characteristics to the liabilities being valued. For the types of business valued using the GMM, these comparable financial instruments would typically be bonds (or bond-like). This means that a market-consistent discount rate is used. The present value of future cashflows is therefore comparable to the Solvency II best estimate liability (BEL), though, in practice, there are differences between the two, for example in how the discount rate is set. Applying an illiquidity premium is also allowed, provided that this is appropriate to the underlying characteristics of the insurance contracts.</p>
+<p>IFRS 17 allows for two different approaches for yield curve construction which, in theory, though not necessarily in practice, produce equivalent results:</p>
+<ul>
+<li><p><strong>The bottom-up approach -</strong> This approach starts from a risk-free yield curve. IFRS 17 does not explicitly define the basis for deriving this risk-free yield curve. One approach is to use interbank swap rates. Various alternative approaches could alternatively be used, however, such as bootstrapping from highly-liquid high-quality government bond yields.</p>
+<p>An illiquidity premium can then be added to these risk-free rates, where appropriate. The adjustment reflects the liquidity characteristics of the insurance contracts. It does not depend simply on whether the insurer intends to hold matching assets to maturity.</p>
+<p>Possible approaches to calculating the illiquidity premium adjustment include the following:</p>
+<ul>
+<li><p>Estimating the illiquidity premium based on the risk-adjusted spreads of corporate and government bonds.</p>
+</li>
+<li><p>Using a fundamental spread approach by deducting the risk-free rate and credit risk premium from corresponding corporate bond reference portfolios.</p>
+</li>
+</ul>
+<p>This has a similar economic motivation to a Solvency II matching adjustment, but the eligibility conditions and calculation are different.</p>
+</li>
+<li><p><strong>The top-down approach -</strong> This approach starts by deriving a yield curve from an actual reference portfolio of assets. Where the assets backing a particular portfolio of insurance contracts are clearly defined, it should be relatively straightforward to observe prices for the assets in the reference portfolio. These do not directly give a market price for the insurance liabilities. It would then be possible to infer the effective portfolio yield by applying an internal rate of return calculation to the contractual cashflows.</p>
+<p>The main issue with this approach is that it requires a term structure of discount rates to be derived (rather than just the average portfolio yield). A flat discount rate will not usually be suitable or acceptable for IFRS 17 discounting. Constructing a term structure for a diverse portfolio of assets will be more difficult than fitting a risk-free curve.</p>
+<p>The yield curve derived using this approach should then be reduced to:</p>
+<ul>
+<li><p>Remove any yield components (e.g. credit risk) that are not relevant to the insurance liability.</p>
+</li>
+<li><p>Allow for any differences between the amounts, timing, and certainty of the cashflows of the reference assets relative to those of the liabilities (since full credit for the illiquidity premium should not be taken in this case).</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Determining an appropriate IFRS 17 discount rate is complex and subject to significant judgement. Care is therefore needed in communicating how the discount rate was derived to stakeholders. IFRS 17 also requires a company to include financial options and guarantees that remain within the insurance contract after any required separation of components in the measurement of the fulfilment cashflows. These should also be valued on a market-consistent basis. Stochastic models or option pricing techniques may be required to do this.</p>
+<h6 id="section-21">Risk adjustment for non-financial risk</h6>
+<p>IFRS 17 requires that an explicit, current risk adjustment is always allowed for in the measurement of insurance cashflows. This adjustment should reflect &quot;the compensation an entity requires for bearing the uncertainty about the amount and timing of cashflows that arises from non-financial risks&quot;. The IFRS 17 risk adjustment is therefore conceptually similar to the Solvency II risk margin (though how they are determined will differ).</p>
+<p>The use of an explicit risk adjustment provides useful insight into how the company views the economic burden imposed by their insurance contracts and how that risk changes over time. In contrast, where prudence is directly built into valuation assumptions (without liabilities also being quoted on a best estimate basis) it is difficult for users to understand the extent of the prudence applied.</p>
+<p>The calculation of the risk adjustment is not explicitly prescribed within IFRS 17. Instead, its calculation is at the discretion of the company (but the method chosen must meet certain criteria).</p>
+<p>Possible approaches to calculating the risk adjustment include:</p>
+<ul>
+<li><p><strong>Value-at-Risk (VaR) -</strong> A percentile-based adjustment can be calculated as the chosen percentile of the present value of net outflows for non-financial risk, less its expected value.</p>
+</li>
+<li><p><strong>Conditional Tail Expectation (CTE) -</strong> This approach uses the mean loss in the tail beyond a chosen percentile. A risk adjustment can be derived by comparing that tail mean with the expected loss. This method is typically chosen where outcome distributions are skewed or have fat tails.</p>
+</li>
+<li><p><strong>Cost of Capital (CoC) -</strong> This approach projects capital associated with non-financial risk and discounts the costs of holding that capital over the remaining lifetime of the contracts. This resembles the cost-of-capital approach to the Solvency II risk margin, but the objective, risks included, diversification, and parameters may differ.</p>
+</li>
+</ul>
+<p>The confidence level at which the risk adjustment should be calculated is not prescribed under IFRS 17.</p>
+<p>Considerations when determining which calculation approach to use for the risk adjustment include the following:</p>
+<ul>
+<li><p>The ease of calculation.</p>
+</li>
+<li><p>Consistency with other financial reporting requirements (e.g. Solvency II).</p>
+</li>
+<li><p>Consistency with how the company considers variability of cashflows internally.</p>
+</li>
+</ul>
+<p>Allowance may also be taken for diversification between risks when calculating the risk adjustment.</p>
+<p>The company must make certain disclosures with respect to the risk adjustment, including:</p>
+<ul>
+<li><p>The confidence level used, or the confidence level corresponding to the result if another technique is used.</p>
+</li>
+<li><p>A reconciliation from the opening to the closing balances of the risk adjustment.</p>
+</li>
+</ul>
+<p>The fulfilment cashflows are measured at current value, with the cashflows, discount rate, and risk adjustment updated at each reporting date.</p>
+<h5 id="section-22">The contractual service margin (CSM)</h5>
+<p>The CSM represents the unearned profit that an insurer expects to recognise as it provides insurance contract services. For profitable groups of contracts, it prevents the expected profit from being recognised immediately when the contracts are written.</p>
+<p>At initial recognition, the CSM is set so that no income or expense arises from the group, after allowing for fulfilment cashflows, cashflows arising at that date, and any relevant previously recognised balances. The CSM includes the effect of the risk adjustment; it is not simply the present value of best-estimate future profits before risk.</p>
+<p>For a simplified example, suppose that an initial premium has been received and directly attributable initial expenses have been paid. Let the present value of remaining net outflows exclude both of those initial cashflows. Then, for a profitable group and ignoring other initial-recognition adjustments:</p>
+<p><strong>CSM = initial premium − initial expenses − present value of remaining net outflows − risk adjustment</strong></p>
+<p>This convention avoids counting the initial premium or expenses twice. For example, an initial premium of 100, initial expenses of 5, a present value of remaining net outflows of 80, and a risk adjustment of 3 give a CSM of 12. Cash of 95 is matched by an insurance liability of 80 + 3 + 12 = 95, so no initial profit emerges.</p>
+<p>The CSM for insurance contracts issued cannot be negative. If the calculation would produce a negative amount, the group is onerous: the insurer recognises the loss immediately and establishes a loss component within the liability for remaining coverage. The loss component is a tracking component of that liability, not a further liability to add on top. This is a deliberate asymmetry: losses are recognised immediately, while unearned profits are recognised as services are provided.</p>
+<p>For profitable regular-premium business, the CSM can be positive even when initial expenses exceed the first premium. Expected future premiums may exceed the expected future benefits and expenses, giving a negative present value of remaining net outflows.</p>
+<h6 id="section-23">Releasing and adjusting the CSM</h6>
+<p>The CSM is released over time using coverage units. These reflect the quantity of benefits and the expected period over which insurance contract services are provided. The allocation compares services provided in the current period with those expected in the current and remaining periods; it is not simply a release whenever the total number of coverage units falls.</p>
+<p>Under the GMM, the main elements of the CSM roll-forward are:</p>
+<ul>
+<li><p>Adding the CSM for new contracts joining the group.</p>
+</li>
+<li><p>Accruing interest using the rate determined at initial recognition.</p>
+</li>
+<li><p>Adjusting for changes in fulfilment cashflows that relate to future service, subject to the loss-component rules.</p>
+</li>
+<li><p>Allowing for exchange-rate movements.</p>
+</li>
+<li><p>Allocating an amount to profit or loss for services provided during the period.</p>
+</li>
+</ul>
+<p>Changes in estimates of future non-financial cashflows and the associated risk adjustment can therefore change the CSM. This is often called ‘unlocking’ the CSM. If estimated future outflows increase by 4 and the CSM can absorb the increase, the CSM decreases by 4. The two changes offset in the liability: the adjustment is not itself a release of revenue for current service. If the CSM cannot absorb the deterioration, the excess is recognised immediately as a loss.</p>
+<p>Experience relating to current or past service generally affects current profit or loss, while changes relating to future service generally adjust the CSM. There are exceptions to a simple experience-versus-assumptions distinction: for example, some premium experience adjustments relate to future service.</p>
+<p>Under the GMM, changes in discount rates do not adjust the CSM, although the fulfilment cashflows themselves are remeasured using current rates. Insurance finance income or expenses are presented in profit or loss, or partly in other comprehensive income under the applicable accounting policy.</p>
+<h6 id="section-24">Grouping contracts</h6>
+<p>IFRS 17 starts with portfolios of contracts subject to similar risks and managed together. Portfolios are divided into groups, distinguishing at least:</p>
+<ul>
+<li><p>Contracts that are onerous at initial recognition.</p>
+</li>
+<li><p>Contracts that have no significant possibility of becoming onerous subsequently.</p>
+</li>
+<li><p>The remaining contracts.</p>
+</li>
+</ul>
+<p>Under the IASB standard, a group cannot include contracts issued more than one year apart. This prevents profitable and onerous contracts from being offset indiscriminately. Groups are established at initial recognition and are not subsequently reassembled merely because their profitability changes.</p>
+<p>The grouping and coverage-unit decisions affect the pattern of profit emergence. Insurers must apply judgement consistently and explain significant judgements. The standard does not require each underlying risk within an individual contract to be accounted for as a separate contract.</p>
+<p>See the <a href="https://www.ifrs.org/news-and-events/updates/ifric/2022/ifric-update-june-2022/">IFRS Foundation’s explanation of coverage units</a> and its <a href="https://www.ifrs.org/issued-standards/list-of-standards/ifrs-17-insurance-contracts/">IFRS 17 overview</a>.</p>
+<h4 id="section-25">The variable fee approach (VFA)</h4>
+<p>IFRS 17 requires contracts that meet specified criteria to be accounted for using the VFA to reflect that those contracts provide investment related services (which are integrated with insurance coverage) and that the issuer receives a variable fee for those services.</p>
+<p>Only insurance contracts with &#39;direct participation features&#39; are eligible for the VFA.</p>
+<p>These features are the following:</p>
+<ul>
+<li><p>The policyholder participates in a share of a clearly identified pool of underlying items or investments.</p>
+</li>
+<li><p>The company expects to pay the policyholder an amount equal to a substantial share of the fair value returns on the underlying.</p>
+</li>
+<li><p>The company expects a substantial proportion of any change in the amounts payable to policyholders to vary with the change in the fair value of the underlying.</p>
+</li>
+</ul>
+<p>The VFA may apply to unit-linked, with-profits, and variable annuity contracts, but only where the contracts are within IFRS 17 and meet all the direct-participation criteria. The underlying items may be the unit fund for unit-linked business or specified assets supporting with-profits business. An asset-share calculation alone does not establish that a contract meets the criteria.</p>
+<p>The variable fee equals the insurer’s share of the fair value of the underlying investments, less the fulfilment cashflows that do not vary with the underlying. That is, the variable fee is the fee payable to the insurer which varies (to some extent) in line with the value of the underlying. For example, for unit-linked business the variable fee represents the excess of charges over expenses (where fund-based charges will vary with the value of the underlying assets).</p>
+<p>There are several differences in the liability valuation approach under the VFA and GMM, resulting in different reporting outcomes including profit timing and volatility. Understanding whether contracts meet the eligibility criteria for the VFA is therefore of great importance to companies implementing IFRS 17, since it will have a significant effect on the systems requirements and reported results. The company will need to disclose any significant judgements made in determining eligibility. The main difference between the VFA and the GMM relates to the roll-forward of the CSM. As for the GMM, the liability under the VFA comprises the fulfilment cashflows and the CSM.</p>
+<p>Under the VFA, changes in the insurer’s variable fee relating to future service generally adjust the CSM. This includes relevant changes in financial assumptions. This does not mean that all market volatility is absorbed by the CSM. Losses exceeding the available CSM, items outside the variable fee, and qualifying risk-mitigation arrangements can affect the result differently. Under the GMM, financial assumption changes generally affect insurance finance income or expenses, which may be presented partly in other comprehensive income. The GMM’s locked-in CSM rate does not mean that fulfilment cashflows use a permanently locked-in discount rate.</p>
+<p>The difference reflects how future profitability for direct participation business is affected by market movements, such as changes in fund-based management charges. The VFA is therefore designed to give a more accurate representation of the sharing of risk between the issuer and the policyholder for contracts with direct participation features. For example, if the value of unit funds increases significantly then the value of expected future management charges will also increase, thus increasing the insurer’s expected variable fee, before the corresponding CSM adjustment. If the CSM was unchanged, this would generate a release of profit. However, under the VFA this will instead be absorbed by the CSM and the profit will only be released as the CSM unwinds.</p>
+<h4 id="section-26">The premium allocation approach (PAA)</h4>
+<p>The PAA offers a simpler alternative to the GMM.</p>
+<p>A company can use the PAA for a group of insurance contracts if, and only if, one of the following is true at inception of the contracts:</p>
+<ul>
+<li><p>The company reasonably expects that this simplification would produce a measurement of the liability (for its remaining coverage) that would not materially differ from the one given by the GMM.</p>
+</li>
+<li><p>The coverage period of each contract in the group is one year or less.</p>
+</li>
+</ul>
+<p>Rather than having fulfilment cashflows and a CSM (as is the case for the GMM and VFA), the PAA uses a simplified measure based on unearned premiums. The liability for remaining coverage is based on premiums received, adjusted for revenue recognised and other relevant items, including acquisition cashflows where applicable. For example, for a one-year single premium contract that has been in force for six months, the liability for remaining coverage could be half of the premium if service is provided evenly and acquisition cashflows, financing effects, and other adjustments are ignored. Any liability for incurred claims is additional.</p>
+<p>One key benefit of the PAA is that it does not require a separate CSM calculation. The insurer must still estimate incurred claims and assess whether remaining coverage is onerous; the approach does not remove the need for claims estimation. This can reduce ongoing costs and resourcing requirements. See the <a href="https://www.ifrs.org/content/dam/ifrs/project/insurance-contracts/ifrs-standard/ifrs-17-effects-analysis.pdf">IFRS 17 effects analysis</a> for the distinction between remaining coverage and incurred claims.</p>
+<p>The use of the simplified PAA approach in IFRS 17 is optional.</p>
+<p>The PAA is most commonly used for short-term general insurance and short-term health and care insurance business. It is therefore generally unsuitable for most long-term life insurance business.</p>
+<h3 id="section-27">Reinsurance</h3>
+<p>IFRS 17 requires insurers to recognise and measure reinsurance contracts held separately from the underlying insurance contracts. Reinsurance is not simply netted against the underlying insurance liabilities.</p>
+<p>IFRS 17 sets out a number of significant differences between the accounting treatment of reinsurance held and the underlying insurance contracts to which they relate:</p>
+<ul>
+<li><p>The methods used for valuing reinsurance contracts may differ from the underlying insurance contracts to which they relate. The VFA is not available for reinsurance (both ceded and accepted), which may be an issue for reinsurance relating to unit-linked and with-profits contracts.</p>
+</li>
+<li><p>For reinsurance held, the CSM can represent a net cost or a net gain, with specific recognition rules. It does not have the same non-negative unearned-profit interpretation as the CSM for insurance contracts issued. This is in contrast to the CSM for the underlying insurance contracts, which cannot have a negative CSM.</p>
+</li>
+<li><p>The CSM will run off over the coverage period of the reinsurance contract, which will often differ from the coverage period of the underlying insurance contracts. The underlying insurance contracts may also be grouped into very different units according to risk, onerousness, and time.</p>
+</li>
+</ul>
+<p>The differences in accounting for reinsurance and the underlying insurance contracts could lead to a mismatch between the value placed on the reinsurance and the value placed on the underlying risks for the insurer in its accounts. This mismatch could lead an insurer to reassess their existing reinsurance arrangements if they are not going to meet their objectives (i.e. if they create undue complexity or profit volatility under IFRS 17).</p>
+<h3 id="section-28">Profit emergence under IFRS 17</h3>
+<p>For unchanged contractual cashflows, changing accounting standards does not itself change the underlying lifetime economic profit. The timing and presentation of reported profit can nevertheless be very different.</p>
+<p>IFRS 4 permitted a range of existing accounting practices. Under some of those practices, prudence margins were lower than the overall profit margin loaded into premiums. As a consequence, some contracts may recognise a day one profit under IFRS 4.</p>
+<p>Consider a single premium policy with overall profit loadings exceeding the prudence margins used under its previous IFRS 4 accounting policy.</p>
+<p>Under that previous accounting policy, the following could be true:</p>
+<ul>
+<li><p>The profit released under IFRS 4 would be higher at inception (and in the first policy year) than under IFRS 17, but lower in subsequent years. This is because IFRS 17 uses the CSM to release profit gradually by deferring it. The CSM under IFRS 17 ensures that no day one profit is recognised.</p>
+</li>
+<li><p>The total profits will be the same as under IFRS 4, but their timing will differ. The CSM defers unearned profit; it does not guarantee smooth or stable total earnings. The CSM is recognised as services are provided; experience variances and finance results also affect reported earnings. The difference in timing for profit release, relative to IFRS 17, will primarily depend on how the release of the IFRS 4 margins compares against the IFRS 17 CSM run-off method (and the release of the risk adjustment).</p>
+</li>
+</ul>
+<p>By contrast with IFRS 4, under IFRS 17 the following happens:</p>
+<ul>
+<li><p>The CSM is released into operating profit as the benefits and services of insurance contracts are provided.</p>
+</li>
+<li><p>The risk adjustment will be released into profit if experience is as expected.</p>
+</li>
+<li><p>Some expenses, which are not attributable to liabilities, will be recognised in P&amp;L as they are incurred. An appropriate allocation of overheads that are &#39;directly attributable to fulfilling insurance contracts&#39; can be included in the fulfilment cashflows. Some expenses, however, are not directly attributable to the relevant insurance portfolios. Attribution is not limited to costs traceable to an individual policy.</p>
+</li>
+</ul>
+<p>Under both IFRS 4 and IFRS 17, profit arises after policy inception due to experience variations (relative to best estimate) during each period. Under IFRS 4, profit arising in each period also reflects the gradual release of prudence margins. Under IFRS 17, profit arising reflects the gradual release of both the CSM and the risk adjustment.</p>
+<p>Where a contract is not written on a profitable basis, a loss would be recognised immediately under IFRS 17 and would be identified separately in the P&amp;L. There is also a requirement under IFRS 17 to monitor the profitability of cohorts in the future and, whenever an onerous group is identified, these losses need to be recognised immediately in the P&amp;L.</p>
+<h3 id="section-29">Comparison of IFRS 17 with Solvency II</h3>
+<p>Insurers will want to understand the similarities of Solvency II and IFRS 17 to ensure they can comply with both regimes as efficiently and cost effectively as possible.</p>
+<h4 id="section-30">Objectives</h4>
+<p>Both Solvency II and IFRS 17 have the aim of harmonising and standardising reporting, but they have different overriding purposes:</p>
+<ul>
+<li><p>IFRS 17 is about the recognition of profits. It provides a common accounting framework for contracts within its scope in jurisdictions applying IFRS 17. It aims to make financial reporting of insurers more relevant, transparent, and comparable.</p>
+</li>
+<li><p>Solvency II is about policyholder protection. It is a risk-based and harmonised EU-wide approach to the assessment of capital adequacy, risk management, and reporting for insurers. It was not designed as a performance reporting metric and focuses on the valuation of insurance contracts for capital adequacy purposes.</p>
+</li>
+</ul>
+<p>Due to their different purposes, IFRS 17 and Solvency II have fundamental differences in their approaches. For example, Solvency II requires an insurer to cover all expenses (otherwise it would become insolvent), whereas IFRS 17 is only relevant to expenses that are directly attributable to insurance contracts. Under IFRS reporting, expenses not directly attributable to insurance contracts are still recognised, but go straight in the P&amp;L statement.</p>
+<p>IFRS 17 is principles based, meaning that (in general) there is more flexibility in the methodology applied than is possible under Solvency II. Solvency II is more prescriptive and comprehensive than IFRS 17. Different principles and methodologies under IFRS 17 and Solvency II may lead to different perspectives on balance sheet management and capital generation for a company.</p>
+<h4 id="section-31">Balance sheet components</h4>
+<p>The following diagram shows the components of insurance liabilities in Solvency II and IFRS 17 balance sheets:</p>
+<p><img src="assets/ifrs17-solvency-comparison.png" alt="IFRS 17 insurance liabilities comprise the present value of future cashflows, a risk adjustment, and a CSM; Solvency II technical provisions comprise best estimate liabilities and a risk margin."></p>
+<p>This is a schematic comparison for the GMM or VFA, not a complete balance sheet or a claim that the corresponding amounts are equal. Capital requirements, other liabilities, and equity are not shown.</p>
+<p>IFRS gives an insurance company some flexibility to harmonise the approaches taken for IFRS 17 and Solvency II reporting. However, there are still likely to be differences in the reported best estimate value of liabilities under the two approaches, as their aims and scope are different.</p>
+<h4 id="section-32">IFRS 17 present value of future cashflows vs. Solvency II BEL</h4>
+<p>IFRS 17 covers insurance contracts and certain investment contracts with discretionary participation features, whereas Solvency II assesses the regulated insurer’s overall solvency.</p>
+<p>The methodology used to calculate the two is broadly similar, but there are some differences. Both require insurers to determine best estimates of future cashflows and both use a discount rate that is consistent with the prevailing rates in financial markets to determine present values of these cashflows. As such, the IFRS 17 present value of future cashflows and the Solvency II BEL will be similar.</p>
+<p>Reasons why the two values may differ in practice include the following:</p>
+<ul>
+<li><p>There may be differences in the yield curves used to discount cashflows. IFRS 17 gives more flexibility over how the discount rate is determined, for example by allowing a top-down or bottom-up approach to be used and also allowing for illiquidity premium. Under Solvency II, the risk-free discount rate is only adjusted if the conditions for the matching adjustment or volatility adjustment are satisfied.</p>
+</li>
+<li><p>IFRS 17 gives insurers some discretion in how market-consistent discount rates are extrapolated to longer durations, whereas Solvency II prescribes how this must be done. This discretion may lead to a different level and shape of discount curve for IFRS 17, relative to Solvency II. Under Solvency II, EIOPA provides the extrapolated risk-free rates beyond the liquid tenors.</p>
+</li>
+<li><p>There may be differences in expense allocation and contract boundaries under the two regimes, leading to different results.</p>
+</li>
+<li><p>The use of the simplified PAA approach under IFRS 17 is optional, so different approaches could be taken for short-term business under Solvency II and IFRS 17.</p>
+</li>
+</ul>
+<h4 id="section-33">IFRS 17 risk adjustment vs. Solvency II risk margin</h4>
+<p>Both the IFRS 17 Risk adjustment and the Solvency II Risk Margin allow for non-financial risks in their respective balance sheets, but their purposes are different.</p>
+<p>The IFRS 17 Risk Adjustment is an internal metric indicating what an entity requires to cover variability. The Solvency II risk margin is a prescribed allowance intended to reflect the cost of transferring obligations to a reference insurer. It is not a directly observed market price. Insurers have more freedom in determining their IFRS 17 Risk Adjustment than in determining their Solvency II Risk Margin.</p>
+<h4 id="section-34">IFRS 17 CSM</h4>
+<p>The CSM is the key driver of when profits are recognised under IFRS 17.</p>
+<p>Solvency II does not specify requirements on P&amp;L recognition, and therefore has no equivalent to the IFRS 17 CSM.</p>
+<h2 id="section-35">US GAAP</h2>
+<p>US domestic public companies report under US GAAP. Insurers also prepare statutory accounts for state insurance supervision; those statutory accounts are a separate reporting basis.</p>
+<p>US GAAP is a set of accounting rules, standards, and procedures issued and frequently revised by the Financial Accounting Standards Board (FASB). US domestic public companies prepare accounts under US GAAP for Securities and Exchange Commission reporting. Foreign private issuers can qualify to use IFRS as issued by the IASB. See the <a href="https://www.sec.gov/about/divisions-offices/division-corporation-finance/financial-reporting-manual/frm-topic-6">SEC’s reporting guidance</a>.</p>
+<p>US GAAP aims to ensure that companies&#39; financial statements are complete, consistent, and comparable. As such, US GAAP has strict rules to ensure transparency in the US financial reporting process by standardising the various methods, terminology, definitions, and financial ratios.</p>
+<p>IFRS accounting standards remain relevant to many US businesses, even when their own primary accounts use US GAAP.</p>
+<p>US companies will be affected by IFRS at different times, and to different degrees, due to the following:</p>
+<ul>
+<li><p><strong>Mergers and acquisitions -</strong> US companies looking outside the USA for merger and acquisition targets will increasingly need to understand IFRS reporting.</p>
+</li>
+<li><p><strong>Non-US stakeholders -</strong> US companies with non-US stakeholders may require IFRS financial information.</p>
+</li>
+<li><p><strong>Non-US subsidiaries -</strong> Multinational companies may have IFRS reporting requirements for their non-US subsidiaries.</p>
+</li>
+</ul>
+<h3 id="section-36">Differences between US GAAP and IFRS</h3>
+<p>The accounting principles for US GAAP have some similarities with IFRS standards, but there are a number of areas where US GAAP and IFRS differ:</p>
+<ul>
+<li><p>US GAAP is a rules-based system with less discretion than IFRS 17. In particular, US GAAP has many detailed industry specific rules. By contrast, IFRS 17 is a principles-based system.</p>
+</li>
+<li><p>There may be major differences in how profit is recognised under US GAAP relative to IFRS 17. Both use the accruals approach, but US GAAP&#39;s revenue recognition requirements are augmented by a number of detailed rules. For example, qualifying acquisition costs may be deferred and amortised under specific rules; this does not permit all expenses to be deferred until related revenue arises.</p>
+</li>
+<li><p>The consolidation rules, which determine which entities are included in group financial statements, differ between IFRS and US GAAP.</p>
+</li>
+<li><p>The definition and classification of contracts differ between IFRS and US GAAP. US insurance accounting distinguishes, for example, traditional and limited-payment contracts, universal-life-type and investment contracts, and participating contracts. The detailed recognition and measurement rules depend on the category.</p>
+</li>
+<li><p>A comparison must also take account of the US GAAP updates for long-duration insurance contracts; older category descriptions alone do not explain the current measurement rules. See the <a href="https://storage.fasb.org/8.15.18%20FASB%20in%20Focus%20LD%20Insurance%20FINAL.pdf">FASB summary of the targeted improvements</a>.</p>
+</li>
+</ul>
+</article><nav class="pagination" aria-label="Page navigation"><a href="15-analysis-of-surplus.html">← Analysis of surplus</a><a href="17-embedded-value.html">Embedded value →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>
