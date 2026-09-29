@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Solvency frameworks and governance | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" aria-current="page" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" title="Solvency valuation and capital">Chapter 10</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 9 of 10</div><article><h1>Solvency frameworks and governance</h1>
+<p>Solvency assessment considers whether an insurer has sufficient resources to meet its obligations, including under adverse conditions. Solvency II provides a useful framework for understanding how capital requirements, governance and disclosure fit together. This page also compares approaches used in other jurisdictions.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">Solvency II</a></li><li><a href="#section-6">Solvency II pillar 2</a></li><li><a href="#section-11">Solvency II pillar 3</a></li><li><a href="#section-14">Other Solvency II issues</a></li><li><a href="#section-21">Comparison with other jurisdictions</a></li></ul></nav></details>
+<p>The detailed EU examples on this page and the next describe the framework before the revised rules apply on 30 January 2027. UK rules have already diverged through Solvency UK. The principles remain useful, but parameters and reporting requirements should always be tied to a jurisdiction and valuation date. <a href="https://www.eiopa.europa.eu/eiopa-completes-solvency-ii-review-mandate-final-guidelines-and-draft-technical-standards-revised-2026-07-15_en">EIOPA explanation of the revised framework</a></p>
+<h2 id="section-1">Solvency II</h2>
+<p>Solvency II is a system for insurance regulation applying to insurers in the EU which became operative from 1 January 2016.</p>
+<p>The primary aim of Solvency II is to adequately protect policyholders and beneficiaries. To achieve this, it sets out a risk-based approach to the assessment of capital adequacy, risk management, and reporting for insurers.</p>
+<p>Solvency II aims to also achieve a harmonised EU-wide approach to regulation of insurers. Prior to Solvency II, insurance regulation in the EU was done at a national level and very different approaches were taken in many member countries. The purpose of this aim was to increase competition in insurance markets from insurers in different EU countries.</p>
+<p>The key aims of Solvency II can be summarised as follows:</p>
+<ul>
+<li><p>Increasing the level of harmonisation of solvency regulations across Europe.</p>
+</li>
+<li><p>Protecting policyholders.</p>
+</li>
+<li><p>Introducing Europe-wide capital requirements that are more sensitive to the levels of risk being undertaken (relative to the Solvency I regulations).</p>
+</li>
+<li><p>Providing appropriate incentives for good risk management.</p>
+</li>
+</ul>
+<p>EIOPA (the European Insurance and Occupational Pensions Authority) provides technical advice and support to the European Commission for the development of Solvency II.</p>
+<p>Transitional arrangements from the previous regime to Solvency II are available for some aspects (e.g. technical provisions and risk-free interest rates) for a defined period of time (up to 16 years). The intention of these transitional arrangements is to avoid unnecessary disruption of markets and availability of insurance products. In some countries, insurers have been required to make formal applications to their national regulator to be permitted to use these transitional arrangements.</p>
+<p>Although Solvency II is a framework applied across the European Economic Area (EEA), it has influenced insurance regulation in many other jurisdictions around the world. A number of non-EU countries have introduced aspects of Solvency II type regulation within their own jurisdictions.</p>
+<h3 id="section-2">Structure</h3>
+<p>Solvency II is composed of three pillars.</p>
+<h4 id="section-3">Pillar 1: quantitative requirements</h4>
+<p> This pillar sets out the minimum capital requirements that firms are required to meet. It specifies the valuation methodologies for assets and liabilities (technical provisions), which are based on market-consistent principles.</p>
+<p>Under pillar 1 there are two distinct capital requirements (which are covered by eligible own funds, rather than included within technical provisions; the SCR and MCR are not added together):</p>
+<ul>
+<li><p>The Solvency Capital Requirement (SCR). This can be calculated using a prescribed standard formula approach or by using a company-specific internal model (which must be approved by the national regulator).</p>
+</li>
+<li><p>The Minimum Capital Requirement (MCR).</p>
+</li>
+</ul>
+<p>Supervisors may also decide that a firm should hold additional capital (as a &#39;capital add-on&#39;) against risks that are either not covered or are inadequately modelled for the SCR.</p>
+<h4 id="section-4">Pillar 2: qualitative requirements and solvency review</h4>
+<p> This pillar includes the supervisory review process, systems of governance, and risk management.</p>
+<p>Under pillar 2, all insurers are required to carry out an Own Risk and Solvency Assessment (ORSA), which requires insurers to do the following:</p>
+<ul>
+<li><p>Identify the risks to which it is exposed, including those not covered under pillar 1.</p>
+</li>
+<li><p>Identify the risk management processes and controls in place.</p>
+</li>
+<li><p>Quantify its ongoing ability to continue to meet the MCR and SCR.</p>
+</li>
+</ul>
+<h4 id="section-5">Pillar 3: reporting and disclosure</h4>
+<p> This pillar covers disclosure and the supervisory reporting regime. Under this pillar, defined reports to regulators and the public are required to be made. Public disclosures are required to give additional confidence in the Solvency II regime and give an additional incentive to insurers to maintain a strong solvency position.</p>
+<p>In summary, Solvency II comprises of the following:</p>
+<ul>
+<li><p>Minimum capital standards.</p>
+</li>
+<li><p>Qualitative risk management requirements.</p>
+</li>
+<li><p>A well-defined and rigorous review process of companies&#39; solvency by regulators.</p>
+</li>
+<li><p>Prescribed disclosures to supervisors, policyholders, and investors.</p>
+</li>
+</ul>
+<h2 id="section-6">Solvency II pillar 2</h2>
+<h3 id="section-7">Governance requirements</h3>
+<p>Pillar 2 sets out requirements for the roles and responsibilities of key functions within an insurance company.</p>
+<p>A company&#39;s board has overall responsibility for ongoing compliance with Solvency II.</p>
+<p>All insurers are required, by Solvency II, to have the following:</p>
+<ul>
+<li><p>A risk management function.</p>
+</li>
+<li><p>An actuarial function.</p>
+</li>
+<li><p>A compliance function.</p>
+</li>
+<li><p>An internal audit function.</p>
+</li>
+</ul>
+<p>An insurer&#39;s organisational structure must have clear segregation of responsibilities (the minimum levels of which are defined within pillar 2 of Solvency II). For example, the internal audit function must be independent of the activities it audits; any permitted combination of functions is subject to safeguards and proportionality conditions.</p>
+<p>The actuarial function is responsible for the coordination of the calculation of the technical provisions. For example:</p>
+<ul>
+<li><p>The actuarial function must explain any material effect of changes in data, methodologies, or assumptions on the amount of technical provisions.</p>
+</li>
+<li><p>The actuarial function must also provide an opinion on the company&#39;s underwriting policy and the adequacy of its reinsurance arrangements.</p>
+</li>
+<li><p>If the company uses an internal model to calculate its SCR, the actuarial function should specify which risks within their domain of expertise should be covered by the internal model. They should also contribute to how dependencies between these risks (and other risks) should be derived. This contribution should be based on a technical analysis and should reflect the experience and expertise of the function.</p>
+</li>
+</ul>
+<h3 id="section-8">ORSA</h3>
+<p>In addition to calculating the MCR and SCR (as part of pillar 1), insurers are also required to carry out an Own Risk and Solvency Assessment (ORSA).</p>
+<p>The ORSA brings together the processes used to identify, assess, monitor, manage and report the insurer’s short- and long-term risks, and to determine the own funds needed to meet its overall solvency needs.</p>
+<h4 id="section-9">Risk assessment</h4>
+<p>The ORSA requires each insurer to identify <em>all</em> the risks to which they are subject and the related risk management processes and controls.</p>
+<p>This includes some of the more qualitative risks that have not necessarily been assessed under pillar 1 (e.g. reputational risk).</p>
+<h4 id="section-10">Solvency assessment</h4>
+<p>The ORSA also requires insurers to quantify their ability to continue to meet the MCR and SCR over the business planning horizon (usually three to five years).</p>
+<p>This should allow for the effect of writing new business.</p>
+<p>This assessment does not have to be performed at a prescribed confidence level, but should be done at a level that the company feels is appropriate, relating to its own stated risk appetite and/or achieving a target credit rating. There is little prescriptive guidance about the ORSA, with EIOPA&#39;s guidance generally being that companies should develop tailored processes and techniques. The intention behind this was to give insurers scope to build processes that genuinely fit their business and which are thus integral to their strategic planning and ongoing decision making, rather than being a &#39;tick box&#39; requirement.</p>
+<p>The ORSA is one element considered by the supervisor when determining whether a further capital add-on is required.</p>
+<p>Insurers are required to evidence to the supervisor that the ORSA is used by senior management (e.g. in making strategic decisions). The importance of using the ORSA as part of the decision making process, and demonstrating this use, has been stressed by the regulator.</p>
+<h2 id="section-11">Solvency II pillar 3</h2>
+<p>The disclosure requirements required by pillar three are intended to increase transparency (and are therefore more extensive than the previous Solvency I regime).</p>
+<h3 id="section-12">Private supervisory reporting</h3>
+<p>Insurers submit private information to supervisors through several reporting channels. These include a Regular Supervisory Report (RSR), Quantitative Reporting Templates (QRTs), and the supervisory report on the Own Risk and Solvency Assessment.</p>
+<p>The RSR provides qualitative and quantitative information on the insurer’s business, governance, risk profile, valuation and capital management. Under the pre-2027 EU framework, the supervisor sets the frequency of the full RSR, with annual reporting of material changes in intervening years. The ORSA supervisory report is a separate submission, rather than simply a section of the RSR. <a href="https://www.eiopa.europa.eu/document/download/1ff6ce2a-2e90-4008-a838-d7fa243e82a0_en?filename=Guidelines+on+supervisory+review+process.pdf">EIOPA supervisory review guidelines</a></p>
+<p>Quantitative templates are submitted annually and, for specified information, quarterly. Quarterly reporting may rely on estimated values to a greater extent than annual reporting.</p>
+<p>The annual QRTs will cover, for example:</p>
+<ul>
+<li><p>The balance sheet.</p>
+</li>
+<li><p>Premiums, claims, and expenses by line of business.</p>
+</li>
+<li><p>Own funds.</p>
+</li>
+<li><p>Capital requirements (SCR and MCR).</p>
+</li>
+<li><p>Assets.</p>
+</li>
+<li><p>Collective investment undertakings.</p>
+</li>
+<li><p>Derivatives.</p>
+</li>
+<li><p>Technical provisions (including information on ring-fenced assets and any matching adjustment applied).</p>
+</li>
+<li><p>Group reporting.</p>
+</li>
+<li><p>Any reinsurance undertakings.</p>
+</li>
+</ul>
+<h3 id="section-13">Public disclosure</h3>
+<p>Other than certain items that can be demonstrated as confidential in nature, extracts from the QRT and some of the qualitative information from the RSR are also disclosed in a public Solvency and Financial Condition Report (SFCR).</p>
+<p>This is produced annually. Local regulators are permitted to impose additional reporting requirements on insurers in the form of &#39;national specific templates&#39;.</p>
+<h2 id="section-14">Other Solvency II issues</h2>
+<h3 id="section-15">Group reporting requirements</h3>
+<h4 id="section-16">Groups</h4>
+<p>Solvency II aims to enable insurance groups to be supervised more efficiently through a &#39;group supervisor&#39; in the home country, co-operating with other relevant national supervisors.</p>
+<p>This ensures that group-wide risks are not overlooked and should enable groups to operate more effectively, whilst continuing to provide policyholder protection.</p>
+<p>Examples of group-wide risks that could be overlooked if assessments are not done at group-level include the following:</p>
+<ul>
+<li><p>The double use of capital within an insurance group (e.g. where regulated entities make subordinated loans to each other).</p>
+</li>
+<li><p>Double leverage (where a parent raises debt which is then used to fund an investment in a regulated subsidiary, improving the solo capital position of the subsidiary).</p>
+</li>
+</ul>
+<p>Solvency II requires the following in respect of groups:</p>
+<ul>
+<li><p>Each insurance <em>group</em> must cover both of the following:</p>
+<ul>
+<li><p>Its overall group SCR, allowing for diversification where the rules permit it.</p>
+</li>
+<li><p>Its minimum consolidated group SCR, based on the relevant entities’ MCRs and proportionate shares under the applicable rules.</p>
+</li>
+</ul>
+</li>
+<li><p>Each insurance <em>subsidiary</em> must cover their own SCR and MCR.</p>
+</li>
+</ul>
+<p>Group supervision would normally be carried out at the top level company, which may be domiciled within the European Economic Area (EEA) or in a &#39;third country&#39; (i.e. non-EEA). Where there is a non-EEA parent company, Solvency II requires that EEA supervisors must assess whether the parent company is subject to &#39;equivalent&#39; group supervision. Depending on this assessment, there may be further requirements imposed on the group, which could include establishing an EEA-based holding company.</p>
+<h4 id="section-17">Equivalence</h4>
+<p>If an aspect of a third-country regulatory regime is deemed to be broadly compliant with Solvency II, then that aspect of the regime is said to be &#39;equivalent&#39;.</p>
+<p>There are three situations under which such &#39;equivalence&#39; can be granted:</p>
+<ul>
+<li><p>The solo solvency regime in the third-country is equivalent.</p>
+</li>
+<li><p>The group supervision regime in the third-country is equivalent.</p>
+</li>
+<li><p>The solvency regime as applied to reinsurance activities in the third-country is equivalent.</p>
+</li>
+</ul>
+<p>Equivalence can be granted for different purposes and periods. A finding about the solvency calculation used for a group is not the same as a finding about reinsurance or group supervision. It also does not, by itself, grant permission to sell insurance across borders. Country decisions and their scope need to be checked separately rather than treated as a permanent list.</p>
+<h3 id="section-18">Impact on business culture and strategy</h3>
+<p>Engagement with Solvency II is important throughout the business, right up to senior management and Board level.</p>
+<p>This is the case for all insurance companies, not just those opting to use an internal model (though being able to demonstrate full integration of Solvency II into the business is a key part of the internal model approval process).</p>
+<p>As such, Solvency II affects almost all of an insurer’s activities:</p>
+<ul>
+<li><p>Solvency II is not just a reporting framework, but also a risk management framework with implications for capital allocation, risk mitigation activities, and performance management.</p>
+</li>
+<li><p>The regime may also have an impact on the optimal product mix for the company and on product design.</p>
+</li>
+<li><p>It is also likely to impact the optimal asset mix for the company (e.g. some asset classes have become relatively more attractive due to their lower capital requirements).</p>
+</li>
+<li><p>The availability of risk diversification benefits may also affect corporate structures and generate merger and acquisition activity.</p>
+</li>
+<li><p>Management information has changed to align Solvency II metrics with the business and strategic decision making process.</p>
+</li>
+<li><p>Insurers also need to consider the impact on the market of the external disclosures under Solvency II.</p>
+</li>
+</ul>
+<h3 id="section-19">Statutory actuarial roles under Solvency II</h3>
+<p>Solvency II establishes responsibilities for the actuarial function. National rules determine the associated statutory roles; the UK also has specific requirements for Chief Actuaries and With-Profits Actuaries.</p>
+<h4 id="section-20">Chief actuary</h4>
+<p>Solvency II requires the actuarial function to be carried out by people with appropriate actuarial and financial mathematics knowledge and relevant experience. In the UK, under PRA supervision, this role is named the Chief Actuary (but may be called something else in other jurisdictions).</p>
+<p>Possible responsibilities of the Chief Actuary include the following:</p>
+<ul>
+<li><p>The co-ordination of calculation of the technical provisions.</p>
+</li>
+<li><p>Ensuring the appropriateness of the methodologies and underlying models used, and the assumptions made, in the calculation of the technical provisions.</p>
+</li>
+<li><p>Assessing the sufficiency and quality of the data used in the calculation of technical provisions.</p>
+</li>
+<li><p>Comparing actual and expected experience.</p>
+</li>
+<li><p>Informing the governing body of the reliability and adequacy of the calculation of technical provisions.</p>
+</li>
+<li><p>Expressing an opinion on the company&#39;s overall underwriting policy.</p>
+</li>
+<li><p>Expressing an opinion on the adequacy of the company&#39;s reinsurance arrangements.</p>
+</li>
+<li><p>Contributing to the effective implementation of risk management systems, with particular regard to risk modelling by the firm.</p>
+</li>
+</ul>
+<h2 id="section-21">Comparison with other jurisdictions</h2>
+<p>The introduction of Solvency II in the EU has had an impact on insurance solvency regulations in many other jurisdictions around the world.</p>
+<h3 id="section-22">United Kingdom</h3>
+<p>The UK left the EU on 31 January 2020, and the transition period ended on 31 December 2020. At the end of that transition, the UK retained a solvency regime derived from Solvency II.</p>
+<p>Subsequent reforms, known as Solvency UK, changed the risk margin, matching adjustment, reporting and other requirements. The main reform package was implemented by the end of 2024. The UK and EU regimes therefore share many principles but should not be assumed to have identical rules or parameters. <a href="https://www.bankofengland.co.uk/prudential-regulation/publication/2025/june/pra-annual-report-2024-25">PRA implementation account</a></p>
+<p>UK insurers lost automatic EU passporting rights at the end of the transition period. This did not mean that every UK insurance group had to cease all EU business: groups could operate through appropriately authorised entities and arrangements. Market access and solvency equivalence are separate questions.</p>
+<h3 id="section-23">USA</h3>
+<p>Solvency regulation in the US is largely a State-based system comprised of State insurance departments and can best be described as a national system of State-based regulation.</p>
+<p>The National Association of Insurance Commissioners (NAIC) assists regulators, protects consumers, and helps maintain the financial stability of the industry. Ultimate regulatory responsibility for insurer solvency rests with each State insurance department and the State insurance commissioner.</p>
+<p>To ensure that legal obligations to policyholders are met when they come due, insurers are required to maintain reserves, capital, and surplus at all times. These must allow for an adequate margin for prudence.</p>
+<p>Accounting standards, risk-based capital requirements, minimum statutory reserves, and State-specific minimum capital requirements form the backbone of reserve and capital adequacy requirements in the US. Similarly to the UK and EU, solvency regulation in the US is based on reserve and capital requirements. State risk-based capital requirements use the NAIC framework. States may impose their own minimum capital requirements, which are usually stated in absolute terms or as a percentage of reserves. There is a common theme of prudence underlying the solvency requirements.</p>
+<h4 id="section-24">Risk-based capital</h4>
+<p>The primary measure of required capital in the US is defined by the Risk-Based Capital (RBC) system which uses a standard formula to determine a capital requirement.</p>
+<p>Regulators use the result of these calculations to determine the level of intervention for weakly capitalised insurers. This is similar to the ladder of supervisory intervention under Solvency II under which prescribed actions will be taken as a company&#39;s capital falls below a specified level.</p>
+<p>A significant proportion of the RBC formula is derived from the annual statement, which is based on statutory accounting. The RBC amount explicitly considers the size and risk profile of the insurer and imposes higher RBC charges for riskier assets or riskier lines of business, resulting in a higher capital requirement.</p>
+<p>Regulators have the authority to take preventative and corrective measures that vary depending on the capital deficiency indicated by the RBC result. These measures are designed to provide for early regulatory intervention to correct problems before insolvencies become inevitable, thereby minimising the frequency and severity of insolvency.</p>
+<p>The RBC formula applies factors to balances taken from the company&#39;s statutory financial statement to calculate an RBC requirement. The factors are set across the industry, rather than on a company by company basis, ensuring a level of consistency and objectivity across companies.</p>
+<p>The RBC system includes factors for asset risk, insurance risk, and business risk. However, it will not cover every risk that the company faces.</p>
+<p>The RBC system therefore operates in conjunction with other aspects of US solvency regulations that focus on company specific factors and risks. Examples of other such aspects of US solvency regulations include the following:</p>
+<ul>
+<li><p>Annual solvency reviews by regulators.</p>
+</li>
+<li><p>Periodic risk-focused examinations.</p>
+</li>
+<li><p>Stress testing and asset adequacy analysis.</p>
+</li>
+</ul>
+<p>RBC is intended to be a minimum regulatory capital standard and is not necessarily the full amount of capital an insurer would want to hold to meet its safety and competitive objectives. That is, the RBC does not represent the economic target level of capital that insurers should hold but, instead, is applied to identify weakly capitalised companies.</p>
+<h4 id="section-25">Reserves</h4>
+<p>In addition to required risk-based capital, insurers hold statutory reserves. Historically, these were largely calculated using formulaic approaches, such as net premium methods; principle-based reserving now applies to specified business.</p>
+<p>Traditional formulaic approaches lock in some assumptions at issue, making reserves less responsive to changes in the economic environment than a current market-consistent valuation.</p>
+<h4 id="section-26">The solvency modernisation initiative</h4>
+<p>In June 2008, insurance regulators began the Solvency Modernisation Initiative (SMI) which was a critical self-examination of the US insurance solvency regulation framework and included a review of international developments regarding insurance supervision.</p>
+<p>The SMI considered what regulators could learn from the financial crisis and what could be done to respond to changes in risk management practices, the economic environment, and increased globalisation.</p>
+<p>The key issues considered by the SMI included the following:</p>
+<ul>
+<li><p>Capital requirements.</p>
+</li>
+<li><p>Governance and risk management.</p>
+</li>
+<li><p>Group supervision.</p>
+</li>
+<li><p>Statutory accounting and financial reporting.</p>
+</li>
+<li><p>Reinsurance.</p>
+</li>
+</ul>
+<h5 id="section-27">Principle-based reserving</h5>
+<p>Standard valuation law adopted by NAIC in 2009 introduced a method for calculating life insurance policy reserves, referred to as Principle-Based Reserving (PBR).</p>
+<p>This approach aims to make reserves more responsive to the risks of complex products, using relevant experience alongside prescribed requirements and minimum reserves.</p>
+<p>Principle-based reserving for life insurance was introduced from 2017, with a transition period. The applicable method depends on the issue date, product and relevant valuation manual requirements. Existing business already sold continues to be valued under the previous valuation requirements (as is consistent with many previous updates or changes in US insurance regulation).</p>
+<p>The life insurance PBR framework includes three reserve calculations:</p>
+<ul>
+<li>A net premium reserve.</li>
+<li>A deterministic reserve.</li>
+<li>A stochastic reserve.</li>
+</ul>
+<p>The product features, risk profile and permitted exclusion tests determine which calculations are required. The detailed rules combine these calculations and apply floors; it is not always a simple maximum of three independently calculated reserves. For example, stochastic calculations can be required where financial options or guarantees introduce material risks. <a href="https://content.naic.org/insurance-topics/principle-based-reserving">NAIC overview of principle-based reserving</a></p>
+<h4 id="section-28">Own risk and solvency assessment (ORSA)</h4>
+<p>As part of the Solvency Modernisation Initiative (SMI), a US equivalent of the ORSA was introduced.</p>
+<p>This requires insurers (or insurance groups) to make their own assessment of the adequacy of their risk management and current/prospective solvency position under normal and severe stress scenarios. This also requires insurers to analyse all reasonably foreseeable and relevant material risks (e.g. underwriting, credit, market, operational, liquidity, etc) that could impact their ability to meet policyholder obligations. The ORSA requirements in the US satisfy International Association of Insurance Supervisors (IAIS) Insurance Core Principles (ICPs) No. 16 - Enterprise Risk Management. Most of the requirements of the US ORSA are broadly similar to other countries&#39; ORSAs, including Solvency II.</p>
+<h4 id="section-29">Comparing jurisdictions</h4>
+<p>The insurance regulatory regimes in the US and the EU have similar purposes, but the approach taken varies in some respects - particularly in the following aspects:</p>
+<ul>
+<li><p><strong>Capital requirements:</strong> In the US, the RBC approach is intended to identify weakly capitalised companies and allow supervisory intervention. By contrast, Solvency II sets out a minimum level of capital but also requires a higher level of capital (representing a greater level of security) and focuses on the specific risks borne by the company. The responsiveness of capital requirements to risk and the level of calibration to life insurers&#39; own portfolios of risks and controls is also different between US RBC and EU Solvency II.</p>
+</li>
+<li><p><strong>Reserving:</strong> The US approach to statutory reserving has historically been reflective of the long-term nature of liabilities and, for the most part, uses formulaic prescribed methods and assumptions, including margins for prudence. By contrast, Solvency II requires a current market-consistent valuation of liabilities with an explicit risk margin. Reserving in the US prior to the introduction of PBR can be compared to the solvency regime in the EU prior to Solvency II, which had prescribed methods and prudential margins in assumptions.</p>
+</li>
+</ul>
+<h3 id="section-30">China</h3>
+<p>China has introduced a three-tiered regulatory framework (C-ROSS) that intends to strengthen capital requirements, risk management, and disclosures of Chinese insurance companies.</p>
+<p>This aims to bring Chinese insurance regulation in line with global standards, but also wishes to reflect the characteristics of the Chinese insurance market (particularly its relatively young nature).</p>
+<h4 id="section-31">C-ROSS</h4>
+<p>The C-ROSS framework is similar to Solvency II and has three tiers:</p>
+<ul>
+<li><p>Pillar I: Quantitative capital requirements. This includes various risk factors applied to premium, reserve, and catastrophe risk, based on the lines of business written. The quantitative risks covered by pillar 1 include insurance risks, market risk, and credit risk.</p>
+</li>
+<li><p>Pillar II: Qualitative capital requirements.</p>
+<p>This pillar comprises three components:</p>
+<ul>
+<li><p>A rating system to determine the level of intervention, applied by the regulator (similar to Solvency II&#39;s intervention levels).</p>
+</li>
+<li><p>An explicit assessment of the risk management process of the company (similar to the ORSA).</p>
+</li>
+<li><p>A series of liquidity risk indicators.</p>
+</li>
+</ul>
+</li>
+<li><p>Pillar III: Improved risk disclosure and transparency. Pillar III uses disclosure and market discipline to complement direct supervision, including attention to risks that arise across the market. The regulator aims to build a mechanism to improve transparency and communication between market participants.</p>
+</li>
+</ul>
+<p>The introduction of C-ROSS creates a number of challenges for life insurers in China:</p>
+<ul>
+<li><p>The production of the results is a complex process.</p>
+</li>
+<li><p>Regular and timely C-ROSS reporting means significant additional workload for companies.</p>
+</li>
+<li><p>For Pillar II, substantial effort is required to establish risk and capital management frameworks that meet regulatory requirements.</p>
+</li>
+<li><p>Life insurers will need to consider ways to streamline the reporting process (e.g. through automation) to shorten reporting timescales and reduce operational risks.</p>
+</li>
+</ul>
+<h4 id="section-32">Comparing jurisdictions</h4>
+<p>The main comparison is the extent to which valuation and capital requirements use current market information, prescribed factors, and an insurer’s own assessment of risk. C-ROSS has developed through successive phases, so detailed asset valuation rules, discount-rate formulae and supervisory assessments need to be tied to a particular version of the framework.</p>
+<p>Solvency II uses a market-consistent balance sheet and an ORSA tailored to the insurer. Other systems can put greater weight on accounting values or prescribed supervisory assessments. Similar three-pillar structures do not necessarily produce comparable capital numbers.</p>
+<h3 id="section-33">Australia</h3>
+<p>In 2009, the Australian Prudential Regulation Authority (APRA) began their Life and General Insurance Capital (LAGIC) project to change the capital standards for insurers in Australia.</p>
+<p>These proposed changes were in response to significant changes in legislation in Australia following the global financial crisis. The proposed changes aimed to increase risk sensitivity and improve consistency in standards across financial services industries. The revised LAGIC regime became effective on 1 January 2013 and included amended capital requirements and more risk-sensitive capital formulae.</p>
+<p>Pillar 1 sets out the quantitative capital requirements. Under APRA’s LPS 110, the Prescribed Capital Amount (PCA) is determined using the Standard Method, with specific treatment for variable annuities. The risk charges include insurance risk, asset risk, asset concentration risk and operational risk.</p>
+<p>The Prudential Capital Requirement (PCR) combines the prescribed capital amount with any supervisory adjustment. Requirements apply to the life company and its funds. The framework also requires an Internal Capital Adequacy Assessment Process (ICAAP). <a href="https://www.apra.gov.au/standards/lps-110">APRA’s LPS 110</a></p>
+<p>This shares Solvency II’s focus on risk-sensitive capital and internal assessment, but the calculation and approval routes are not identical.</p>
+<p>The other LAGIC pillars cover the requirements for good risk management and governance, and the requirement for regular disclosures by the insurer.</p>
+<h4 id="section-34">Comparing jurisdictions</h4>
+<p>LAGIC has strong parallels to Solvency II.</p>
+<p>It uses a three pillar approach. It includes an Internal Capital Adequacy Assessment Process (ICAAP), which is similar to the ORSA.</p>
+<h3 id="section-35">South Africa</h3>
+<p>A risk-based solvency framework, known as the Solvency Assessment and Management (SAM) framework, for the prudential regulation of insurers in South Africa was implemented in July 2018.</p>
+<p>The SAM framework is largely based on Solvency II and has a three-pillar structure.</p>
+<p>Pillar 1 sets out the quantitative regulatory requirements that insurers must comply with. This requires insurers to determine their balance sheet and capital requirements on a SAM basis. These are then used to determine their financial soundness from a regulatory perspective. The SAM basis requires technical provisions (reserves) to be calculated on a best estimate basis, plus a risk margin (like Solvency II). The main regulatory capital requirement under SAM reflects the amount of own funds that a company requires to survive a one-year loss at a 99.5% confidence level (like Solvency II). As for Solvency II, this amount is referred to as the Solvency Capital Requirement (SCR) under SAM.</p>
+<p>Insurers may use a standard formula or, with local regulatory approval, use an internal model to calculate their capital requirement.</p>
+<p>Pillar 2 deals with the qualitative requirements and rules on supervision of insurers. The aim of pillar 2 is to establish a system of sound governance and risk management.</p>
+<p>Pillar 3 sets out the regulatory reporting and public disclosures required by insurers. This includes private information which must be disclosed to regulators and public information which must be disclosed to the market.</p>
+<h4 id="section-36">Comparing jurisdictions</h4>
+<p>A guiding principle for the development of SAM was that it should comply with the criteria for Solvency II third-country equivalence.</p>
+<p>The starting point for SAM was Solvency II, but it has been adapted for features unique to the South African insurance market and economic environment.</p>
+<p>For example:</p>
+<ul>
+<li><p>The risk-free rates used reflect the South African context.</p>
+</li>
+<li><p>Certain risks (e.g. market risk) are calibrated to the South African market environment.</p>
+</li>
+<li><p>To encourage wider access to insurance for people on low incomes, South Africa has a reduced minimum capital requirement for new microinsurers (relative to the normal SAM SCR).</p>
+</li>
+</ul>
+<p>As a result of these adaptations, there are some differences between SAM and Solvency II. The basic SAM methodology is as for Solvency II, but the defined parameters and stress tests have been adjusted for relevance to South Africa.</p>
+<h3 id="section-37">Other Asia / Pacific</h3>
+<p>Most country regulators in Asia are moving towards building more robust regulatory and solvency frameworks, though the sophistication varies by jurisdiction.</p>
+<p>The approach ranges from Solvency II equivalence status to much simpler minimum capital approaches.</p>
+<h3 id="section-38">Latin America</h3>
+<p>A number of countries in Latin America are introducing Solvency II type regulations, or aspects of these such as risk-based capital calculations.</p>
+<p>This has represented a significant change to their previous regulatory models.</p>
+<p>Mexico provides an example of a framework influenced by Solvency II. Other countries have adopted or developed their own risk-based capital and risk-management requirements. The pace and detail of reform vary between jurisdictions.</p>
+<p>The introduction of risk-based capital requirements encourages a greater focus on risk management. It also makes it important to understand the local valuation basis and calibration before comparing solvency ratios across countries.</p>
+</article><nav class="pagination" aria-label="Page navigation"><a href="08-the-regulatory-environment.html">← The regulatory environment</a><a href="10-solvency-valuation-and-capital.html">Solvency valuation and capital →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>

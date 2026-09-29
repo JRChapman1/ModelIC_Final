@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Solvency valuation and capital | ModelIC course</title><style>
+:root { color-scheme: light; --ink: #25312e; --accent: #216957; --muted: #62726c; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+body { margin: 0; background: #f6f7f3; color: var(--ink); font: 18px/1.75 Georgia, 'Times New Roman', serif; }
+a { color: var(--accent); text-underline-offset: .2em; }
+a:hover { color: #123f34; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #b86f25; outline-offset: 4px; }
+.skip { position: absolute; left: 1rem; top: -5rem; background: white; padding: .5rem; }
+.skip:focus { top: 1rem; }
+.shell { max-width: 1060px; margin: auto; padding: 0 28px; }
+.masthead { padding-top: 30px; padding-bottom: 24px; font-family: system-ui, sans-serif; }
+.brand { font-size: 15px; font-weight: 650; letter-spacing: .04em; text-decoration: none; }
+.chapters { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; font-size: 14px; }
+.chapters a[aria-current] { font-weight: 700; color: var(--ink); }
+main { max-width: 850px; margin: 0 auto 32px; background: white; border: 1px solid #dfe5de; border-radius: 8px; padding: 48px 64px; }
+.eyebrow, .pagination, .contents, footer { font-family: system-ui, sans-serif; }
+.eyebrow { color: var(--muted); text-transform: uppercase; font-size: 12px; letter-spacing: .12em; margin-bottom: 12px; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; color: #193e32; }
+h1 { font-size: clamp(30px, 5vw, 43px); margin-top: 0; letter-spacing: -.025em; }
+h2 { font-size: 29px; border-top: 1px solid #e4e8e1; padding-top: 28px; margin-top: 52px; }
+h3 { font-size: 23px; margin-top: 36px; }
+h4 { font-size: 20px; margin-top: 28px; }
+h5, h6 { font-size: 18px; margin-top: 26px; margin-bottom: 14px; }
+article img { display: block; max-width: 100%; height: auto; margin: 28px auto; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 24px 0; }
+table { border-collapse: collapse; width: 100%; font: 14px/1.5 system-ui, sans-serif; }
+th, td { border: 1px solid #dfe5de; padding: 10px 12px; text-align: left; }
+th { background: #f0f4ed; font-weight: 650; }
+tbody tr:nth-child(even) { background: #fafbf8; }
+td:first-child { font-weight: 550; }
+p { margin: 1em 0; }
+li { margin: .5em 0; }
+ul, ol { padding-left: 1.5em; }
+strong { font-weight: 700; }
+.contents { background: #f4f7f1; padding: 14px 20px; margin: 28px 0 36px; border-radius: 5px; font-size: 15px; }
+summary { cursor: pointer; font-weight: 600; }
+.contents ul { margin-bottom: 4px; }
+.pagination { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; margin-top: 48px; border-top: 1px solid #dfe5de; padding-top: 24px; font-size: 14px; }
+.pagination a { max-width: 46%; }
+.course-list { list-style: none; padding: 0; }
+.course-list li { border-top: 1px solid #e4e8e1; padding: 20px 0; margin: 0; }
+.course-list a { font-size: 23px; }
+.course-list p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+footer { padding: 0 0 28px; font-size: 12px; color: var(--muted); text-align: center; }
+article a { overflow-wrap: anywhere; }
+@media (max-width: 650px) { .shell { padding: 0 14px; } main { padding: 28px 23px; } body { font-size: 17px; } h2 { font-size: 26px; } .chapters { gap: 8px 16px; } }
+@media print { body { background: white; color: black; font-size: 11pt; } .masthead, .contents, .pagination, footer, .skip { display: none; } main { border: 0; padding: 0; max-width: none; } h2, h3, h4 { break-after: avoid; } a { color: inherit; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="masthead shell"><a class="brand" href="index.html">ModelIC · Life insurance</a><nav class="chapters" aria-label="Course chapters"><a href="01-protection-and-savings-products.html" title="Protection and savings products">Chapter 1</a><a href="02-retirement-income-and-other-products.html" title="Retirement income and other products">Chapter 2</a><a href="03-life-insurance-product-bases.html" title="Life insurance product bases">Chapter 3</a><a href="04-the-business-environment.html" title="The business environment">Chapter 4</a><a href="05-legislation-and-customer-protection.html" title="Legislation and customer protection">Chapter 5</a><a href="06-taxation-principles.html" title="Taxation principles">Chapter 6</a><a href="07-taxation-in-practice.html" title="Taxation in practice">Chapter 7</a><a href="08-the-regulatory-environment.html" title="The regulatory environment">Chapter 8</a><a href="09-solvency-frameworks-and-governance.html" title="Solvency frameworks and governance">Chapter 9</a><a href="10-solvency-valuation-and-capital.html" aria-current="page" title="Solvency valuation and capital">Chapter 10</a></nav></header>
+<div class="shell"><main id="main"><div class="eyebrow">Chapter 10 of 10</div><article><h1>Solvency valuation and capital</h1>
+<p>The quantitative part of a solvency framework brings together the valuation of assets and liabilities, the calculation of capital requirements, and the assessment of the capital available to meet them. This page develops those ideas using the Solvency II framework and the distinction between best estimate liabilities, the risk margin and own funds.</p><details class="contents"><summary>On this page</summary><nav aria-label="On this page"><ul><li><a href="#section-1">The solvency balance sheet</a></li><li><a href="#section-2">Valuation of assets</a></li><li><a href="#section-7">Valuation of technical provisions</a></li><li><a href="#section-17">The solvency capital requirement (SCR)</a></li><li><a href="#section-30">The minimum capital requirement (MCR)</a></li><li><a href="#section-31">Supervisory intervention levels</a></li><li><a href="#section-32">Quality of capital resources</a></li><li><a href="#section-33">Data quality</a></li></ul></nav></details>
+<p>The detailed EU examples use the framework applying before 30 January 2027, as explained in the preceding chapter. UK rules and the revised EU rules have different parameters and conditions.</p>
+<h2 id="section-1">The solvency balance sheet</h2>
+<p>A solvency balance sheet compares the value of the insurer’s assets with its technical provisions and other liabilities. The excess contributes to own funds, which are then assessed for eligibility to cover capital requirements.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable reference table"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it represents</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Assets</td>
+<td>Investments, reinsurance recoverables and other recognised assets.</td>
+</tr>
+<tr>
+<td>Best estimate liability</td>
+<td>Present value of expected future benefits and expenses less premiums, within the contract boundary.</td>
+</tr>
+<tr>
+<td>Risk margin</td>
+<td>An additional allowance for the cost of supporting non-hedgeable risks as the existing business runs off.</td>
+</tr>
+<tr>
+<td>Other liabilities</td>
+<td>Items such as tax and other amounts owed by the insurer.</td>
+</tr>
+<tr>
+<td>Own funds</td>
+<td>Capital resources recognised under the solvency rules, subject to adjustments and eligibility limits.</td>
+</tr>
+<tr>
+<td>SCR and MCR</td>
+<td>Two capital thresholds against which eligible own funds are compared. They are not liabilities and are not added together.</td>
+</tr>
+</tbody></table></div>
+<p>Technical provisions normally comprise the best estimate liability plus the risk margin. Capital above the SCR is a further buffer; it is not part of the technical provisions.</p>
+<h2 id="section-2">Valuation of assets</h2>
+<p>Important asset categories on the Solvency II balance sheet include:</p>
+<ul>
+<li><p>Investments (e.g. equities, bonds, property, etc).</p>
+</li>
+<li><p>Reinsurance recoveries.</p>
+</li>
+<li><p>Participations (i.e. holdings that create a participation under the rules, including holdings of at least 20% of voting rights or capital).</p>
+</li>
+</ul>
+<h3 id="section-3">Valuation of investments</h3>
+<p>Assets are required to be valued at market value, based on readily available market prices in orderly transactions that are sourced independently (i.e. quoted market prices in active markets).</p>
+<p>If such prices are not available, then mark-to-model techniques can be used, provided that these are consistent with the overall market-consistent (or &#39;fair value&#39; or &#39;economic value&#39;) approach. That is, the prices produced should be the amount at which the assets could be exchanged between knowledgeable willing parties in an arm&#39;s length transaction. Unquoted equities, unquoted derivatives, and property are examples of assets for which mark-to-model techniques may be required.</p>
+<p>This was a significant change for much of Europe, where book values (i.e. original cost, possibly with depreciation) were often used under the previous regulatory regime.</p>
+<h4 id="section-4">Prudent person principle</h4>
+<p>Solvency II applies a principles-based investment requirement known as the &#39;prudent person principle&#39;, alongside specific requirements for linked business.</p>
+<p>This principle has been developed from a legal concept which requires advisers to only make investment decisions for their clients which a prudent person would make. This principle requires insurers to develop their own set of risk indicators for the purpose of making investment decisions rather than depending solely on risk assessments performed by third parties (e.g. asset managers and credit rating agencies).</p>
+<p>For example:</p>
+<ul>
+<li><p>Insurers must only invest in assets and instruments whose risks can be properly identified, measured, monitored, managed, controlled, and reported for the purpose of appropriately accounting for them in the assessment of their overall solvency needs.</p>
+</li>
+<li><p>All assets of an insurer must be invested in such a manner as to ensure the security, quality, liquidity, and profitability of the insurer&#39;s overall assets.</p>
+</li>
+<li><p>Insurers should ensure that the investment of assets is done in the best interest of policyholders.</p>
+</li>
+</ul>
+<p>Companies need to assess their ability to manage any non-standard asset classes before investing in them. They must also have strong monitoring and control procedures in place in respect of any investments that are not traded on a regulated market.</p>
+<h3 id="section-5">Reinsurance recoveries</h3>
+<p>Recoveries expected from reinsurance are shown as an asset on insurers&#39; balance sheet, rather than as a reduction in gross liabilities.</p>
+<p>The fair value principle for valuing assets applies to reinsurance recoveries.</p>
+<p>Reinsurance recoveries must be adjusted to allow for the best estimate of losses arising due to reinsurer default. This is calculated as the present value of expected losses in each future year. This adjustment is usually small, since the probability of reinsurer default is normally considered to be low (depending on the credit rating and security of the reinsurer).</p>
+<h3 id="section-6">Participations</h3>
+<p>Participations mainly arise when considering groups or where companies have outsourcing subsidiaries.</p>
+<p>The overall market-consistent valuation approach also applies for participations.</p>
+<h2 id="section-7">Valuation of technical provisions</h2>
+<p>Technical provisions, which are also based on a market-consistent valuation approach, should represent the amount that the insurance company would have to pay to immediately transfer their obligations to another insurance company.</p>
+<p>As with the valuation of assets, the valuation of technical provisions should represent a fair value (i.e. the price charged in an arm’s-length transaction by a knowledgeable and willing party). In practice, however, such liability values are rarely directly observable and thus need to be modelled using market-consistent assumptions.</p>
+<p>Technical provisions are given by the sum of the following two constituents:</p>
+<ul>
+<li><p>Best estimate liabilities. This is the present value of expected future cashflows (benefits plus expenses less premiums) based on best estimate assumptions. Discounting is performed using the relevant risk-free rate term structure.</p>
+</li>
+<li><p>A risk margin.</p>
+</li>
+</ul>
+<p>Life insurance cashflows can be categorised as either hedgeable or non-hedgeable:</p>
+<ul>
+<li><p><em>Hedgeable</em> cashflows are those which can be replicated by a financial instrument with a reliable market value. For hedgeable cashflows, the technical provisions are equal to the market value of those hedging instruments. In this case, separate calculation of the best estimate liability and risk margin is not required. However, most life insurance cashflows are not hedgeable.</p>
+<p>The investment element of a unit-linked maturity guarantee can illustrate replication, if matching financial instruments exist. The whole policy may still contain mortality, lapse, expense or other non-hedgeable risks. In this case, the replicated investment payoff could be valued using the unit fund and matching put options. This does not automatically provide a complete valuation of all policy cashflows.</p>
+</li>
+<li><p><em>Non-hedgeable</em> cashflows are those which cannot be replicated by financial instruments with a reliable market value. For non-hedgeable cashflows, the technical provisions must be calculated as the sum of the best estimate liability plus a risk margin. Both components incorporate the discounting required by their respective calculation methods.</p>
+</li>
+</ul>
+<p>Technical provisions are then equal to the sum of the values of the hedgeable and non-hedgeable cashflows.</p>
+<p>The calculation of technical provisions should be segmented into homogeneous risk groups and, at a minimum, the prescribed lines of business.</p>
+<h3 id="section-8">Best estimate liabilities</h3>
+<h4 id="section-9">Method</h4>
+<p>The best estimate liability (BEL) is the present value of expected future cashflows, discounted using a risk free yield curve. These cashflow projections should ideally be performed on a policy-by-policy basis. However, approximations are permitted and grouped model points can be used provided that certain conditions are met (including validation of accuracy).</p>
+<h4 id="section-10">Assumptions</h4>
+<p>All assumptions used in the BEL calculation should be best estimate (with no prudence margins).</p>
+<p>Cashflow projections should allow for all expected decrements and policyholder actions, including lapses.</p>
+<p>In setting assumptions to reflect realistic policyholder behaviour, companies should allow for the fact that policyholders are likely to behave differently in different circumstances.</p>
+<p>For example, the rate at which an option is exercised by policyholders may depend on the following:</p>
+<ul>
+<li><p>The extent to which the option is in-the-money.</p>
+</li>
+<li><p>Policyholder awareness of the option (e.g. from company communications or media coverage).</p>
+</li>
+<li><p>Changes in the financial position of the company offering the option.</p>
+</li>
+</ul>
+<p>Insurers should account for all relevant available data (both internal and external) when deriving assumptions to reflect the characteristics of their insurance portfolio.</p>
+<p>Future premiums can be accounted for up to the &#39;contract boundary&#39;. The &#39;contract boundary&#39; is broadly defined as the point at which a company can unilaterally terminate the contract and refuse to accept a premium (or change the premium/benefits in such a way that they fully reflect the risks).</p>
+<p>For life insurance policies, the contract boundary usually means the maturity or expiry date of the contract (or, in some cases, an earlier date at which premiums or benefits are reviewable so that they fully reflect the risks). For example, a review point may form a contract boundary where the insurer has a substantive unilateral right to reprice the relevant risks fully. A premium-review clause alone is not sufficient.</p>
+<p>Allowance for future expenses needs to consider both overheads and directly attributable expenses. Expense inflation should also be allowed for. Expenses should reflect realistic servicing of the obligations as they run off. A separate arbitrary closure margin is not part of a best estimate, but shrinking volumes do not justify ignoring future overheads.</p>
+<p>For some liabilities (including financial guarantees and options) a market consistent simulation or stochastic analysis is likely to be the most appropriate calculation approach. However, a deterministic closed form solution could be acceptable in some cases, depending on the risks involved and the materiality.</p>
+<h4 id="section-11">With-profits</h4>
+<p>For with-profits business, discretionary benefits (e.g. future reversionary and terminal bonuses) need to be allowed for in technical provisions.</p>
+<p>For business that incorporates a discretionary element, the BEL should be calculated separately for guaranteed and future discretionary benefits. For example, for a traditional with-profits contract the liabilities relating to guaranteed benefits (including bonuses already declared in previous years) should be calculated separately from the liabilities relating to future (expected, but currently non-guaranteed) bonus declarations.</p>
+<p>The BEL calculation therefore needs to allow for how investment strategy might change under each stochastic simulation. Calculations also need to reflect realistic management actions (e.g. changes in reversionary bonus rates, equity backing ratios, and charges that vary with economic conditions). The equity backing ratio is the proportion of the fund invested in higher-risk higher-return assets such as equities. Calculations should also reflect realistic policyholder behaviour (e.g. levels of withdrawals that vary according to the relative attractiveness of guarantees under different economic conditions).</p>
+<p>Calculation of the BEL should also allow for any charges deducted from policyholders&#39; funds.</p>
+<p>The future discretionary benefits should relate to normal expected bonus distributions only. This should not include the distribution of the estate, unless a formal distribution plan has been approved by the national regulator.</p>
+<p>The BEL for with-profits business should not include the value of shareholder transfers in respect of future bonus declarations. Though shareholder transfers are not included as a liability, they should be valued (separately) to the extent that such transfers relate to future discretionary benefits recognised in the BEL. This (separate) value of shareholder transfers will instead be included in own funds.</p>
+<h4 id="section-12">Unit-linked</h4>
+<p>For unit-linked business, the unit and non-unit components may be separated for the purposes of determining technical provisions.</p>
+<p>It is possible for the BEL to be negative in this case and negative non-unit reserves can be held. The non-unit reserve will be negative if the best estimate value of future charges exceeds the value of future expenses and benefit costs. It is possible, particularly early in the contract term, for the negative non-unit reserve to outweigh the positive unit reserve so that the BEL overall is negative. It is also possible for the BEL to be negative for non-linked contracts if the best estimate value of future premiums exceeds the value of future claims and expenses. This will usually be the case for profitable regular premium business that has been recently written.</p>
+<h4 id="section-13">Risk-free discount rates</h4>
+<p>The BEL is calculated by discounting the expected future cashflows using a risk-free yield curve.</p>
+<p>The risk-free discount rates are published by EIOPA on a monthly basis. Insurers must use these rates and cannot set their own discount rates.</p>
+<p>The EIOPA risk-free discount rates are based on a stated methodology with the intention that they can be replicated by insurers (and other interested parties).</p>
+<p>Risk-free yield curves are also published by EIOPA for each of the key currencies within the EU insurance market. This ensures consistency between insurers across the EU whilst also allowing for the different interest rate environments across the different EU economies. This information is useful, for example, if an EU insurer is valuing the liabilities of an overseas subsidiary.</p>
+<p>The risk-free rates are based on swap rates where there is a sufficiently deep and liquid swap market, or government bond yields otherwise. A credit risk adjustment is then applied to these rates (by EIOPA) to reflect the risk of default of the counterparty. This credit risk adjustment is applied as a downward shift to the observed market yields.</p>
+<p>For longer-term maturities for which data are not available, the yield curve is extrapolated to a defined long-term equilibrium rate. The Smith-Wilson method is used to perform this extrapolation.</p>
+<h5 id="section-14">The matching adjustment</h5>
+<p>Where insurers have long-term predictable liabilities and can hold matching assets to maturity, they can be less exposed to changes in illiquidity spreads than an investor who may need to sell those assets early.</p>
+<p>The matching adjustment can apply to annuity business where bonds can be held to match the nature, term, and currency of the expected benefits. For annuities without surrender options, the insurer can purchase matching bonds at outset without concerns of having to sell them before the redemption proceeds of the bonds are paid. Holding an asset to maturity reduces exposure to forced sales caused by price movements. Credit risk, cashflow mismatch and liquidity needs still matter.</p>
+<p>In such cases, insurers are allowed to adjust the risk-free discount rate in line with the spread movements of their matching assets. This means that the discount rate can be increased to take credit for the extra return offered by corporate bonds (over government bonds) that relates to the illiquidity premium. By using a higher discount rate, the value of the insurer&#39;s liabilities is reduced.</p>
+<p>The use of the matching adjustment must be approved by the regulator and there are strict requirements for the eligibility of assets and liabilities.</p>
+<p>For example:</p>
+<ul>
+<li><p>The assigned asset and liability portfolio must be identified and managed separately, with restrictions on using its assets for other obligations.</p>
+</li>
+<li><p>Assets must be bond-like.</p>
+</li>
+<li><p>The portfolio is managed with the intention of holding matching assets to maturity, subject to permitted changes.</p>
+</li>
+<li><p>The liabilities and any policyholder options must satisfy the applicable eligibility conditions; surrender rights are tightly constrained.</p>
+</li>
+</ul>
+<p>If the insurer ceases to satisfy the matching-adjustment conditions, it must notify its supervisor and follow the applicable remedial requirements. The consequences and timescales depend on the jurisdiction and version of the rules.</p>
+<p>The MA is derived by taking the spread on the portfolio of matching assets and deducting the &#39;fundamental spread&#39;. The &#39;fundamental spread (FS)&#39; is an allowance for the credit risks retained by the insurer in respect of the matching assets. The FS is published by EIOPA.</p>
+<p>The discount rate used by an insurer who takes credit for a MA is therefore equal to the risk-free rate, plus the spread on the insurer&#39;s own assets, less the fundamental spread. The spread on the insurer&#39;s matching assets will be comprised of a credit spread and an illiquidity spread. Deducting the fundamental spread aims to give a discount rate that is equal to the risk-free rate plus the illiquidity premium on the matching assets.</p>
+<p>The MA is calculated by the insurer and is specific to them (since it is based on their own mix of matching assets).</p>
+<h5 id="section-15">Volatility adjustment</h5>
+<p>For eligible liabilities to which a matching adjustment is not applied, insurers may use a &#39;volatility adjustment (VA)&#39; to the risk-free discount rate.</p>
+<p>The purpose of the VA is to reduce the risk of forced sales of assets in the event of extreme bond spread movements. When asset values fall substantially, insurers (and banks) may need to sell certain assets and buy safer assets in order to protect their solvency. Sales of such assets will lead to further falls in their prices, leading to pro-cyclicality. Ultimately, forced sales may lead to unreliable market values which no longer represent the true worth underlying the assets.</p>
+<p>The idea of the VA, therefore, is to allow insurers to place a lower value on their liabilities in times of general economic stress, thus reducing the need to sell certain assets during a crisis and dampening the effect of pro-cyclicality.</p>
+<p>The VA is based on the spreads of a representative portfolio of assets for each relevant currency (or for each national insurance market, where assets held by insurers in that market are under particular stress).</p>
+<p>The VA aims to increase the discount rate to reflect the portion of the spread that is not attributable to a realistic assessment of expected losses or credit risk. Thus, if a market panic causes corporate bond prices to fall (and hence spreads to widen) without any corresponding change in default risk then a higher discount rate may be used to value liabilities.</p>
+<p>Risk-free discount rates which include the addition of a volatility adjustment are also published by EIOPA.</p>
+<p>Use of the VA is subject to certain risk management requirements. For example, insurers must have a liquidity plan and perform sensitivity analysis. In some EU member states, use of the VA is also subject to prior supervisory approval.</p>
+<h3 id="section-16">The risk margin</h3>
+<p>The purpose of the risk margin (RM) is to increase the technical provisions to the amount that would have to be paid to another insurance company in order for them to take on the best estimate liability.</p>
+<p>The risk margin therefore represents the theoretical compensation for the risk of future experience being worse than best estimate assumptions, and for the cost of holding regulatory capital against this risk.</p>
+<p>The RM is determined using a &#39;cost of capital&#39; method. This method is based on the cost of holding capital to support those risks which cannot be hedged. Such non-hedgeable risks include all insurance risks, reinsurance credit risk, operational risk, and &#39;residual market risk&#39;. One example of &#39;residual market risk&#39; is where liability cashflows are longer duration than the duration of available risk-free assets.</p>
+<p>The calculation of the risk margin using the cost of capital method involves the following steps:</p>
+<ul>
+<li><p>The capital required to support the relevant risks at each future projection date during the run-off of existing business is projected. Each year’s cost of holding that capital is discounted from the end of the year. Under Solvency II, the projected capital requirement is the non-hedgeable SCR.</p>
+</li>
+<li><p>The projected capital amounts are then multiplied by a cost of capital rate. This rate can be considered the cost of raising incremental capital in excess of the risk-free rate. Alternatively, it represents the frictional cost to the company of locking in this capital to earn a risk-free rate rather than being able to invest it freely to earn a higher reward. Under the EU framework applying before 30 January 2027, the prescribed cost-of-capital rate is 6% a year. The revised EU framework reduces it to 4.75% and changes the calculation. UK rules use a different specification. The rate and formula therefore need to be matched to the valuation date and jurisdiction. <a href="https://eur-lex.europa.eu/eli/reg_del/2026/269/oj">EU amending regulation</a>.</p>
+</li>
+<li><p>Each projected capital amount is multiplied by the cost-of-capital rate, discounted using the relevant risk-free rate, and summed to give the overall risk margin.</p>
+</li>
+</ul>
+<p>When calculating the risk margin, the insurer should not include any allowance for the matching adjustment or volatility adjustment.</p>
+<p>A non-simplified full projection of the SCR for each future year (in the first step) would be too complex as it would potentially involve nested stochastic calculations. Various simplifying approaches may therefore be used. For example, the insurer may instead select a driver (e.g. reserves or sum at risk) which has an approximately linear relationship with the required capital or its components. The initial capital can be expressed as a percentage of that driver and the projected capital (i.e. the non-hedgeable SCR) can then be approximated as the same percentage of the projected values of the driver. In practice, however, more complex methods using a combination of drivers and correlations may instead be used.</p>
+<p>The risk margin must be disclosed separately for each line of business.</p>
+<p>However, the aggregate risk margin can be reduced to allow for diversification benefits between lines of business up to entity level. The allocation of the diversification benefit between business lines can be approximated by apportioning the total diversified risk margin across business lines in proportion to the SCR. For example, suppose an insurer sells only term assurance and annuities and has £34m of diversified capital for the risks included in the risk-margin calculation. If the standalone capital amounts for term assurance and annuities were £10m and £30m respectively then a simple proportional allocation of the relevant time-zero capital to term assurance would be £10m * (£34m / (£10m + £30m)) = £8.5m.</p>
+<h2 id="section-17">The solvency capital requirement (SCR)</h2>
+<p>The SCR is a Value-at-Risk (VaR) measure based on a 99.5% confidence level for the loss over one year of an insurer&#39;s basic own funds.</p>
+<p>Basic own funds broadly comprise the excess of assets over all liabilities, plus qualifying subordinated liabilities and subject to regulatory adjustments. They are not simply assets minus technical provisions.</p>
+<p>There is a prescribed list of risk groups that the SCR has to cover, which are the following:</p>
+<ul>
+<li><p>Non-life underwriting risk.</p>
+</li>
+<li><p>Life underwriting risk.</p>
+</li>
+<li><p>Health underwriting risk.</p>
+</li>
+<li><p>Market risk.</p>
+</li>
+<li><p>Counterparty default risk.</p>
+</li>
+<li><p>Operational risk.</p>
+</li>
+</ul>
+<p>The SCR can be calculated using either a standard formula (prescribed by the regulator), their own internal model, or a combination of these approaches. The standard formula uses standard prescribed stress tests (or factors) which are then aggregated using prescribed correlation matrices to give the SCR. Firms using the standard formula are expected to justify that this is appropriate for their own circumstances. If using an internal model, this must have regulatory approval and must meet a number of standards including the &#39;use test&#39;. The &#39;use test&#39; requires the company to demonstrate that the internal model is widely used within the company and plays an important role in its decision making and governance processes.</p>
+<p>Some companies may also adopt a partial internal model, which uses a combination of internal model and standard formula approaches. Simplifications in the calculation of the SCR may be applied, provided that they are proportionate to the nature, scale, and complexity of the risks involved.</p>
+<p>When calculating using the standard formula, insurers may replace certain specified underwriting-risk parameters with undertaking-specific parameters where the rules permit this and supervisory approval is obtained. This is not permission to replace any standard-formula assumption. These are known as &#39;Undertaking Specific Parameters (USPs)&#39;. Regulatory approval is required to use USPs. USPs are assumptions based on the insurer&#39;s own data and should be calibrated at least annually. USPs, if used in the SCR calculation, should also be used as a key input into the insurer&#39;s ORSA (since the ORSA should account for the specific risk profile of the company).</p>
+<p>The range of possibilities for the SCR calculation (in decreasing order of complexity of calculation) is as follows:</p>
+<ul>
+<li><p>Full internal model.</p>
+</li>
+<li><p>Partial internal model.</p>
+</li>
+<li><p>Standard formula with undertaking specific parameters (&#39;USPs&#39;).</p>
+</li>
+<li><p>Standard formula.</p>
+</li>
+<li><p>Standard formula with simplifications.</p>
+</li>
+</ul>
+<p>Additional constraints apply to the calculation of the SCR if there are ring-fenced funds with limitations on capital fungibility (i.e. restrictions on the extent to which the capital can readily be transferred between funds).</p>
+<p>The benefit of risk mitigation techniques can be recognised in the SCR, provided any basis risk is immaterial or can be reflected in the SCR. All residual risks (e.g. counterparty risk arising from risk transfer arrangements) should be recognised. Dynamic hedging is not permitted to be recognised under the standard formula approach, but may be allowed for within an internal model.</p>
+<p>The national regulator also has the power to require a capital add-on to be held in excess of the SCR calculated by the company. For example, where some aspect of the company&#39;s risk profile differs from the assumptions underlying the standard formula and the risk is not being internally modelled a capital add-on may be required to reflect the risk appropriately.</p>
+<h3 id="section-18">Standard formula</h3>
+<h4 id="section-19">Risk modules and sub-modules</h4>
+<p>The following diagram illustrates the structure of the SCR calculation under the standard formula:</p>
+<p><img src="assets/solvency-capital-modules.png" alt="Structure of the standard formula: the overall SCR combines the basic SCR, operational risk and a loss-absorbency adjustment; the basic SCR aggregates market, counterparty, underwriting and intangible-asset risks."></p>
+<p>The basic SCR is calculated by considering different modules of risks:</p>
+<ul>
+<li><p>Market (equity, property, interest rate, credit spread, currency, and concentration).</p>
+</li>
+<li><p>Counterparty default.</p>
+</li>
+<li><p>Insurance (assessed separately for life, health, and non-life business).</p>
+</li>
+<li><p>Intangible assets.</p>
+</li>
+</ul>
+<p>Critical illness and income protection may be classified as SLT (&#39;Similar to Life Techniques&#39;) health insurance business. The classification depends on the technical basis used. &#39;Non-SLT&#39; covers business not pursued on a similar technical basis to life insurance, such as much private medical insurance.</p>
+<p>Solvency II requires that an intangible asset is only assigned a value if it can be valued and sold as a separate asset in an active market. In practice, most intangible assets of insurers (e.g. goodwill, brand names, etc) are not tradable in active markets and no value will be assigned to them under Solvency II. The intangible asset component of the BSCR is therefore likely to be small.</p>
+<p>The life underwriting module reflects the risks arising from life insurance obligations in relation to the perils covered and the assumptions influenced by the processes used in the conduct of business.</p>
+<p>For life insurance, the insurance risk module comprises the following sub-modules:</p>
+<ul>
+<li><p>Mortality. Mortality risk is the risk of loss (or of adverse change in the value of insurance liabilities) resulting from changes in the level, trend, or volatility of mortality rates in circumstances where an increase in the mortality rate leads to an increase in the value of insurance liabilities.</p>
+</li>
+<li><p>Longevity.</p>
+</li>
+<li><p>Disability/morbidity.</p>
+</li>
+<li><p>Lapse.</p>
+</li>
+<li><p>Expenses.</p>
+</li>
+<li><p>Revision. &#39;Revision risk&#39; refers to the risk of adverse variation of an annuity&#39;s amount as a result of unanticipated changes to the claims process. This is intended to cover only genuinely reviewable annuities and not those that are index-linked. Such &#39;genuinely reviewable annuities&#39; refer to annuities that arise from non-life insurance claims (e.g. accident insurance) where there is the risk that the annuity amount might change (e.g. due to a change in the health of the injured person).</p>
+</li>
+<li><p>Catastrophe (e.g. pandemic).</p>
+</li>
+</ul>
+<h4 id="section-20">Standard formula calculation</h4>
+<p>The SCR is first calculated for each module.</p>
+<p>For the market and insurance risk modules, each individual stress is performed separately according to detailed rules.</p>
+<p>The calibration and application of each stress is specified within the standard formula. For example:</p>
+<ul>
+<li><p>The market risk module requires:</p>
+<ul>
+<li><p>A -25% stress to property values.</p>
+</li>
+<li><p>Upward and downward currency shocks, subject to specified exceptions and calibrations.</p>
+</li>
+</ul>
+</li>
+<li><p>The life underwriting risk module requires:</p>
+<ul>
+<li><p>An immediate and permanent 15% increase in mortality rates.</p>
+</li>
+<li><p>An increase of 10% in future expenses and one percentage point in the annual rate of expense inflation.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>The SCR for each individual risk is then determined as the difference between the net asset value in the unstressed balance sheet and the net asset value in the stressed balance sheet. For this stress calculation, net asset value reflects assets less the best estimate and other relevant liabilities, with the risk margin held unchanged. In a simplified balance sheet containing only assets and insurance liabilities, the change can therefore be calculated using assets less the BEL. Holding the risk margin unchanged avoids circularity, because its calculation itself depends on projected capital requirements.</p>
+<p>For risk i, the capital requirement is:</p>
+<p><strong>SCRᵢ = max(0, NAV before stress − NAV under stress i).</strong></p>
+<p> In determining the values of assets and BEL under each stress, adverse changes in policyholder option take-up rates should be allowed for. The beneficial effects of any risk mitigation techniques and any future management actions can also be accounted for (provided certain specified conditions are met).</p>
+<p>The individual risk capital amounts are then combined across the risks within the module using a specified correlation matrix. The module SCR is calculated as:</p>
+<p><strong>Module SCR = √(Σᵢ Σⱼ Corrᵢⱼ × SCRᵢ × SCRⱼ)</strong></p>
+<p>where SCRᵢ is the capital requirement for risk i and Corrᵢⱼ is the prescribed correlation between risks i and j.</p>
+<p>For example, under Article 136 of the Solvency II delegated regulation, the specified correlation matrix for the life underwriting risk module is the following:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable reference table"><table>
+<thead>
+<tr>
+<th>Risk</th>
+<th align="right">Mortality</th>
+<th align="right">Longevity</th>
+<th align="right">Disability</th>
+<th align="right">Lapse</th>
+<th align="right">Expense</th>
+<th align="right">Revision</th>
+<th align="right">Catastrophe</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mortality</td>
+<td align="right">100%</td>
+<td align="right">−25%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+</tr>
+<tr>
+<td>Longevity</td>
+<td align="right">−25%</td>
+<td align="right">100%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td>Disability</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">100%</td>
+<td align="right">0%</td>
+<td align="right">50%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+</tr>
+<tr>
+<td>Lapse</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">100%</td>
+<td align="right">50%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+</tr>
+<tr>
+<td>Expense</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">50%</td>
+<td align="right">50%</td>
+<td align="right">100%</td>
+<td align="right">50%</td>
+<td align="right">25%</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">0%</td>
+<td align="right">50%</td>
+<td align="right">100%</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td>Catastrophe</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+<td align="right">100%</td>
+</tr>
+</tbody></table></div>
+<p>For the counterparty risk submodule, the calculation approach is similar, but insurers must first differentiate between the following exposures:</p>
+<ul>
+<li><p>Type 1 exposures - May not be diversified and the counterparty is likely to be rated (e.g. derivatives, securitisations, cash deposits, and reinsurance arrangements).</p>
+</li>
+<li><p>Type 2 exposures - Usually diversified and the counterparty is unlikely to be rated (e.g. receivables from intermediaries and policyholders).</p>
+</li>
+</ul>
+<p>Different detailed approaches are specified for the determination of the SCR for each type of exposure (which are then combined using a given formula).</p>
+<p>Having obtained the SCR for each module, a further specified correlation matrix is used to combine them to give the Basic SCR (BSCR). Aggregation is therefore performed at multiple levels. In performing this aggregation, the intangibles risk module is taken to be completely separate from other risk modules (i.e. it does not contribute any diversification benefits). The BSCR is thus calculated as:</p>
+<p><strong>BSCR = √(Σᵢ Σⱼ Corrᵢⱼ × SCRᵢ × SCRⱼ) + SCR for intangible assets</strong></p>
+<p>Here SCRᵢ is the capital requirement for module i and Corrᵢⱼ is the prescribed correlation between modules i and j.</p>
+<p>The correlation matrix that should be used in the combination of risk modules is the following:</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable reference table"><table>
+<thead>
+<tr>
+<th>Module</th>
+<th align="right">Market</th>
+<th align="right">Default</th>
+<th align="right">Life</th>
+<th align="right">Health</th>
+<th align="right">Non-life</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Market</td>
+<td align="right">100%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+</tr>
+<tr>
+<td>Default</td>
+<td align="right">25%</td>
+<td align="right">100%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">50%</td>
+</tr>
+<tr>
+<td>Life</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">100%</td>
+<td align="right">25%</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td>Health</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">25%</td>
+<td align="right">100%</td>
+<td align="right">0%</td>
+</tr>
+<tr>
+<td>Non-life</td>
+<td align="right">25%</td>
+<td align="right">50%</td>
+<td align="right">0%</td>
+<td align="right">0%</td>
+<td align="right">100%</td>
+</tr>
+</tbody></table></div>
+<p>To obtain the overall SCR, two adjustments are made to the BSCR.</p>
+<p><strong>Operational risk</strong> is added without recognising diversification with the other risk modules. The standard-formula calculation uses prescribed measures, including premiums and technical provisions; business where policyholders bear the investment risk has a specific expense-based treatment.</p>
+<p><strong>Loss-absorbing capacity</strong> allows for reductions in technical provisions and deferred taxes under stress. For example, discretionary benefits may be reduced under adverse conditions, or a deferred tax liability may fall because some previously expected gains will no longer arise.</p>
+<p>The technical-provision adjustment compares capital calculations with and without the relevant loss absorption. The deferred-tax adjustment is assessed separately and depends on the tax consequences of the stress, including whether any tax benefit can be recognised. The combined adjustment, denoted Adj, is negative or zero in the following expression:</p>
+<p><strong>Overall SCR = BSCR + SCR for operational risk + Adj.</strong></p>
+<h3 id="section-21">Internal model</h3>
+<p>Provided it has been approved by their regulator, an insurer can use an internal model as a full or partial alternative to the standard formula.</p>
+<p>Partial internal models use an internal model for particular risk modules, sub-modules, or business units. For the authorisation of partial internal models, the same tests apply as for full internal models (though these tests may be adapted to take account of the limited scope of the model&#39;s application).</p>
+<p>An internal model might be appropriate if the risk profile of the business differs significantly from the risk profile assumed in the standard formula and/or if the company already uses such a model for risk management or other decision-making purposes (e.g. pricing, investment strategy, etc). The supervisor can compel an insurer to develop an internal model if they feel that the standard formula is not appropriate for the risk profile of the company. Under such circumstances, the regulator may also impose a temporary capital add-on (to the SCR calculated using the standard formula) until an appropriate internal model has been developed.</p>
+<p>Once an insurer has received authorisation to use an internal model, the company cannot revert to using the standard formula for the SCR (unless they can justify the circumstances and obtain approval from the regulator).</p>
+<p>The overall capital requirements resulting from using an internal model will generally differ from the outcome of the standard formula calculation and may be either higher or lower depending on how the firm&#39;s tailored risk profile compares against the assumptions underlying the standard formula. The internal model must still generate an SCR based on the stated requirements, including coverage of the risk types in the standard formula and providing at least the equivalent protection to a 99.5% confidence level over one year.</p>
+<p>The tests that an internal model must pass before it may gain approval are the following:</p>
+<h4 id="section-22">The &#39;use test&#39;</h4>
+<p>Companies must demonstrate that their internal model is widely used throughout all relevant areas of the business and that it plays a significant role in the internal governance, risk management, and decision-making processes. The model should also be used in the economic and solvency capital assessments and capital allocation processes.</p>
+<p>This test is seen as one of the most challenging aspects of gaining internal model approval. As well as embedding the model throughout the company and developing an effective risk culture, companies need to be able to evidence that this is the case. Evidencing this may, for example, be done by showing senior management decisions and sign-off of models and assumptions (internal governance) and having all risks identified by the risk management system as inputs into the internal model (risk management processes). Companies should also be able to demonstrate that their internal model plays a key role in their ORSA.</p>
+<h4 id="section-23">Statistical quality standards</h4>
+<p>A number of minimum quality standards must be met relating to assumptions and data, including probability distribution forecasting, the use of expert judgement, materiality considerations, and methods of aggregation.</p>
+<p>For example:</p>
+<ul>
+<li><p>The data used must be accurate, complete and appropriate.</p>
+</li>
+<li><p>The data sets used should also be updated at least annually.</p>
+</li>
+<li><p>The assumptions used must be consistent with those used in calculating the technical provisions.</p>
+</li>
+</ul>
+<p>A key challenge in meeting this requirement is that historical data available to calibrate extreme events is limited. In practice, some industry consensus has emerged for some of the stresses (e.g. credit spreads and property market movements). It is important, however, that insurers allow for their own specific features (e.g. the extent to which their actual holdings are more or less volatile than the holdings on which any industry consensus is based). Setting dependency structures and correlation factors that apply under extreme conditions is also challenging.</p>
+<h4 id="section-24">Calibration standards</h4>
+<p>These standards aim to assess whether the SCR derived from the internal model has a calibration equivalent to the VaR at 99.5% confidence over one year. Companies can use different confidence levels and time periods as long as they can demonstrate that these provide an equivalent level of policyholder protection. Supervisors may require companies to run their internal models using benchmark portfolios and data provided by the supervisor (rather than internal data) in order to verify the calibration of the model.</p>
+<h4 id="section-25">Profit and loss attribution</h4>
+<p>This includes a requirement to demonstrate how the categorisation of risk chosen in the internal model will be used to explain the causes and sources of actual profits and losses. For example, if there is a lapse risk module within the internal model, then it must be possible to measure and attribute profits/losses arising from lapses within the internal model.</p>
+<h4 id="section-26">Validation standards</h4>
+<p>The internal model must have been fully validated by the insurance company and must be subject to regular control cycle review, including testing results against emerging experience. For example, through sensitivity testing, independent reviews, and checking of model outputs (e.g. asset prices) against external sources of data.</p>
+<h4 id="section-27">Documentation standards</h4>
+<p>The design and operational aspects of the internal model must be clearly and thoroughly documented. The documentation must provide a detailed outline of the theory and assumptions underlying the model and indicate any circumstances under which the internal model does not work effectively.</p>
+<h4 id="section-28">Interactions between risks</h4>
+<p>It is also important for an internal model to recognise that a certain subset of events happening at the same time, with an overall one-year probability level of 1-in-200, may produce a higher capital requirement than combining all of the individual capital requirements for separate 1-in-200 events using a correlation matrix.</p>
+<p>This is caused by &#39;non-linearity&#39; and &#39;non-separability&#39; of individual risks. &#39;Non-linearity&#39; refers to the fact that the results of a stress are often not linear with respect to the magnitude of the stress (particularly where options and guarantees are involved). &#39;Non-separability&#39; of risks refers to the ways in which different risk drivers interact with one another (e.g. a combined increase in longevity and expenses would be more detrimental than each stress in isolation for annuity business). Allowances need to be made for non-linearity and non-separability effects.</p>
+<p>An internal model may be structured in any way that an insurer sees fit, provided the above tests are satisfied. The internal model does not have to follow the structure of the standard formula and may be based on stochastic simulations (rather than stress tests and correlation matrices), perhaps by use of copulas to model dependency structures.</p>
+<h4 id="section-29">Fitting the tails of the distribution</h4>
+<p>Calibration of internal models also requires care and expertise. In particular, it is important that the probability distribution used properly reproduces the more extreme behaviour of the variable being modelled, taking care to ensure that it does not understate the frequency of more extreme outcomes. As with all modelling, it is important to check the goodness-of-fit. However, since the purpose of this model is to calculate the 99.5% VaR, it is particularly important to achieve a good fit in the tails of the distribution.</p>
+<h2 id="section-30">The minimum capital requirement (MCR)</h2>
+<p>The MCR is defined as a simple factor-based linear formula which is targeted at a VaR measure over one year at an 85% confidence level.</p>
+<p>Insurers do not actually perform VaR calculation to determine their MCR. Instead, they apply a prescribed simple linear formula which is given in the Solvency II rulebook.</p>
+<p>For life insurance business, the formula is based on technical provisions and capital at risk on death or disability, multiplied by specified factors. These factors vary according to the type of benefits, including discretionary, linked and other guaranteed benefits.</p>
+<p>The MCR must be calculated and reported to the regulator quarterly.</p>
+<p>The linear MCR is subject to a corridor of 25% to 45% of the SCR, and then to an absolute monetary floor. That absolute floor can take precedence over the percentage corridor. The absolute floor differs by type of undertaking and is updated under the rules, so a calculation should use the amount applicable at the valuation date. <a href="https://www.eiopa.europa.eu/rulebook/solvency-ii-single-rulebook/article-2216_en">Solvency II MCR rules</a>.</p>
+<h2 id="section-31">Supervisory intervention levels</h2>
+<p>The SCR and MCR constitute two rungs of a &#39;ladder of supervisory intervention&#39; under which severe prescribed supervisory authority action will be taken as a company&#39;s eligible capital falls below the SCR and approaches the MCR.</p>
+<p>Supervisors can also act before a capital breach. A breach of the MCR triggers urgent intervention and a short-term finance scheme. Failure to submit an adequate scheme or restore compliance within the statutory period can lead to withdrawal of authorisation; withdrawal is not automatic at the instant of every breach.</p>
+<p>For example, the supervisory actions might progress from:</p>
+<ul>
+<li><p>requiring the company to submit a recovery plan.</p>
+</li>
+<li><p>various interventions by the regulator in the management of the company.</p>
+</li>
+<li><p>withdrawing the company&#39;s authorisation to sell new business.</p>
+</li>
+</ul>
+<p>An insurer is required to inform the regulator immediately if the MCR or SCR is breached, or if a breach is likely in the short-term.</p>
+<h2 id="section-32">Quality of capital resources</h2>
+<p>Own funds are the capital resources recognised by the solvency framework. They comprise basic own funds and ancillary own funds.</p>
+<p><strong>Basic own funds</strong> broadly comprise the excess of assets over liabilities, plus subordinated liabilities, subject to the prescribed adjustments. Subordinated debt remains a liability on the balance sheet; qualifying debt is then recognised in the own-funds calculation because of its loss-absorbing characteristics. It must not be counted twice. <a href="https://www.eiopa.europa.eu/rulebook/solvency-ii-single-rulebook/article-2176_en">Solvency II definition of basic own funds</a></p>
+<p><strong>Ancillary own funds</strong> are resources that may be called upon to absorb losses but are not yet paid in, such as qualifying unpaid share capital or certain guarantees. Their recognition requires supervisory approval.</p>
+<p>Capital is divided into tiers according to its loss absorbency and permanence:</p>
+<ul>
+<li><p><strong>Tier 1</strong> is the highest-quality capital, available to absorb losses on a going-concern basis and in a winding-up.</p>
+</li>
+<li><p><strong>Tier 2</strong> has lower-quality loss-absorbing characteristics.</p>
+</li>
+<li><p><strong>Tier 3</strong> is the lowest-quality eligible tier and can include net deferred tax assets meeting the relevant conditions.</p>
+</li>
+</ul>
+<p>Subordinated debt is not automatically Tier 3. Its classification depends on the instrument’s terms. The criteria include whether it is paid up, its availability to absorb losses, its ranking in a winding-up, obligations to pay interest or dividends, its outstanding term, and incentives to redeem it. <a href="https://www.eiopa.europa.eu/rulebook/solvency-ii-single-rulebook/article-2502_en">EIOPA rules on Tier 2 items</a></p>
+<p>Restrictions apply to the capital that can cover each requirement. Under the EU framework, at least 50% of the SCR must be covered by Tier 1 and Tier 3 must be less than 15% of the SCR. The MCR must be covered by eligible basic own funds, with at least 80% Tier 1 and no Tier 3.</p>
+<p>Where capital is restricted within a ring-fenced fund, such as some with-profits funds, it may support that fund’s own risks without being freely available elsewhere in the insurer. Entity-level adjustments reflect those restrictions. It is therefore inappropriate to assume either that all fund surplus is freely transferable or that only future shareholder transfers can support the fund’s own solvency.</p>
+<h2 id="section-33">Data quality</h2>
+<p>EIOPA has issued advice on &#39;Standards for Data Quality&#39;.</p>
+<p>This advice highlights the importance of having good quality data for the valuation of technical provisions.</p>
+<p>This quality is deemed crucial for the following reasons:</p>
+<ul>
+<li><p>The more complete and correct the data, the more consistent and accurate will be the final estimates.</p>
+</li>
+<li><p>The application of a wider range of methodologies for calculating the best estimate is made possible, improving the chances of application of adequate and robust methods in each case.</p>
+</li>
+<li><p>Validation of methods is more reliable and leads to more credible conclusions, once a reasonable level of data quality is achieved.</p>
+</li>
+<li><p>Effective comparisons over time and in relation to market data are possible, which leads to better knowledge of the business in which the undertaking operates and its performance.</p>
+</li>
+</ul>
+<p>It is also noted that the issue of data quality is relevant to other areas of the solvency assessment, such as the SCR. A consistent approach to data quality issues needs to be taken across Pillar 1, without disregarding the different objectives.</p>
+</article><nav class="pagination" aria-label="Page navigation"><a href="09-solvency-frameworks-and-governance.html">← Solvency frameworks and governance</a><a href="index.html">Course contents →</a></nav></main></div><footer>ModelIC · Life insurance course</footer></body></html>
